@@ -2633,10 +2633,13 @@
       // Envío opcional a Webhook URL si está configurada
       if (WEBHOOK_URL !== "") {
         try {
+          // Usar 'no-cors' y 'text/plain' evita cualquier bloqueo CORS (Preflight OPTIONS)
+          // por parte del navegador y asegura que los datos se escriban siempre en Google Sheets.
           await fetch(WEBHOOK_URL, {
             method: 'POST',
+            mode: 'no-cors',
             headers: {
-              'Content-Type': 'application/json'
+              'Content-Type': 'text/plain'
             },
             body: JSON.stringify(leadData)
           });
