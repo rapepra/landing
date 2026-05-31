@@ -490,13 +490,12 @@
     }
 
     /* ==========================================================================
-       5. HERO SECTION (CENTRED)
+       5. HERO SECTION (2 COLUMNS WITH BUILDER PHOTO)
        ========================================================================== */
     .hero {
       background: radial-gradient(circle at 80% 20%, rgba(74, 144, 217, 0.12) 0%, transparent 60%), linear-gradient(135deg, var(--primary-dark) 0%, #0F254B 100%);
       color: var(--white);
       padding: 160px 0 100px 0;
-      text-align: center;
       position: relative;
       overflow: hidden;
     }
@@ -513,15 +512,21 @@
       pointer-events: none;
     }
 
-    .hero-content {
-      max-width: 850px;
-      margin: 0 auto;
-      z-index: 5;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 50px;
+      align-items: center;
       position: relative;
+      z-index: 5;
+    }
+
+    .hero-content {
+      text-align: left;
     }
 
     .hero h1 {
-      font-size: 3.5rem;
+      font-size: 3.25rem;
       font-weight: 800;
       color: var(--white);
       margin-bottom: 24px;
@@ -536,10 +541,9 @@
     }
 
     .hero .subtitle {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       color: #D2E3F4;
-      max-width: 720px;
-      margin: 0 auto 40px auto;
+      margin-bottom: 40px;
       font-weight: 400;
       line-height: 1.6;
     }
@@ -547,9 +551,8 @@
     .hero-actions {
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 20px;
-      margin-bottom: 60px;
+      margin-bottom: 50px;
     }
 
     .hero-link {
@@ -568,21 +571,54 @@
       border-color: var(--white);
     }
 
+    /* Column Derecho: Imagen de Confianza */
+    .hero-image-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-image-glow {
+      position: absolute;
+      width: 90%;
+      height: 90%;
+      background: radial-gradient(circle, rgba(74, 144, 217, 0.25) 0%, transparent 70%);
+      filter: blur(20px);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-image {
+      width: 100%;
+      max-width: 480px;
+      height: auto;
+      border-radius: var(--border-radius-lg);
+      border: 3px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 40px rgba(74, 144, 217, 0.15);
+      z-index: 2;
+      transition: var(--transition-smooth);
+    }
+
+    .hero-image:hover {
+      transform: translateY(-5px);
+      border-color: rgba(74, 144, 217, 0.35);
+      box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.6), 0 0 50px rgba(74, 144, 217, 0.3);
+    }
+
     /* Stats bar */
     .hero-stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
+      gap: 20px;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding-top: 50px;
-      max-width: 900px;
-      margin: 0 auto;
+      padding-top: 40px;
     }
 
     .stat-item {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       gap: 8px;
     }
 
@@ -591,7 +627,7 @@
     }
 
     .stat-text {
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 600;
       color: #D2E3F4;
     }
@@ -1682,22 +1718,39 @@
         font-size: 1rem;
       }
 
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
       .hero h1 {
         font-size: 2.25rem;
       }
 
       .hero .subtitle {
         font-size: 1.05rem;
+        margin-bottom: 30px;
       }
 
       .hero-actions {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 15px;
+        margin-bottom: 40px;
       }
 
       .hero-actions .btn {
         width: 100%;
         max-width: 320px;
+      }
+
+      .hero-image {
+        max-width: 360px;
       }
 
       .hero-stats {
@@ -1790,32 +1843,41 @@
        2. HERO SECTION
        ========================================================================== -->
   <section class="hero">
-    <div class="container hero-content">
-      <div class="badge badge-white fade-in stagger-1">
-        ✦ Inteligencia Artificial para constructores
+    <div class="container hero-grid">
+      <!-- Columna Izquierda: Contenido Textual y Estadísticas -->
+      <div class="hero-content">
+        <div class="badge badge-white fade-in stagger-1">
+          ✦ Inteligencia Artificial para constructores
+        </div>
+        <h1 class="fade-in stagger-2">Genera presupuestos profesionales <span>en segundos con IA</span></h1>
+        <p class="subtitle fade-in stagger-3">
+          ObraFlow analiza tu obra y crea presupuestos detallados por capítulos (Albañilería, Fontanería, Electricidad...) listos para enviar al cliente en PDF.
+        </p>
+        <div class="hero-actions fade-in stagger-4">
+          <a href="#contacto" class="btn btn-orange">Solicitar demo gratis</a>
+          <a href="#cómo-funciona" class="hero-link">Ver cómo funciona ↓</a>
+        </div>
+        
+        <div class="hero-stats fade-in stagger-5">
+          <div class="stat-item">
+            <span class="stat-icon">⏱</span>
+            <span class="stat-text">30 segundos por presupuesto</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-icon">📄</span>
+            <span class="stat-text">Formato profesional español</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-icon">🤖</span>
+            <span class="stat-text">IA entrenada en construcción</span>
+          </div>
+        </div>
       </div>
-      <h1 class="fade-in stagger-2">Genera presupuestos profesionales <span>en segundos con IA</span></h1>
-      <p class="subtitle fade-in stagger-3">
-        ObraFlow analiza tu obra y crea presupuestos detallados por capítulos (Albañilería, Fontanería, Electricidad...) listos para enviar al cliente en PDF.
-      </p>
-      <div class="hero-actions fade-in stagger-4">
-        <a href="#contacto" class="btn btn-orange">Solicitar demo gratis</a>
-        <a href="#cómo-funciona" class="hero-link">Ver cómo funciona ↓</a>
-      </div>
-      
-      <div class="hero-stats fade-in stagger-5">
-        <div class="stat-item">
-          <span class="stat-icon">⏱</span>
-          <span class="stat-text">30 segundos por presupuesto</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-icon">📄</span>
-          <span class="stat-text">Formato profesional español</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-icon">🤖</span>
-          <span class="stat-text">IA entrenada en construcción</span>
-        </div>
+
+      <!-- Columna Derecha: Imagen de Confianza del Constructor -->
+      <div class="hero-image-container fade-in stagger-3">
+        <div class="hero-image-glow"></div>
+        <img src="hero-builder.png" alt="Constructor profesional español sonriendo y revisando un presupuesto automatizado en una tablet en una obra de reformas" class="hero-image" width="480" height="480">
       </div>
     </div>
   </section>
@@ -2393,11 +2455,11 @@
         </a>
       </div>
       
-      <div class="footer-nav">
-        <a href="#">Política de privacidad</a>
-        <a href="#">Aviso legal</a>
+      <nav class="footer-nav" aria-label="Enlaces legales del pie de página">
+        <a href="politica-privacidad.html">Política de privacidad</a>
+        <a href="aviso-legal.html">Aviso legal</a>
         <a href="#contacto">Contacto</a>
-      </div>
+      </nav>
     </div>
     
     <div class="container">
@@ -2633,15 +2695,19 @@
       // Envío opcional a Webhook URL si está configurada
       if (WEBHOOK_URL !== "") {
         try {
-          // Usar 'no-cors' y 'text/plain' evita cualquier bloqueo CORS (Preflight OPTIONS)
-          // por parte del navegador y asegura que los datos se escriban siempre en Google Sheets.
-          await fetch(WEBHOOK_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: {
-              'Content-Type': 'text/plain'
-            },
-            body: JSON.stringify(leadData)
+          // Convertimos los datos a parámetros de consulta GET.
+          // Las peticiones GET a Google Apps Script no generan Preflight OPTIONS (CORS) y conservan sus parámetros intactos al ser redirigidas por Google.
+          const params = new URLSearchParams({
+            name: leadData.name,
+            phone: leadData.phone,
+            workType: leadData.workType,
+            volume: leadData.volume,
+            date: leadData.date
+          });
+
+          await fetch(`${WEBHOOK_URL}?${params.toString()}`, {
+            method: 'GET',
+            mode: 'no-cors'
           });
         } catch (error) {
           console.error("Error al enviar el Webhook:", error);

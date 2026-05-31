@@ -35,17 +35,30 @@ Nuestra solución utiliza **Google Apps Script** como una pasarela intermedia (A
 3. Copia y pega exactamente el siguiente código:
 
 ```javascript
+// Función principal para peticiones GET (Recomendada y utilizada por la landing page, 100% inmune a bloqueos CORS)
+function doGet(e) {
+  return handleLeadRequest(e.parameter, e.parameter.date || new Date().toISOString());
+}
+
+// Función de respaldo para peticiones POST
 function doPost(e) {
+  try {
+    var data = JSON.parse(e.postData.contents);
+    return handleLeadRequest(data, data.date || new Date().toISOString());
+  } catch (error) {
+    return createJsonResponse({ 'status': 'error', 'message': 'JSON inválido: ' + error.toString() });
+  }
+}
+
+// Procesador común para guardar los leads
+function handleLeadRequest(data, dateString) {
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
   
   try {
-    // Parseamos el JSON recibido desde la página web
-    var data = JSON.parse(e.postData.contents);
+    // Formateamos la fecha a formato local en España (GMT+1 / GMT+2 según horario de verano)
+    var formattedDate = new Date(dateString).toLocaleString('es-ES', { timeZone: 'Europe/Madrid' });
     
-    // Formateamos la fecha a formato local en España (GMT+2 / GMT+1)
-    var formattedDate = new Date(data.date).toLocaleString('es-ES', { timeZone: 'Europe/Madrid' });
-    
-    // Mapeamos los valores internos de los selects a texto elegante en español
+    // Mapeamos los valores internos de los selects a texto descriptivo en español
     var workTypeMap = {
       'obra-nueva': 'Obra nueva',
       'reforma-integral': 'Reforma integral',
@@ -61,38 +74,41 @@ function doPost(e) {
       'mas-de-30': 'Más de 30 presupuestos/mes'
     };
     
-    var workTypeSpanish = workTypeMap[data.workType] || data.workType;
-    var volumeSpanish = volumeMap[data.volume] || data.volume;
+    var workTypeSpanish = workTypeMap[data.workType] || data.workType || 'No especificado';
+    var volumeSpanish = volumeMap[data.volume] || data.volume || 'No especificado';
+    var nameClean = data.name || 'Desconocido';
+    var phoneClean = data.phone || 'Sin teléfono';
     
     // Añadimos la fila a la hoja de cálculo.
-    // El prefijo "'" en el teléfono asegura que Excel/Google Sheets lo lea como texto y no trunque los ceros a la izquierda.
+    // El prefijo "'" en el teléfono asegura que Excel/Google Sheets lo guarde como texto para conservar el cero inicial.
     sheet.appendRow([
       formattedDate,
-      data.name,
-      "'" + data.phone,
+      nameClean,
+      "'" + phoneClean,
       workTypeSpanish,
       volumeSpanish
     ]);
     
-    // Devolvemos una respuesta exitosa compatible con CORS preflight
-    return ContentService.createTextOutput(JSON.stringify({ 'status': 'success', 'message': 'Lead guardado con éxito.' }))
-                         .setMimeType(ContentService.MimeType.JSON)
-                         .setHeader('Access-Control-Allow-Origin', '*');
+    return createJsonResponse({ 'status': 'success', 'message': 'Lead guardado con éxito.' });
                          
   } catch (error) {
-    // Devolvemos el error en formato JSON
-    return ContentService.createTextOutput(JSON.stringify({ 'status': 'error', 'message': error.toString() }))
-                         .setMimeType(ContentService.MimeType.JSON)
-                         .setHeader('Access-Control-Allow-Origin', '*');
+    return createJsonResponse({ 'status': 'error', 'message': error.toString() });
   }
 }
 
-// Requerido por los navegadores modernos para peticiones Fetch asíncronas entre dominios (CORS Preflight)
+// Helper para empaquetar la respuesta JSON con CORS habilitado
+function createJsonResponse(responseObject) {
+  return ContentService.createTextOutput(JSON.stringify(responseObject))
+                       .setMimeType(ContentService.MimeType.JSON)
+                       .setHeader('Access-Control-Allow-Origin', '*');
+}
+
+// Requerido por navegadores para CORS Preflight en solicitudes POST complejas
 function doOptions(e) {
   return ContentService.createTextOutput("")
                        .setMimeType(ContentService.MimeType.TEXT)
                        .setHeader('Access-Control-Allow-Origin', '*')
-                       .setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS')
+                       .setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
                        .setHeader('Access-Control-Allow-Headers', 'Content-Type');
 }
 ```
