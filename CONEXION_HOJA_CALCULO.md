@@ -1,4 +1,4 @@
-# Guía de Conexión Segura a Google Sheets (Hoja de Cálculo) para ObraFlow
+# Guía de Conexión Segura a Google Sheets (Hoja de Cálculo) para Presupuesta
 
 Esta guía explica paso a paso cómo conectar el formulario de captación de tu landing page directamente con una **Hoja de Cálculo de Google** de forma **100% segura, gratuita y sin depender de herramientas de pago** como Zapier o Make.
 
@@ -18,7 +18,7 @@ Nuestra solución utiliza **Google Apps Script** como una pasarela intermedia (A
 ## 🛠️ Paso 1: Preparar tu Hoja de Cálculo
 
 1. Entra en tu cuenta de Google Drive y crea una nueva **Hoja de Cálculo de Google** (Google Sheet).
-2. Nómbrala como gustes, por ejemplo: `Leads ObraFlow`.
+2. Nómbrala como gustes, por ejemplo: `Leads Presupuesta`.
 3. En la primera fila (Fila 1), crea las siguientes columnas para estructurar los datos:
    * **Columna A**: `Fecha`
    * **Columna B**: `Nombre`
@@ -124,7 +124,7 @@ Para que la landing page pueda comunicarse con este código, debemos publicarlo:
 1. Haz clic en el botón azul **Implementar** (en la esquina superior derecha) ➔ **Nueva implementación**.
 2. En la ventana que aparece, haz clic en el icono del engranaje al lado de "Seleccionar tipo" y elige **Aplicación web**.
 3. Rellena los campos de la siguiente manera:
-   * **Descripción**: `Webhook de captura Leads ObraFlow`
+   * **Descripción**: `Webhook de captura Leads Presupuesta`
    * **Ejecutar como**: `Yo (tu-correo@gmail.com)`
    * **Quién tiene acceso**: Cambia a **Cualquiera** (*Esto es fundamental, de lo contrario Google bloqueará las llamadas desde la web*).
 4. Haz clic en el botón azul **Implementar**.
