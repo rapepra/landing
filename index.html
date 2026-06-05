@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x2haye6mzc");
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="index, follow">
@@ -27,6 +36,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="hero-builder.png" as="image">
 
   <!-- ==========================================================================
        DATOS ESTRUCTURADOS DE BUSCADORES E INTELIGENCIAS ARTIFICIALES (SEO / GEO JSON-LD)
@@ -369,7 +379,9 @@
     }
 
     header.scrolled {
-      background-color: var(--primary-dark);
+      background-color: rgba(15, 31, 61, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       height: 70px;
       box-shadow: 0 10px 30px rgba(15, 31, 61, 0.3);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -380,7 +392,7 @@
     }
 
     header.scrolled .nav-links a {
-      color: rgba(255, 255, 255, 0.8);
+      color: rgba(255, 255, 255, 0.85);
     }
 
     header.scrolled .nav-links a:hover {
@@ -401,7 +413,7 @@
     }
 
     .logo-icon {
-      fill: var(--accent-light);
+      fill: #9EC6EE;
       width: 32px;
       height: 32px;
       transition: var(--transition-smooth);
@@ -414,7 +426,7 @@
     .logo-text {
       font-size: 1.5rem;
       font-weight: 800;
-      color: var(--primary-dark);
+      color: var(--white);
       letter-spacing: -0.5px;
     }
 
@@ -432,7 +444,7 @@
 
     .nav-links a {
       font-weight: 500;
-      color: var(--gray-text);
+      color: rgba(255, 255, 255, 0.85);
       font-size: 0.95rem;
       position: relative;
     }
@@ -449,7 +461,7 @@
     }
 
     .nav-links a:hover {
-      color: var(--primary-dark);
+      color: var(--white);
     }
 
     .nav-links a:hover::after {
@@ -477,7 +489,7 @@
       display: block;
       width: 100%;
       height: 3px;
-      background-color: var(--primary-dark);
+      background-color: var(--white);
       border-radius: 3px;
       position: absolute;
       transition: var(--transition-smooth);
@@ -681,7 +693,7 @@
 
     .problem-card:hover {
       transform: translateY(-8px);
-      box-shadow: var(--shadow-lg);
+      box-shadow: 0 20px 40px -15px rgba(229, 62, 62, 0.12), var(--shadow-lg);
       border-color: rgba(229, 62, 62, 0.2);
     }
 
@@ -796,6 +808,12 @@
       transform: scale(1.1);
     }
 
+    .slider-group input[type="range"]::-webkit-slider-thumb:active {
+      transform: scale(1.2);
+      background-color: var(--white);
+      box-shadow: 0 0 15px var(--cta-orange);
+    }
+
     /* Soporte y compatibilidad del control slider en Firefox */
     .slider-group input[type="range"]::-moz-range-thumb {
       width: 20px;
@@ -811,6 +829,12 @@
     .slider-group input[type="range"]::-moz-range-thumb:hover {
       background-color: var(--white);
       transform: scale(1.1);
+    }
+
+    .slider-group input[type="range"]::-moz-range-thumb:active {
+      transform: scale(1.2);
+      background-color: var(--white);
+      box-shadow: 0 0 15px var(--cta-orange);
     }
 
     .calculator-results {
@@ -846,7 +870,7 @@
 
     .result-info h4 {
       font-size: 0.9rem;
-      color: var(--gray-light);
+      color: var(--gray-text);
       text-transform: uppercase;
       letter-spacing: 0.5px;
       margin-bottom: 4px;
@@ -893,8 +917,9 @@
     }
 
     .solution-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-lg);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px -15px rgba(46, 109, 164, 0.12), var(--shadow-lg);
+      border-color: rgba(46, 109, 164, 0.2);
     }
 
     .step-number {
@@ -970,8 +995,8 @@
 
     .feature-card:hover {
       border-color: var(--accent-light);
-      box-shadow: var(--shadow-md);
-      transform: translateY(-5px);
+      box-shadow: 0 20px 40px -15px rgba(74, 144, 217, 0.12), var(--shadow-lg);
+      transform: translateY(-8px);
     }
 
     .feature-icon-container {
@@ -1127,6 +1152,7 @@
 
     .price-card:hover {
       transform: translateY(-8px);
+      box-shadow: 0 20px 40px -15px rgba(27, 58, 107, 0.15), var(--shadow-lg);
     }
 
     /* Destacado Pro Card */
@@ -1181,8 +1207,14 @@
 
     .price-value span {
       font-size: 1rem;
-      color: var(--gray-light);
+      color: var(--gray-text);
       font-weight: 500;
+    }
+
+    .price-annual-note {
+      font-size: 0.82rem;
+      color: var(--gray-text);
+      margin-top: 6px;
     }
 
     .price-features {
@@ -1329,7 +1361,7 @@
 
     .author-company {
       font-size: 0.85rem;
-      color: var(--gray-light);
+      color: var(--gray-text);
     }
 
     /* ==========================================================================
@@ -1411,7 +1443,7 @@
     .faq-answer p {
       padding: 24px 28px;
       font-size: 0.95rem;
-      color: var(--gray-text);
+      color: #2D3748;
       line-height: 1.6;
     }
 
@@ -1504,7 +1536,7 @@
 
     .form-help {
       font-size: 0.8rem;
-      color: var(--gray-light);
+      color: var(--gray-text);
     }
 
     .contact-form .btn-orange {
@@ -1519,7 +1551,7 @@
       justify-content: center;
       gap: 8px;
       font-size: 0.8rem;
-      color: var(--gray-light);
+      color: var(--gray-text);
       text-align: center;
       margin-top: 20px;
     }
@@ -1703,7 +1735,7 @@
 
     .footer-copyright {
       font-size: 0.85rem;
-      color: #718096;
+      color: #A0AEC0;
       border-top: 1px solid rgba(255, 255, 255, 0.05);
       padding-top: 30px;
       margin-top: 30px;
@@ -1750,19 +1782,24 @@
       }
 
       .pricing-grid {
-        grid-template-columns: 1fr 1fr;
-        max-width: 700px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        max-width: 960px;
+      }
+
+      .price-card {
+        padding: 35px 20px;
       }
 
       .price-card.featured {
-        transform: scale(1);
+        transform: scale(1.02);
       }
       .price-card.featured:hover {
-        transform: translateY(-8px);
+        transform: scale(1.02) translateY(-8px);
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       section {
         padding: 70px 0;
       }
@@ -1781,7 +1818,9 @@
         left: 0;
         width: 100%;
         height: calc(100vh - 70px);
-        background-color: var(--primary-dark);
+        background-color: rgba(15, 31, 61, 0.96);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
         flex-direction: column;
         justify-content: center;
         gap: 40px;
@@ -1789,6 +1828,7 @@
         transform: translateX(100%);
         transition: var(--transition-smooth);
         z-index: 1050;
+        overflow-y: auto;
       }
 
       .nav-menu.active {
@@ -1870,7 +1910,16 @@
       .features-grid,
       .pricing-grid {
         grid-template-columns: 1fr;
-        max-width: 420px;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .price-card.featured {
+        transform: scale(1);
+      }
+      .price-card.featured:hover {
+        transform: translateY(-8px);
       }
 
       .price-card {
@@ -1901,6 +1950,21 @@
       .footer-nav {
         flex-direction: column;
         gap: 15px;
+      }
+
+      .toast-notif {
+        left: 16px;
+        right: 16px;
+        bottom: -80px;
+        max-width: calc(100% - 32px);
+        padding: 10px 14px;
+        font-size: 0.8rem;
+        gap: 8px;
+        border-radius: var(--border-radius-sm);
+      }
+
+      .toast-notif.show {
+        bottom: 16px;
       }
     }
   </style>
@@ -2243,7 +2307,7 @@
             <div class="price-value">
               <span class="price-monthly" style="display:none;">49€</span><span class="price-annual">29€</span><span>/mes</span>
             </div>
-            <div style="font-size:0.82rem; color:var(--gray-light); margin-top:6px;" class="price-annual-note">Facturado anualmente</div>
+            <div class="price-annual-note">Facturado anualmente</div>
           </div>
           <ul class="price-features">
             <li>
@@ -2284,7 +2348,7 @@
             <div class="price-value">
               <span class="price-monthly" style="display:none;">80€</span><span class="price-annual">69€</span><span>/mes</span>
             </div>
-            <div class="price-annual-note" style="font-size:0.82rem; color:var(--gray-light); margin-top:6px;">Facturado anualmente</div>
+            <div class="price-annual-note">Facturado anualmente</div>
           </div>
           <ul class="price-features">
             <li>
@@ -2328,7 +2392,7 @@
             <div class="price-value">
               <span class="price-monthly" style="display:none;">120€</span><span class="price-annual">99€</span><span>/mes</span>
             </div>
-            <div class="price-annual-note" style="font-size:0.82rem; color:var(--gray-light); margin-top:6px;">Facturado anualmente</div>
+            <div class="price-annual-note">Facturado anualmente</div>
           </div>
           <ul class="price-features">
             <li>
