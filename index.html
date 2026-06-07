@@ -204,6 +204,7 @@
   <!-- ==========================================================================
        2. HERO SECTION
        ========================================================================== -->
+  <main>
   <section class="hero">
     <div class="container hero-grid">
       <!-- Columna Izquierda: Contenido Textual y Estadísticas -->
@@ -249,7 +250,7 @@
        ========================================================================== -->
   <section class="problem">
     <div class="container">
-      <h2 class="section-title fade-in">¿Sigues haciendo presupuestos<br><span>en Word o a mano?</span></h2>
+      <h2 class="section-title fade-in">¿Sigues haciendo presupuestos<br><span>a mano?</span></h2>
       
       <div class="problem-grid">
         <!-- Card 1 -->
@@ -262,7 +263,7 @@
         <div class="problem-card fade-in stagger-2">
           <div class="problem-card-icon">📉</div>
           <h3>Aspecto poco profesional</h3>
-          <p>Un presupuesto en Word no transmite confianza. Tus competidores con mejor presentación y desglose claro ganan más obras cobrando lo mismo o más.</p>
+          <p>Un presupuesto hecho a mano no transmite confianza. Tus competidores con mejor presentación y desglose claro ganan más obras cobrando lo mismo o más.</p>
         </div>
         <!-- Card 3 -->
         <div class="problem-card fade-in stagger-3">
@@ -270,6 +271,163 @@
           <h3>Errores y olvidos</h3>
           <p>Partidas esenciales que se te olvidan incluir, precios desactualizados por la inflación y cálculos matemáticos manuales que a veces fallan y te cuestan dinero.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       9. SECCIÓN PRECIOS
+       ========================================================================== -->
+  <section id="precios" class="pricing">
+    <div class="container">
+      <h2 class="section-title fade-in">Sin sorpresas. <span>Sin letra pequeña.</span></h2>
+
+      <!-- Toggle mensual / anual -->
+      <div class="billing-toggle-wrapper fade-in">
+        <span class="billing-label" id="label-monthly">Mensual</span>
+        <label class="billing-switch" for="billing-toggle" aria-label="Cambiar a pago anual">
+          <input type="checkbox" id="billing-toggle" checked>
+          <div class="billing-switch-track"></div>
+          <div class="billing-switch-thumb"></div>
+        </label>
+        <span class="billing-label active" id="label-annual">Anual <span class="billing-save-badge">Ahorra hasta 40%</span></span>
+      </div>
+      
+      <div class="pricing-grid">
+        <!-- Plan Básico -->
+        <div class="price-card fade-in stagger-1">
+          <div class="price-header">
+            <div class="price-name">Básico</div>
+            <div class="price-value">
+              <span class="price-monthly" style="display:none;">49€</span><span class="price-annual">29€</span><span>/mes</span>
+            </div>
+            <div class="price-annual-note">Facturado anualmente</div>
+          </div>
+          <ul class="price-features">
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Hasta 10 presupuestos al mes
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Gestión de clientes e historial
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Exportación a PDF profesional A4
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              IA para generación de presupuestos
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Renders de diseño con IA
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Soporte por email y WhatsApp
+            </li>
+          </ul>
+          <div class="price-cta">
+            <a href="#contacto" class="btn btn-muted">Solicitar demo gratis</a>
+          </div>
+        </div>
+
+        <!-- Plan Pro -->
+        <div class="price-card featured fade-in stagger-2">
+          <div class="popular-badge">Más popular</div>
+          <div class="price-header">
+            <div class="price-name">Pro</div>
+            <div class="price-value">
+              <span class="price-monthly" style="display:none;">80€</span><span class="price-annual">69€</span><span>/mes</span>
+            </div>
+            <div class="price-annual-note">Facturado anualmente</div>
+          </div>
+          <ul class="price-features">
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Hasta 30 presupuestos al mes
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <strong>Todo lo del plan Básico</strong>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Exportación a PDF y Excel (.xlsx)
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Renders de diseño con IA ilimitados
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Transcripción de notas de audio
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Portal del cliente interactivo
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Soporte prioritario por WhatsApp
+            </li>
+          </ul>
+          <div class="price-cta">
+            <a href="#contacto" class="btn btn-orange">Solicitar demo gratis</a>
+          </div>
+        </div>
+
+        <!-- Plan Enterprise -->
+        <div class="price-card fade-in stagger-3">
+          <div class="price-header">
+            <div class="price-name">Enterprise</div>
+            <div class="price-value">
+              <span class="price-monthly" style="display:none;">120€</span><span class="price-annual">99€</span><span>/mes</span>
+            </div>
+            <div class="price-annual-note">Facturado anualmente</div>
+          </div>
+          <ul class="price-features">
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <strong>Presupuestos ilimitados</strong>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              <strong>Todo lo del plan Pro</strong>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Usuarios e instaladores adicionales
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Catálogo de clientes y obras compartido
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Sesión de onboarding personalizada
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              Soporte prioritario 24/7 con gestor
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+              SLA de soporte garantizado
+            </li>
+          </ul>
+          <div class="price-cta">
+            <a href="#contacto" class="btn btn-muted">Solicitar demo gratis</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="pricing-guarantees fade-in">
+        <span>✓ 14 días de prueba gratis</span>
+        <span>✓ Sin tarjeta de crédito</span>
+        <span>✓ Cancela cuando quieras</span>
       </div>
     </div>
   </section>
@@ -468,162 +626,6 @@
     </div>
   </section>
 
-  <!-- ==========================================================================
-       9. SECCIÓN PRECIOS
-       ========================================================================== -->
-  <section id="precios" class="pricing">
-    <div class="container">
-      <h2 class="section-title fade-in">Sin sorpresas. <span>Sin letra pequeña.</span></h2>
-
-      <!-- Toggle mensual / anual -->
-      <div class="billing-toggle-wrapper fade-in">
-        <span class="billing-label" id="label-monthly">Mensual</span>
-        <label class="billing-switch" for="billing-toggle" aria-label="Cambiar a pago anual">
-          <input type="checkbox" id="billing-toggle" checked>
-          <div class="billing-switch-track"></div>
-          <div class="billing-switch-thumb"></div>
-        </label>
-        <span class="billing-label active" id="label-annual">Anual <span class="billing-save-badge">Ahorra hasta 40%</span></span>
-      </div>
-      
-      <div class="pricing-grid">
-        <!-- Plan Básico -->
-        <div class="price-card fade-in stagger-1">
-          <div class="price-header">
-            <div class="price-name">Básico</div>
-            <div class="price-value">
-              <span class="price-monthly" style="display:none;">49€</span><span class="price-annual">29€</span><span>/mes</span>
-            </div>
-            <div class="price-annual-note">Facturado anualmente</div>
-          </div>
-          <ul class="price-features">
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Hasta 10 presupuestos al mes
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Gestión de clientes e historial
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Exportación a PDF profesional A4
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              IA para generación de presupuestos
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Renders de diseño con IA
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Soporte por email y WhatsApp
-            </li>
-          </ul>
-          <div class="price-cta">
-            <a href="#contacto" class="btn btn-muted">Solicitar demo gratis</a>
-          </div>
-        </div>
-
-        <!-- Plan Pro -->
-        <div class="price-card featured fade-in stagger-2">
-          <div class="popular-badge">Más popular</div>
-          <div class="price-header">
-            <div class="price-name">Pro</div>
-            <div class="price-value">
-              <span class="price-monthly" style="display:none;">80€</span><span class="price-annual">69€</span><span>/mes</span>
-            </div>
-            <div class="price-annual-note">Facturado anualmente</div>
-          </div>
-          <ul class="price-features">
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Hasta 30 presupuestos al mes
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              <strong>Todo lo del plan Básico</strong>
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Exportación a PDF y Excel (.xlsx)
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Renders de diseño con IA ilimitados
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Transcripción de notas de audio
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Portal del cliente interactivo
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Soporte prioritario por WhatsApp
-            </li>
-          </ul>
-          <div class="price-cta">
-            <a href="#contacto" class="btn btn-orange">Solicitar demo gratis</a>
-          </div>
-        </div>
-
-        <!-- Plan Enterprise -->
-        <div class="price-card fade-in stagger-3">
-          <div class="price-header">
-            <div class="price-name">Enterprise</div>
-            <div class="price-value">
-              <span class="price-monthly" style="display:none;">120€</span><span class="price-annual">99€</span><span>/mes</span>
-            </div>
-            <div class="price-annual-note">Facturado anualmente</div>
-          </div>
-          <ul class="price-features">
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              <strong>Presupuestos ilimitados</strong>
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              <strong>Todo lo del plan Pro</strong>
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Usuarios e instaladores adicionales
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Catálogo de clientes y obras compartido
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Sesión de onboarding personalizada
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Soporte prioritario 24/7 con gestor
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              SLA de soporte garantizado
-            </li>
-          </ul>
-          <div class="price-cta">
-            <a href="#contacto" class="btn btn-muted">Solicitar demo gratis</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="pricing-guarantees fade-in">
-        <span>✓ 14 días de prueba gratis</span>
-        <span>✓ Sin tarjeta de crédito</span>
-        <span>✓ Cancela cuando quieras</span>
-      </div>
-    </div>
-  </section>
 
   <!-- ==========================================================================
        10. SECCIÓN TESTIMONIO
@@ -869,6 +871,7 @@
   <!-- ==========================================================================
        10. FOOTER
        ========================================================================== -->
+  </main>
   <footer>
     <div class="container footer-container">
       <div class="footer-left">
