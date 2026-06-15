@@ -41,7 +41,7 @@
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 80px; /* Compensa la altura del navbar fijo */
+      scroll-padding-top: 120px; /* Compensa la altura del navbar fijo + banner */
       font-size: 16px;
     }
 
@@ -210,7 +210,7 @@
        ========================================================================== */
     header {
       position: fixed;
-      top: 0;
+      top: 40px; /* Desplazado por el banner de urgencia */
       left: 0;
       width: 100%;
       height: 80px;
@@ -973,10 +973,10 @@
 
     .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 24px;
       align-items: stretch;
-      max-width: 1050px;
+      max-width: 768px;
       margin: 0 auto 50px auto;
     }
 
@@ -1596,6 +1596,205 @@
     }
 
     /* ==========================================================================
+       13B. COMPONENTES DE URGENCIA Y PRECIOS NUEVOS
+       ========================================================================== */
+    /* Banner de Urgencia */
+    .urgency-banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      background-color: #F6890A;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2001; /* Encima de todo */
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      overflow: hidden;
+      padding: 0 16px;
+    }
+
+    .urgency-banner .banner-text-desktop {
+      display: block;
+    }
+
+    .urgency-banner .banner-text-mobile {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .urgency-banner {
+        font-size: 0.85rem;
+      }
+      .urgency-banner .banner-text-desktop {
+        display: none;
+      }
+      .urgency-banner .banner-text-mobile {
+        display: block;
+      }
+    }
+
+    /* Contador Regresivo */
+    .countdown-wrapper {
+      max-width: 600px;
+      margin: 0 auto 40px auto;
+      background-color: #1B3A6B;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--border-radius-lg);
+      padding: 24px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .countdown-title {
+      font-size: 1.1rem;
+      color: var(--white);
+      margin-bottom: 16px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .countdown-timer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .countdown-box {
+      background-color: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--border-radius-md);
+      padding: 12px 16px;
+      min-width: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .countdown-num {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .countdown-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #9EC6EE;
+      margin-top: 4px;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 600px) {
+      .countdown-wrapper {
+        padding: 16px 12px;
+        margin-bottom: 30px;
+      }
+      .countdown-timer {
+        gap: 8px;
+      }
+      .countdown-box {
+        min-width: 65px;
+        padding: 8px 4px;
+      }
+      .countdown-num {
+        font-size: 1.75rem;
+      }
+      .countdown-label {
+        font-size: 0.6rem;
+      }
+    }
+
+    /* Estilos de Precios Nuevos */
+    .price-original {
+      font-size: 1.5rem;
+      text-decoration: line-through;
+      color: var(--gray-light);
+      margin-right: 8px;
+      font-weight: 500;
+    }
+
+    .price-current {
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+    }
+
+    .price-period {
+      font-size: 1rem;
+      color: var(--gray-text);
+      font-weight: 500;
+    }
+
+    .price-note {
+      font-size: 0.85rem;
+      color: #E07B05;
+      margin-top: 10px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    /* Badge para Enterprise */
+    .enterprise-badge {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--primary-medium);
+      color: var(--white);
+      padding: 6px 16px;
+      border-radius: var(--border-radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 8px rgba(46, 109, 164, 0.3);
+      white-space: nowrap;
+    }
+
+    /* Sección SEO para IAs y buscadores */
+    .about-seo-section {
+      background-color: var(--gray-bg);
+      border-top: 1px solid var(--gray-border);
+      padding: 40px 0;
+    }
+    
+    .about-seo-title {
+      font-size: 1rem;
+      color: var(--gray-light);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-align: left;
+    }
+    
+    .about-seo-text {
+      font-size: 0.85rem;
+      color: var(--gray-light);
+      line-height: 1.6;
+      text-align: justify;
+    }
+    
+    .about-seo-text a {
+      color: var(--primary-medium);
+      text-decoration: underline;
+    }
+    
+    .about-seo-text a:hover {
+      color: var(--primary-dark);
+    }
+
+    /* ==========================================================================
        14. RESPONSIVE DESIGN (MOBILE FIRST)
        ========================================================================== */
     @media (max-width: 1024px) {
@@ -1625,9 +1824,9 @@
       }
 
       .pricing-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 16px;
-        max-width: 960px;
+        max-width: 720px;
       }
 
       .price-card {
@@ -1657,10 +1856,10 @@
 
       .nav-menu {
         position: fixed;
-        top: 70px;
+        top: 110px; /* 40px banner + 70px header */
         left: 0;
         width: 100%;
-        height: calc(100vh - 70px);
+        height: calc(100vh - 110px);
         background-color: rgba(15, 31, 61, 0.96);
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);

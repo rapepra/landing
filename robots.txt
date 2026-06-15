@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://presupuesta.es/sitemap.xml
+Sitemap: https://presupuesta.net/sitemap.xml
