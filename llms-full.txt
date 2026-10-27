@@ -54,20 +54,11 @@ Funciona en el navegador del móvil (iPhone y Android), de la tablet y del orden
 ### ¿Qué IVA puedo poner?
 21 %, 10 % (reformas de vivienda que cumplan los requisitos) o 0 %. Presupuesta recuerda el que uses y lo desglosa en el PDF.
 
-### ¿Cuántos presupuestos puedo hacer?
-El plan incluye 100 presupuestos generados con IA al mes, de sobra para un autónomo. Si tu empresa necesita más, escríbenos y te preparamos un plan a medida.
-
 ### ¿Me hacéis factura? ¿Cómo me doy de baja?
 Sí: el pago se hace con Stripe, que emite la factura con IVA y te deja poner tu NIF o CIF. Te das de baja cuando quieras desde «Mi suscripción», sin permanencia; sigues teniendo acceso hasta el final del periodo pagado.
 
-### ¿Qué es el código FUNDADOR?
-Un agradecimiento para los 20 primeros: 10 € menos al mes para siempre en el plan mensual (14,90 € + IVA). Lo introduces al activar la suscripción.
-
 ### ¿Mis datos están seguros?
 Cada profesional solo ve sus propios clientes y presupuestos, los pagos los gestiona Stripe (nunca vemos tu tarjeta) y no vendemos tus datos a nadie. Lo tienes explicado en la política de privacidad.
-
-### ¿Puedo hablar con una persona?
-Claro. Escríbenos por WhatsApp al 652 67 93 91 o a asistente@presupuesta.net y te responde Raúl, que es quien ha hecho Presupuesta.
 
 ## Ejemplos de presupuestos (datos de ejemplo, empresas y clientes ficticios)
 
@@ -160,10 +151,10 @@ Qué debe llevar el presupuesto de obra de un autónomo: tus datos y NIF, los de
   - Nivelado de solera de terraza con mortero autonivelante y pendiente hacia el sumidero. — 20 m² × 22,00 € = 440,00 €
   - Solado con gres antideslizante de exterior con cemento cola flexible C2TE. — 20 m² × 38,00 € = 760,00 €
 
-### Cómo enviar un presupuesto que transmite más confianza
+### Cómo enviar un presupuesto que transmita confianza
 https://presupuesta.net/ejemplos/enviar-presupuesto-confianza.html
 Consejos para presentar y enviar un presupuesto de obra que el cliente acepte: rapidez, desglose claro, PDF con tu logo, IVA, forma de pago y seguimiento.
 - Base imponible: 3.302,00 € · IVA 10 %: 330,20 € · Total: 3.632,20 €
 - Partidas:
-  - Albañilería y nivelado con materiales de primera marca con marcado CE. Garantía de dos años. — 1 PA × 2.150,00 € = 2.150,00 €
+  - Albañilería y nivelado con materiales de primera calidad con marcado CE. Garantía de dos años. — 1 PA × 2.150,00 € = 2.150,00 €
   - Pintura plástica lavable de paredes y techos, dos manos. — 180 m² × 6,40 € = 1.152,00 €

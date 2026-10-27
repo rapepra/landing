@@ -29,16 +29,10 @@ PREGUNTAS_INICIO = [
      "Funciona en el navegador del móvil (iPhone y Android), de la tablet y del ordenador, sin instalar nada. El dictado por voz está pensado para usarlo en la obra."),
     ("¿Qué IVA puedo poner?",
      "21 %, 10 % (reformas de vivienda que cumplan los requisitos) o 0 %. Presupuesta recuerda el que uses y lo desglosa en el PDF."),
-    ("¿Cuántos presupuestos puedo hacer?",
-     "El plan incluye 100 presupuestos generados con IA al mes, de sobra para un autónomo. Si tu empresa necesita más, escríbenos y te preparamos un plan a medida."),
     ("¿Me hacéis factura? ¿Cómo me doy de baja?",
      "Sí: el pago se hace con Stripe, que emite la factura con IVA y te deja poner tu NIF o CIF. Te das de baja cuando quieras desde «Mi suscripción», sin permanencia; sigues teniendo acceso hasta el final del periodo pagado."),
-    ("¿Qué es el código FUNDADOR?",
-     "Un agradecimiento para los 20 primeros: 10 € menos al mes para siempre en el plan mensual (14,90 € + IVA). Lo introduces al activar la suscripción."),
     ("¿Mis datos están seguros?",
      "Cada profesional solo ve sus propios clientes y presupuestos, los pagos los gestiona Stripe (nunca vemos tu tarjeta) y no vendemos tus datos a nadie. Lo tienes explicado en la política de privacidad."),
-    ("¿Puedo hablar con una persona?",
-     "Claro. Escríbenos por WhatsApp al 652 67 93 91 o a asistente@presupuesta.net y te responde Raúl, que es quien ha hecho Presupuesta."),
 ]
 
 LEGAL = {
@@ -160,7 +154,7 @@ LEGAL = {
 <p>Lo que introduces es tuyo. Lo tratamos para darte el servicio, según la <a href="politica-privacidad.html">política de privacidad</a>. Puedes descargar tus presupuestos en PDF en cualquier momento.</p>
 
 <h2>8. Disponibilidad y responsabilidad</h2>
-<p>Trabajamos para que el servicio funcione siempre, pero puede haber interrupciones por mantenimiento o causas ajenas. En la medida que permita la ley, nuestra responsabilidad se limita al importe pagado en los últimos 12 meses.</p>
+<p>Trabajamos para que el servicio funcione siempre, pero puede haber interrupciones por mantenimiento o causas ajenas. En la medida en que lo permita la ley, nuestra responsabilidad se limita al importe pagado en los últimos 12 meses.</p>
 
 <h2>9. Cambios y ley aplicable</h2>
 <p>Podemos actualizar estas condiciones; si el cambio es importante, te avisaremos por email. Se aplica la ley española.</p>

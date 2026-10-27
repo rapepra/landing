@@ -115,7 +115,15 @@ def cabecera(base: str) -> str:
 
 def pie(base: str) -> str:
     ej = "".join(f'<li><a href="{base}ejemplos/{x["slug"]}.html">{e(x["corto"])}</a></li>' for x in EJEMPLOS[:6])
-    return f"""<footer class="pie">
+    return f"""<aside class="banner-estudios" aria-label="Presupuesta Estudios">
+  <div class="contenedor">
+    <a href="{ESTUDIOS}?utm_source=presupuesta.net&amp;utm_medium=banner&amp;utm_campaign=pie">
+      <span class="be-texto"><small>Presupuesta Estudios</small><strong>¿Quieres que te encuentren en Google?</strong><span>Hacemos la web de tu negocio y ponemos a punto tu ficha de Google Maps para que te llamen a ti.</span></span>
+      <span class="be-cta">Ver cómo trabajamos {icono("flecha")}</span>
+    </a>
+  </div>
+</aside>
+<footer class="pie">
   <div class="contenedor">
     <div class="pie-grid">
       <div>
@@ -200,7 +208,7 @@ def cabeza(titulo, descripcion, ruta, base, jsonld=None, tipo="website", indexar
 <link rel="apple-touch-icon" href="{base}logo.png">
 <link rel="manifest" href="{base}site.webmanifest">
 <link rel="alternate" type="text/plain" title="Información para asistentes de IA" href="{WEB}/llms.txt">
-<link rel="preload" href="{base}assets/fuentes/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{base}assets/fuentes/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{base}assets/fuentes/figtree.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{base}assets/site.css?v={VERSION}">
 {ld}
@@ -469,7 +477,7 @@ def pagina_inicio():
         "WHATSAPP_URL": wa("Hola, tengo una duda sobre Presupuesta"),
         "WHATSAPP_EMPRESA": wa("Hola, me interesa Presupuesta para una empresa con varias personas"),
         "WHATSAPP_VISIBLE": WHATSAPP_VISIBLE,
-        "EJEMPLOS": "".join(tarjeta_ejemplo(x, base) for x in EJEMPLOS[:6]),
+        "EJEMPLOS": "".join(tarjeta_ejemplo(x, base) for x in EJEMPLOS[:3]),
         "PREGUNTAS": preguntas_html(PREGUNTAS_INICIO, abrir_primera=True),
         "FOTO_FUNDADOR": (f'<img class="foto-fundador" src="{FUNDADOR["foto"]}" alt="{e(FUNDADOR["nombre"])}, fundador de Presupuesta" width="220" height="220" loading="lazy">'
                           if FUNDADOR.get("foto") else f'<div class="foto-fundador" aria-hidden="true">{e(FUNDADOR["nombre"][0])}</div>'),

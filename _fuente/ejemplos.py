@@ -223,7 +223,7 @@ EJEMPLOS = [
         "title": "De nota de voz a presupuesto de obra en PDF",
         "description": "Cómo dictar un trabajo con el móvil en la obra y obtener un presupuesto desglosado por partidas, con precios de tu provincia y PDF listo para enviar por WhatsApp.",
         "h1": "De una nota de voz a un presupuesto profesional",
-        "entradilla": "Hablas un minuto en la obra y antes de subir a la furgoneta tienes el presupuesto desglosado. Este es un ejemplo real del flujo.",
+        "entradilla": "Hablas un minuto en la obra y antes de subir a la furgoneta tienes el presupuesto desglosado. Así funciona, paso a paso.",
         "ciudad": "Madrid", "superficie": "Salón y cocina", "iva": 21,
         "problema": [
             "Llegar a casa después de diez horas de obra y ponerse otras dos con el Excel. Mientras tanto, el presupuesto tarda días en salir y otro profesional se lleva el trabajo.",
@@ -379,7 +379,7 @@ EJEMPLOS = [
         "oficio": "Ventas",
         "title": "Cómo enviar un presupuesto de reforma que dé confianza",
         "description": "Consejos para presentar y enviar un presupuesto de obra que el cliente acepte: rapidez, desglose claro, PDF con tu logo, IVA, forma de pago y seguimiento.",
-        "h1": "Cómo enviar un presupuesto que transmite más confianza",
+        "h1": "Cómo enviar un presupuesto que transmita confianza",
         "entradilla": "El cliente no siempre elige el más barato: elige al que le transmite orden y tranquilidad. Así se consigue con el presupuesto.",
         "ciudad": "Barcelona", "superficie": "Reforma de piso", "iva": 10,
         "problema": [
@@ -390,7 +390,7 @@ EJEMPLOS = [
         "nota_ia": "Con el PDF listo puedes enviarlo desde la ficha del cliente, que tiene el botón directo a su WhatsApp. Luego marcas el presupuesto como pendiente y el panel te avisa si no responde.",
         "capitulos": [
             {"titulo": "Trabajos", "partidas": [
-                ("Albañilería y nivelado con materiales de primera marca con marcado CE. Garantía de dos años.", 1, "PA", 2150, "zona"),
+                ("Albañilería y nivelado con materiales de primera calidad con marcado CE. Garantía de dos años.", 1, "PA", 2150, "zona"),
                 ("Pintura plástica lavable de paredes y techos, dos manos.", 180, "m²", 6.4, "tu"),
             ]},
         ],
