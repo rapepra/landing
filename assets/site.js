@@ -82,29 +82,6 @@
     });
   });
 
-  /* ---------- Calculadora de tiempo ---------- */
-  var calc = document.getElementById("calculadora");
-  if (calc) {
-    var nPres = document.getElementById("calc-presupuestos");
-    var nHoras = document.getElementById("calc-horas");
-    var outPres = document.getElementById("calc-presupuestos-valor");
-    var outHoras = document.getElementById("calc-horas-valor");
-    var resHoras = document.getElementById("calc-resultado");
-    var resDias = document.getElementById("calc-dias");
-    var MIN_CON_PRESUPUESTA = 10; // repasar y ajustar lo que propone la IA
-    var calcular = function () {
-      var p = Number(nPres.value), h = Number(nHoras.value);
-      outPres.textContent = p;
-      outHoras.textContent = h.toLocaleString("es-ES") + " h";
-      var ahorro = Math.max(0, p * (h - MIN_CON_PRESUPUESTA / 60));
-      resHoras.textContent = Math.round(ahorro) + " h";
-      resDias.textContent = (ahorro / 8).toLocaleString("es-ES", { maximumFractionDigits: 1 });
-    };
-    nPres.addEventListener("input", calcular);
-    nHoras.addEventListener("input", calcular);
-    calcular();
-  }
-
   /* ---------- Demo del móvil: dictar → IA → partidas → PDF ---------- */
   var demo = document.getElementById("demo");
   if (!demo) return;
