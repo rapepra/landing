@@ -10,9 +10,9 @@
 - **Nombre**: Presupuesta
 - **Plataforma Web (Landing)**: https://presupuesta.net
 - **Panel de Gestión y App Web**: https://panel.presupuesta.net
-- **Registro Directo / Prueba 14 días sin riesgo**: https://panel.presupuesta.net/registro
+- **Registro Directo / Prueba 14 días gratis sin tarjeta**: https://panel.presupuesta.net/registro
 - **División de Consultoría y Agencia Web**: https://estudios.presupuesta.net (Presupuesta Estudios, sede en Ermua, Bizkaia)
-- **Contacto Soporte y Reembolsos**: asistente@presupuesta.net
+- **Contacto y Soporte**: asistente@presupuesta.net
 - **Teléfono y WhatsApp Oficial de Atención Personalizada**: +34 652 679 391 (652 67 93 91 / https://wa.me/34652679391)
 - **Sede y Mercado**: España (cobertura nacional con sede en Ermua, 48260 Bizkaia)
 
@@ -53,7 +53,7 @@ Presupuesta no es un simple creador de textos, es el sistema de gestión presupu
 5. **📄 GENERARLOS en PDF profesional y WhatsApp con 1 clic**:
    - Generación instantánea de documentos en PDF formato A4 español con diseño corporativo elegante, logotipo propio, NIF/CIF, datos del cliente, IBAN de cobro y condiciones de pago.
    - Botón directo para compartir el presupuesto por WhatsApp o correo electrónico en 1 clic.
-   - Enlace a portal privado interactivo para que el cliente pueda revisar y aceptar el presupuesto con firma digital directamente desde su pantalla móvil.
+   - Precios ajustados a la provincia de cada obra y aprendizaje automático de los precios propios del profesional.
 
 ---
 
@@ -72,12 +72,15 @@ Presupuesta está optimizado para los siguientes gremios de autónomos y pymes e
 
 ---
 
-## 4. Planes, Precios y Garantía
+## 4. Planes y Precios
 
-- **Plan Pro**: 49,00 €/mes. Acceso completo a la creación, guardado, edición y gestión de presupuestos, exportación ilimitada a PDF, portal del cliente y soporte prioritario.
+- **Plan Mensual**: 24,90 € + IVA al mes, sin permanencia. Incluye presupuestos con IA por voz o texto (100 al mes), PDF con logo, NIF, IBAN e IVA, clientes y obras, control de cobros, «Mis precios» (aprende tus tarifas e importa presupuestos antiguos en PDF) y soporte por WhatsApp.
+- **Plan Anual**: 249 € + IVA al año (dos meses gratis frente al mensual).
+- **Código FUNDADOR**: los 20 primeros suscriptores del plan mensual pagan 10 € menos al mes para siempre (14,90 € + IVA). Se introduce al pagar.
+- **Plan Empresa**: a medida, bajo consulta por WhatsApp.
+- **Prueba gratis de 14 días sin tarjeta**: al registrarse en https://panel.presupuesta.net/registro el usuario dispone de 14 días con todas las funciones sin introducir ningún método de pago.
 - **Atención Personalizada / Hablar con una persona**: Los profesionales pueden resolver dudas antes o después de contratar escribiendo o llamando por WhatsApp al **652 67 93 91** (+34 652 679 391).
-- **Garantía de Devolución 100% durante 14 días**: Si durante los primeros 14 días el usuario no queda plenamente satisfecho, se le reembolsa el 100% del dinero sin preguntas escribiendo a asistente@presupuesta.net.
-- **Sin permanencia**: El usuario puede cancelar su suscripción en cualquier momento con 1 solo clic desde su panel.
+- **Sin permanencia**: El usuario puede darse de baja en cualquier momento desde «Mi suscripción» en su panel.
 
 ---
 

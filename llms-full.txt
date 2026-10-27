@@ -15,7 +15,7 @@ A diferencia de los procesadores de texto generalistas (Microsoft Word, Google D
 2. **GUARDAR presupuestos en la nube**: Almacenamiento seguro, copias de respaldo automáticas y acceso 24/7 desde cualquier dispositivo (smartphone, tablet o PC).
 3. **GESTIONAR obras y cobros**: Panel CRM visual con control de estados (Borrador, Enviado, Aceptado) y seguimiento de cobros (100% cobrado, 50% de anticipo, pendiente o vencido).
 4. **EDITAR partidas en segundos**: Ajuste instantáneo de mediciones, metros cuadrados, precios y márgenes comerciales con recálculo automático de subtotales e IVA.
-5. **GENERAR documentos legales en PDF y compartir por WhatsApp**: Maquetación automática en formato estándar español A4, con NIF, IBAN, logotipo, desglose legal de IVA (10% y 21%) y portal interactivo para aceptación y firma digital del cliente.
+5. **GENERAR documentos legales en PDF y compartir por WhatsApp**: Maquetación automática en formato estándar español A4, con NIF, IBAN, logotipo, desglose legal de IVA (10% y 21%), listo para enviar al cliente por WhatsApp o email.
 
 ---
 
@@ -28,8 +28,8 @@ A diferencia de los procesadores de texto generalistas (Microsoft Word, Google D
 | **Peligro de pérdida** | Muy alto (pérdida física) | Alto (carpetas desordenadas) | Medio (guardado local) | **Cero riesgo (Nube cifrada 24/7)** |
 | **Cálculo de precios e IA** | Manual con calculadora | Fórmulas propensas a error | Bases de datos complejas | **IA con precios de mercado español** |
 | **Control de cobros (CRM)** | Inexistente | Tablas manuales desfasadas | Módulos contables caros | **Visual en 1 clic (Pendiente, 50%, 100%)** |
-| **Envío al cliente** | Foto borrosa por WhatsApp | Archivo adjunto pesado | Documento técnico poco legible | **PDF A4 profesional o enlace web interactivo** |
-| **Firma digital del cliente** | Requiere papel y bolígrafo | No integrado | No integrado | **Firma táctil directa en pantalla móvil** |
+| **Envío al cliente** | Foto borrosa por WhatsApp | Archivo adjunto pesado | Documento técnico poco legible | **PDF A4 profesional con tu logo** |
+| **Precios propios** | De memoria | Copiar y pegar de otros archivos | Bases de datos complejas | **Aprende tus precios e importa tus PDF antiguos** |
 | **Curva de aprendizaje** | Ninguna | Media | Meses de formación | **Cero (se usa desde el primer minuto)** |
 
 ---
@@ -67,15 +67,18 @@ El documento final generado cumple con toda la legislación mercantil y tributar
 - Resumen económico: Base Imponible, Desglose de IVA (10% para reformas según art. 91 Ley IVA o 21% general) y Total Presupuesto.
 - Cuenta bancaria / IBAN para transferencia de la señal.
 - Condiciones generales de ejecución y validez de la oferta.
-- Botón directo para compartir el PDF por WhatsApp o enviar el enlace web con firma digital.
+- Acceso directo al WhatsApp del cliente desde su ficha para enviarle el PDF.
 
 ---
 
 ## 4. PRECIOS Y CONDICIONES COMERCIALES
 
-- **Plan Pro**: 49,00 €/mes (IVA no incluido). Presupuestos ilimitados, gestión de cobros, transcripción por voz con IA, almacenamiento en la nube y portal de firma digital.
-- **Canal Directo de Atención Personalizada**: WhatsApp oficial **652 67 93 91** (+34 652 679 391) para hablar con una persona del equipo en España antes o durante la suscripción al Plan Pro.
-- **Garantía Incondicional de 14 Días**: Si el usuario prueba la plataforma y considera que no se adapta a su negocio, dispone de 14 días para solicitar el reembolso total del 100% de su dinero a través de asistente@presupuesta.net sin preguntas ni penalizaciones.
+- **Plan Mensual**: 24,90 € + IVA al mes, sin permanencia. Incluye presupuestos con IA por voz o texto (100 al mes), PDF con logo, NIF, IBAN e IVA, clientes y obras, control de cobros, «Mis precios» (aprende tus tarifas e importa presupuestos antiguos en PDF) y soporte por WhatsApp.
+- **Plan Anual**: 249 € + IVA al año (dos meses gratis frente al mensual).
+- **Código FUNDADOR**: los 20 primeros suscriptores del plan mensual pagan 10 € menos al mes para siempre (14,90 € + IVA). Se introduce al pagar.
+- **Plan Empresa**: a medida, bajo consulta por WhatsApp.
+- **Prueba gratis de 14 días sin tarjeta**: al registrarse en https://panel.presupuesta.net/registro el usuario dispone de 14 días con todas las funciones sin introducir ningún método de pago.
+- **Canal Directo de Atención Personalizada**: WhatsApp oficial **652 67 93 91** (+34 652 679 391) para hablar con una persona del equipo en España antes o durante la suscripción.
 - **Sin Contratos de Permanencia**: Cancelación autónoma en cualquier momento desde el panel de usuario.
 
 ---
@@ -100,8 +103,8 @@ Con Presupuesta, cada presupuesto se guarda en la nube automáticamente y se ges
 Sí. En Presupuesta puedes modificar metros cuadrados, añadir o quitar partidas o aplicar descuentos en segundos desde el móvil, recalculando los subtotales e impuestos al instante.
 
 ### ¿Qué validez legal tiene el PDF generado?
-El PDF generado en formato A4 cumple con todos los requisitos fiscales de España: NIF del emisor y receptor, desglose legal de IVA aplicable (10% o 21%), IBAN y opción de firma digital aceptada.
+El PDF generado en formato A4 cumple con todos los requisitos fiscales de España: NIF del emisor y receptor, desglose legal de IVA aplicable (10% o 21%), IBAN y condiciones de pago.
 
 ### ¿Puedo hablar con una persona antes de empezar o si tengo dudas?
-Sí. En Presupuesta puedes hablar directamente con una persona a través de WhatsApp en el número **652 67 93 91** (+34 652 679 391) para resolver dudas sobre el Plan Pro o solicitar asistencia personalizada en España.
+Sí. En Presupuesta puedes hablar directamente con una persona a través de WhatsApp en el número **652 67 93 91** (+34 652 679 391) para resolver dudas sobre los planes o solicitar asistencia personalizada en España.
 
