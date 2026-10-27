@@ -1,13 +1,13 @@
 /* ==========================================================================
    Presupuesta · web pública
    Mismo sistema de diseño que la app (panel.presupuesta.net):
-   crema cálido, naranja obra #C2410C. Títulos en Instrument Serif y texto en Figtree.
+   crema cálido, naranja obra #C2410C. Títulos en Inter Tight y texto en Figtree.
    ========================================================================== */
 
 @font-face {
-  font-family: "Instrument Serif";
-  src: url("fuentes/instrument-serif.woff2") format("woff2");
-  font-weight: 400; font-display: swap;
+  font-family: "Inter Tight";
+  src: url("fuentes/inter-tight.woff2") format("woff2");
+  font-weight: 400 700; font-display: swap;
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
@@ -39,7 +39,7 @@
   --pend-bg: #fef3c7; --pend-ink: #92400e;
   --acep-bg: #dbeafe; --acep-ink: #1d4ed8;
 
-  --font-titulos: "Instrument Serif", ui-serif, Georgia, serif;
+  --font-titulos: "Inter Tight", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-display: "Figtree", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-sans: "Figtree", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --radius: 24px;
@@ -93,7 +93,7 @@ img, svg { display: block; max-width: 100%; }
 a { color: inherit; }
 button { font: inherit; cursor: pointer; }
 h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.12; letter-spacing: -0.015em; font-weight: 650; }
-h1, h2 { font-family: var(--font-titulos); font-weight: 400; letter-spacing: -0.01em; line-height: 1.02; }
+h1, h2 { font-family: var(--font-titulos); font-weight: 600; letter-spacing: -0.035em; line-height: 1.04; }
 p { text-wrap: pretty; }
 :focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 6px; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
@@ -113,7 +113,7 @@ p { text-wrap: pretty; }
   font-size: 14px; font-weight: 500; font-variant-numeric: tabular-nums;
   color: var(--muted); margin-bottom: 14px;
 }
-.titulo-seccion { font-size: clamp(38px, 5.4vw, 64px); max-width: 15ch; }
+.titulo-seccion { font-size: clamp(32px, 4.6vw, 54px); max-width: 16ch; }
 .titulo-seccion em { font-style: normal; color: var(--muted); }
 .entradilla { font-size: clamp(17px, 1.8vw, 19px); color: var(--muted); max-width: 36em; }
 .entradilla a { color: var(--ink); text-underline-offset: 3px; }
@@ -199,7 +199,7 @@ p { text-wrap: pretty; }
 /* ---------- Hero ---------- */
 .hero { padding: clamp(48px, 8vw, 104px) 0 clamp(64px, 9vw, 112px); }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); gap: 56px; align-items: center; position: relative; }
-.hero h1 { font-size: clamp(48px, 7.4vw, 92px); margin-bottom: 26px; }
+.hero h1 { font-size: clamp(40px, 6.2vw, 76px); margin-bottom: 24px; }
 .hero h1 span { color: var(--brand); display: block; }
 .hero .entradilla { font-size: clamp(19px, 2.1vw, 22px); margin-bottom: 32px; color: var(--muted); }
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
@@ -264,13 +264,28 @@ p { text-wrap: pretty; }
 .total-mini small { display: block; color: var(--dark-ink); font-size: 12.5px; }
 .total-mini b { font-family: var(--font-display); font-size: 24px; font-variant-numeric: tabular-nums; }
 
-.pdf-listo { flex: 1; display: flex; flex-direction: column; gap: 12px; }
-.pdf-hoja { background: #fff; color: #1f1d1a; border-radius: 14px; box-shadow: var(--shadow); padding: 16px; font-size: 10.5px; line-height: 1.45; flex: 1; border: 1px solid var(--line); }
-.pdf-hoja-cab { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; border-bottom: 2px solid var(--brand); padding-bottom: 10px; margin-bottom: 10px; }
-.pdf-logo { width: 34px; height: 34px; border-radius: 9px; background: #1d4ed8; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 14px; }
-.pdf-hoja-cab strong { font-size: 13px; display: block; }
-.pdf-hoja .lin { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid #f1ede6; }
-.pdf-hoja .tot { display: flex; justify-content: space-between; font-weight: 800; font-size: 13px; padding-top: 8px; }
+.pdf-listo { flex: 1; display: flex; flex-direction: column; gap: 10px; }
+.pdf-hoja { background: #fff; color: #1f1d1a; border-radius: 14px; box-shadow: var(--shadow); padding: 14px 14px 12px; font-size: 11px; line-height: 1.4; border: 1px solid var(--line); display: flex; flex-direction: column; gap: 8px; }
+.pdf-hoja small { display: block; color: #6b655d; font-size: 10px; }
+.pdf-hoja-cab { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; border-bottom: 2px solid var(--brand); padding-bottom: 9px; }
+.pdf-emisor { display: flex; gap: 8px; align-items: center; }
+.pdf-logo { width: 30px; height: 30px; border-radius: 8px; background: #1d4ed8; color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0; }
+.pdf-hoja-cab strong { font-size: 12.5px; display: block; }
+.pdf-num { text-align: right; }
+.pdf-num strong { color: var(--brand); }
+.pdf-cliente { background: #faf8f4; border-radius: 8px; padding: 6px 9px; }
+.pdf-cliente b { font-weight: 600; }
+.pdf-hoja .lin { display: flex; justify-content: space-between; padding: 3px 0; border-bottom: 1px solid #f1ede6; font-variant-numeric: tabular-nums; }
+.pdf-hoja .lin.cab { color: #6b655d; font-size: 9.5px; text-transform: uppercase; letter-spacing: .05em; border-bottom-color: #e7e1d8; }
+.pdf-totales { display: flex; flex-direction: column; gap: 2px; align-self: flex-end; width: 64%; font-variant-numeric: tabular-nums; }
+.pdf-totales div { display: flex; justify-content: space-between; color: #6b655d; }
+.pdf-totales .tot { color: #1f1d1a; font-weight: 800; font-size: 13.5px; border-top: 1.5px solid #1f1d1a; padding-top: 4px; margin-top: 2px; }
+.pdf-pago { font-size: 10.5px; color: #3d3a35; }
+.pdf-firma { display: grid; grid-template-columns: 1.6fr 1fr; gap: 12px; margin-top: 10px; }
+.pdf-firma span { border-top: 1px solid #1f1d1a; padding-top: 3px; font-size: 9.5px; color: #6b655d; }
+.pdf-enviado { display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--ok-ink); background: var(--ok-bg); border-radius: 999px; padding: 7px 12px; align-self: center; opacity: 0; transform: translateY(6px); transition: opacity .4s, transform .4s; }
+.pdf-enviado.visto { opacity: 1; transform: none; }
+.pdf-enviado svg { width: 16px; height: 16px; }
 .acciones-pdf { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .acciones-pdf span { display: flex; align-items: center; justify-content: center; gap: 6px; height: 44px; border-radius: 12px; font-weight: 700; font-size: 14px; }
 .acciones-pdf .wa { background: #16a34a; color: #fff; }
@@ -379,7 +394,7 @@ p { text-wrap: pretty; }
   width: 220px; height: 220px; border-radius: 20px; object-fit: cover; background: var(--line-soft);
   display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 600; font-size: 80px; color: var(--muted);
 }
-.cita { font-family: var(--font-titulos); font-size: clamp(30px, 3.6vw, 44px); line-height: 1.12; font-weight: 400; letter-spacing: -.01em; margin-bottom: 18px; }
+.cita { font-family: var(--font-titulos); font-size: clamp(24px, 3vw, 34px); line-height: 1.2; font-weight: 600; letter-spacing: -.025em; margin-bottom: 18px; }
 .firma { color: var(--muted); }
 .firma strong { color: var(--ink); }
 .respaldo { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px; }
@@ -397,7 +412,7 @@ p { text-wrap: pretty; }
 
 /* ---------- Llamada final ---------- */
 .final { padding: clamp(80px, 12vw, 150px) 0; }
-.final h2 { font-size: clamp(44px, 7vw, 88px); margin-bottom: 22px; max-width: 14ch; }
+.final h2 { font-size: clamp(38px, 6vw, 72px); margin-bottom: 22px; max-width: 14ch; }
 .final h2 span { color: var(--brand); }
 .final .entradilla { margin-bottom: 32px; }
 
@@ -409,7 +424,7 @@ p { text-wrap: pretty; }
 }
 .be-texto { display: flex; flex-direction: column; gap: 8px; max-width: 40em; }
 .be-texto small { font-size: 14px; color: var(--dark-ink); }
-.be-texto strong { font-family: var(--font-titulos); font-weight: 400; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.08; }
+.be-texto strong { font-family: var(--font-titulos); font-weight: 600; letter-spacing: -.025em; font-size: clamp(24px, 3vw, 34px); line-height: 1.12; }
 .be-texto span { color: var(--dark-ink); }
 .be-cta { display: inline-flex; align-items: center; gap: 8px; height: 50px; padding: 0 24px; border-radius: 999px; background: #fff; color: var(--dark); font-weight: 600; white-space: nowrap; transition: transform .15s; }
 .banner-estudios a:hover .be-cta { transform: translateX(3px); }
@@ -440,17 +455,19 @@ p { text-wrap: pretty; }
 .barra-movil .btn { height: 46px; padding: 0 18px; font-size: 16px; }
 @media (max-width: 760px) { .barra-movil { display: flex; } body { padding-bottom: 76px; } }
 
-/* ---------- Aviso de cookies ---------- */
+/* ---------- Aviso de cookies (discreto) ---------- */
 .aviso-cookies {
-  position: fixed; left: 12px; bottom: 12px; z-index: 70; max-width: 420px;
-  background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 18px; box-shadow: var(--shadow-lg); font-size: 15px;
+  position: fixed; left: 16px; bottom: 16px; z-index: 70; max-width: 340px;
+  display: flex; align-items: center; gap: 12px 16px; flex-wrap: wrap;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 12px 14px;
+  box-shadow: 0 8px 24px rgba(31, 29, 26, .10); font-size: 13.5px; line-height: 1.45;
 }
 .aviso-cookies[hidden] { display: none; }
-.aviso-cookies p { color: var(--muted); margin-bottom: 12px; }
-.aviso-cookies p strong { color: var(--ink); }
-.aviso-cookies div { display: flex; gap: 8px; }
-.aviso-cookies .btn { height: 42px; padding: 0 16px; font-size: 15px; flex: 1; }
-@media (max-width: 760px) { .aviso-cookies { right: 12px; max-width: none; bottom: 12px; } }
+.aviso-cookies p { color: var(--muted); flex: 1 1 180px; }
+.aviso-cookies a { color: var(--ink); }
+.aviso-cookies div { display: flex; gap: 6px; }
+.aviso-cookies .btn { height: 34px; padding: 0 14px; font-size: 13.5px; }
+@media (max-width: 760px) { .aviso-cookies { left: 10px; right: 10px; max-width: none; bottom: 86px; } }
 
 /* ==========================================================================
    Páginas de ejemplo

@@ -169,8 +169,8 @@ def pie(base: str) -> str:
   <a href="{REGISTRO}" class="btn btn-principal">Probar</a>
 </div>
 <div id="aviso-cookies" class="aviso-cookies" role="dialog" aria-label="Cookies" hidden>
-  <p><strong>¿Nos dejas medir cómo se usa la web?</strong> Usamos Microsoft Clarity para ver qué partes se entienden y cuáles no. Sin publicidad. <a href="{base}politica-privacidad.html#cookies">Más información</a>.</p>
-  <div><button class="btn btn-secundario" type="button" data-cookies="no">No, gracias</button><button class="btn btn-principal" type="button" data-cookies="si">Aceptar</button></div>
+  <p>Usamos cookies de análisis para mejorar la web. <a href="{base}politica-privacidad.html#cookies">Más información</a></p>
+  <div><button class="btn btn-secundario" type="button" data-cookies="no">Rechazar</button><button class="btn btn-principal" type="button" data-cookies="si">Aceptar</button></div>
 </div>
 <script src="{base}assets/site.js?v={VERSION}" defer></script>"""
 
@@ -208,7 +208,7 @@ def cabeza(titulo, descripcion, ruta, base, jsonld=None, tipo="website", indexar
 <link rel="apple-touch-icon" href="{base}logo.png">
 <link rel="manifest" href="{base}site.webmanifest">
 <link rel="alternate" type="text/plain" title="Información para asistentes de IA" href="{WEB}/llms.txt">
-<link rel="preload" href="{base}assets/fuentes/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{base}assets/fuentes/inter-tight.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{base}assets/fuentes/figtree.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{base}assets/site.css?v={VERSION}">
 {ld}

@@ -19,7 +19,7 @@
           <div class="movil-isla"></div>
           <div class="movil-pantalla">
             <div class="movil-barra"><span>9:41</span><span>5G ▮▮▮</span></div>
-            <div class="movil-cabecera"><div><strong>Nuevo presupuesto</strong><small>Reforma de baño · Bilbao</small></div><span class="chip chip-pend">Borrador</span></div>
+            <div class="movil-cabecera"><div><strong>Nuevo presupuesto</strong><small>Reforma de baño · Bilbao</small></div><span class="chip chip-pend" id="demo-estado">Borrador</span></div>
             <div class="movil-cuerpo">
 
               <div class="demo-paso activo">
@@ -57,15 +57,24 @@
               <div class="demo-paso">
                 <div class="pdf-listo">
                   <div class="pdf-hoja">
-                    <div class="pdf-hoja-cab"><div style="display:flex;gap:8px;align-items:center"><span class="pdf-logo">RB</span><div><strong>Reformas Ejemplo</strong>NIF B00000000</div></div><div style="text-align:right"><strong style="color:#c2410c">2026-0042</strong>Válido 30 días</div></div>
+                    <div class="pdf-hoja-cab">
+                      <div class="pdf-emisor"><span class="pdf-logo">RB</span><div><strong>Reformas Ejemplo</strong><small>NIF B00000000 · Bilbao</small></div></div>
+                      <div class="pdf-num"><strong>2026-0042</strong><small>Válido 30 días</small></div>
+                    </div>
+                    <div class="pdf-cliente"><small>Cliente</small><b>Ane Etxeberria · Reforma de baño</b></div>
+                    <div class="lin cab"><span>Concepto</span><span>Importe</span></div>
                     <div class="lin"><span>1. Demoliciones</span><span>420,00 €</span></div>
                     <div class="lin"><span>2. Albañilería</span><span>1.077,00 €</span></div>
                     <div class="lin"><span>3. Fontanería</span><span>540,00 €</span></div>
-                    <div class="lin"><span>Base imponible</span><span>2.037,00 €</span></div>
-                    <div class="lin"><span>IVA 10 %</span><span>203,70 €</span></div>
-                    <div class="tot"><span>TOTAL</span><span>2.240,70 €</span></div>
-                    <div style="margin-top:10px;color:#6b655d">Señal 50 %: 1.120,35 € · IBAN ES00 0000 …</div>
+                    <div class="pdf-totales">
+                      <div><span>Base imponible</span><span>2.037,00 €</span></div>
+                      <div><span>IVA 10 %</span><span>203,70 €</span></div>
+                      <div class="tot"><span>Total</span><span>2.240,70 €</span></div>
+                    </div>
+                    <div class="pdf-pago"><small>Forma de pago</small>50 % al aceptar (1.120,35 €) y 50 % al terminar, por transferencia.</div>
+                    <div class="pdf-firma"><span>Conforme del cliente</span><span>Fecha</span></div>
                   </div>
+                  <div class="pdf-enviado">{{I_CHECK}} Enviado a Ane por WhatsApp</div>
                   <div class="acciones-pdf"><span class="dl">{{I_BAJAR}} PDF</span><span class="wa">{{I_MENSAJE}} WhatsApp</span></div>
                 </div>
               </div>

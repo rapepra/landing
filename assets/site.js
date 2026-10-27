@@ -100,7 +100,7 @@
     "3. Repasas las partidas y el total",
     "4. Descargas el PDF y se lo mandas por WhatsApp"
   ];
-  var DURACION = [6200, 3400, 5200, 4200];
+  var DURACION = [6200, 3400, 5200, 5600];
   var actual = -1, temporizadores = [];
 
   function limpiar() { temporizadores.forEach(clearTimeout); temporizadores = []; }
@@ -149,6 +149,17 @@
           total.textContent = euros(j === partidas.length - 1 ? objetivo : suma);
         }, reducido ? 0 : 300 + j * 650);
       });
+    }
+    // Último paso: «Enviado» al poco de mostrar el PDF
+    var estado = document.getElementById("demo-estado");
+    var enviado = demo.querySelector(".pdf-enviado");
+    if (estado) { estado.textContent = "Borrador"; estado.className = "chip chip-pend"; }
+    if (enviado) enviado.classList.remove("visto");
+    if (i === 3) {
+      luego(function () {
+        if (estado) { estado.textContent = "Enviado"; estado.className = "chip chip-ok"; }
+        if (enviado) enviado.classList.add("visto");
+      }, reducido ? 0 : 1400);
     }
     if (auto && !reducido) luego(function () { mostrar((i + 1) % pasos.length, true); }, DURACION[i]);
   }

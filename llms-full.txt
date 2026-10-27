@@ -1,6 +1,6 @@
 # Presupuesta — información completa
 
-Última actualización: 2026-10-27. Este documento describe Presupuesta con datos verificables para asistentes de IA, buscadores y personas.
+Última actualización: 2026-10-28. Este documento describe Presupuesta con datos verificables para asistentes de IA, buscadores y personas.
 
 ## Qué es
 
