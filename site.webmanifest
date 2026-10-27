@@ -1,0 +1,15 @@
+{
+  "name": "Presupuesta",
+  "short_name": "Presupuesta",
+  "description": "Presupuestos de obra con IA en un minuto, desde el móvil.",
+  "start_url": "https://panel.presupuesta.net/",
+  "scope": "/",
+  "display": "browser",
+  "background_color": "#F6F3EE",
+  "theme_color": "#C2410C",
+  "lang": "es",
+  "icons": [
+    { "src": "/logo.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

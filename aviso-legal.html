@@ -1,282 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "x2haye6mzc");
-  </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aviso legal | Presupuesta</title>
+<meta name="description" content="Datos identificativos del titular de presupuesta.net y condiciones de uso de la web.">
+<link rel="canonical" href="https://presupuesta.net/aviso-legal.html">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="theme-color" content="#C2410C">
+<meta name="author" content="Presupuesta">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Presupuesta">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Aviso legal | Presupuesta">
+<meta property="og:description" content="Datos identificativos del titular de presupuesta.net y condiciones de uso de la web.">
+<meta property="og:url" content="https://presupuesta.net/aviso-legal.html">
+<meta property="og:image" content="https://presupuesta.net/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Presupuesta: presupuestos de obra con IA">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/logo.png" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="/logo.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="text/plain" title="Información para asistentes de IA" href="https://presupuesta.net/llms.txt">
+<link rel="preload" href="/assets/fuentes/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fuentes/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css?v=20261027">
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, follow">
-  <meta name="description" content="Aviso Legal e información general de condiciones de uso para la landing page comercial de Presupuesta en España.">
-  <link rel="icon" type="image/png" href="/logo.png">
-  <title>Aviso Legal | Presupuesta</title>
-  
-  <!-- Google Fonts: Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --primary-dark: #1B3A6B;
-      --primary-medium: #2E6DA4;
-      --accent-light: #4A90D9;
-      --white: #FFFFFF;
-      --gray-text: #4A5568;
-      --gray-light: #718096;
-      --gray-bg: #F7FAFC;
-      --gray-border: #E2E8F0;
-      --cta-orange: #F6890A;
-      --footer-bg: #0F1F3D;
-      --font-family: 'Inter', sans-serif;
-      --border-radius-md: 12px;
-      --border-radius-lg: 20px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: var(--font-family);
-      background-color: var(--gray-bg);
-      color: var(--gray-text);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* Navbar */
-    header {
-      background-color: var(--primary-dark);
-      width: 100%;
-      height: 80px;
-      display: flex;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .container {
-      width: 100%;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .navbar-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
-
-    .logo-icon {
-      fill: var(--white);
-      width: 32px;
-      height: 32px;
-    }
-
-    .logo-text {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--white);
-      letter-spacing: -0.5px;
-    }
-
-    .btn-back {
-      display: inline-flex;
-      align-items: center;
-      padding: 10px 20px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      border-radius: var(--border-radius-md);
-      background-color: rgba(255, 255, 255, 0.1);
-      color: var(--white);
-      text-decoration: none;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      transition: all 0.3s ease;
-    }
-
-    .btn-back:hover {
-      background-color: var(--white);
-      color: var(--primary-dark);
-    }
-
-    /* Contenido Legal */
-    main {
-      padding: 60px 0;
-    }
-
-    .legal-card {
-      background-color: var(--white);
-      border-radius: var(--border-radius-lg);
-      padding: 50px 40px;
-      box-shadow: 0 10px 30px -10px rgba(27, 58, 107, 0.08);
-      border: 1px solid var(--gray-border);
-    }
-
-    h1 {
-      font-size: 2.25rem;
-      color: var(--primary-dark);
-      font-weight: 800;
-      margin-bottom: 12px;
-      line-height: 1.2;
-    }
-
-    .last-updated {
-      font-size: 0.9rem;
-      color: var(--gray-text);
-      margin-bottom: 40px;
-      border-bottom: 1px solid var(--gray-border);
-      padding-bottom: 15px;
-    }
-
-    h2 {
-      font-size: 1.35rem;
-      color: var(--primary-dark);
-      margin-top: 35px;
-      margin-bottom: 15px;
-      font-weight: 700;
-    }
-
-    p {
-      margin-bottom: 20px;
-      font-size: 1rem;
-    }
-
-    ul {
-      list-style-type: disc;
-      padding-left: 24px;
-      margin-bottom: 20px;
-    }
-
-    li {
-      margin-bottom: 8px;
-    }
-
-    /* Footer */
-    footer {
-      background-color: var(--footer-bg);
-      color: #9EC6EE;
-      padding: 40px 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      font-size: 0.9rem;
-      text-align: center;
-    }
-
-    footer a {
-      color: #A0AEC0;
-      text-decoration: none;
-      margin: 0 12px;
-    }
-
-    footer a:hover {
-      color: var(--white);
-    }
-
-    .footer-copyright {
-      margin-top: 15px;
-      color: #A0AEC0;
-      font-size: 0.8rem;
-    }
-
-    @media (max-width: 768px) {
-      .legal-card {
-        padding: 30px 20px;
-      }
-      h1 {
-        font-size: 1.75rem;
-      }
-    }
-  </style>
 </head>
 <body>
-
-  <!-- Navbar -->
-  <header>
-    <div class="navbar-container">
-      <a href="index.html" class="logo-container" aria-label="Volver al inicio">
-        <img src="logo.webp" class="logo-icon" alt="Logo de Presupuesta">
-        <span class="logo-text">Presupuesta</span>
-      </a>
-      <a href="index.html" class="btn-back">← Volver</a>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<div class="franja">Los 20 primeros pagan <strong>14,90 € al mes para siempre</strong> con el código FUNDADOR · <a href="https://panel.presupuesta.net/registro">Empezar gratis →</a></div>
+<header class="cabecera">
+  <div class="contenedor cabecera-dentro">
+    <a href="/" class="marca" aria-label="Presupuesta, ir al inicio"><svg viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" rx="116" fill="#C2410C"/><path transform="translate(-20 -12)" fill="#FFFFFF" fill-rule="evenodd" d="M 150 232 A 126 126 0 1 1 226 347.6 L 226 392 Q 226 404 214 408 L 150 430 Z M 276 178 A 54 54 0 1 0 276.01 178 Z"/></svg><span>Presupuesta</span></a>
+    <ul id="menu" class="menu">
+      <li><a href="/#como-funciona">Cómo funciona</a></li>
+      <li><a href="/#funciones">Funciones</a></li>
+      <li><a href="/ejemplos/">Ejemplos</a></li>
+      <li><a href="/#precios">Precios</a></li>
+      <li><a href="/#preguntas">Preguntas</a></li>
+    </ul>
+    <div class="acciones-cabecera">
+      <a href="https://panel.presupuesta.net/entrar" class="enlace-entrar">Entrar</a>
+      <a href="https://panel.presupuesta.net/registro" class="btn btn-principal">Probar gratis</a>
+      <button class="boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
     </div>
-  </header>
+  </div>
+</header>
+<main id="contenido" class="legal">
+  <div class="contenedor contenedor-estrecho">
+    <h1>Aviso legal</h1>
+    <p class="fecha">Última actualización: 27/10/2026</p>
+    
+<h2>1. Titular de la web</h2>
+<p>En cumplimiento de la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), estos son los datos del titular de presupuesta.net y de la aplicación panel.presupuesta.net:</p>
+<ul>
+  <li><strong>Titular:</strong> <span class="pendiente">PENDIENTE: nombre y apellidos o razón social</span></li>
+  <li><strong>NIF:</strong> <span class="pendiente">PENDIENTE: NIF/CIF</span></li>
+  <li><strong>Domicilio:</strong> <span class="pendiente">PENDIENTE: dirección completa, 48260 Ermua (Bizkaia)</span></li>
+  <li><strong>Email:</strong> <a href="mailto:asistente@presupuesta.net">asistente@presupuesta.net</a></li>
+  <li><strong>Teléfono y WhatsApp:</strong> +34 652 67 93 91</li>
+</ul>
+<p>Presupuesta es una marca comercial vinculada a Presupuesta Estudios (estudios.presupuesta.net).</p>
 
-  <!-- Contenido -->
-  <main class="container">
-    <article class="legal-card">
-      <h1>Aviso Legal</h1>
-      <div class="last-updated">Última actualización: 31 de mayo de 2026</div>
+<h2>2. Objeto</h2>
+<p>Esta web informa sobre Presupuesta, una aplicación para hacer presupuestos de obra con inteligencia artificial, y permite acceder a su registro. El uso de la aplicación se rige además por las <a href="condiciones.html">condiciones de uso</a>.</p>
 
-      <p>En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSI-CE), se exponen a continuación los datos identificativos del titular de esta página web.</p>
+<h2>3. Uso de la web</h2>
+<p>Te comprometes a usar la web de forma lícita y a no dañar sus sistemas ni los de terceros. Los contenidos (textos, diseño, código, logotipos y ejemplos) son de Presupuesta o de sus autores y no se pueden reproducir con fines comerciales sin permiso.</p>
 
-      <h2>1. Datos Identificativos</h2>
-      <ul>
-        <li><strong>Denominación Social</strong>: Presupuesta Inc.</li>
-        <li><strong>Dirección de Contacto</strong>: Madrid, España.</li>
-        <li><strong>Contacto electrónico</strong>: info@presupuesta.net</li>
-      </ul>
+<h2>4. Ejemplos y precios orientativos</h2>
+<p>Los presupuestos de ejemplo usan empresas, clientes, NIF e IBAN ficticios. Los precios que propone la aplicación son estimaciones de referencia: el profesional debe revisarlos y es responsable del presupuesto que envía a su cliente.</p>
 
-      <h2>2. Objeto de la Página Web</h2>
-      <p>La presente landing page tiene un carácter exclusivamente informativo y de promoción comercial de la marca <strong>Presupuesta</strong>, un software en formato SaaS (software como servicio) diseñado para simplificar y generar presupuestos de construcción de manera automática en segundos. Los usuarios tienen a su disposición un formulario web para solicitar una demostración explicativa sin compromiso.</p>
+<h2>5. Responsabilidad</h2>
+<p>Ponemos los medios razonables para que la web funcione y su información sea correcta, pero no podemos garantizar la ausencia total de errores o interrupciones. No nos hacemos responsables de los contenidos de webs de terceros enlazadas.</p>
 
-      <h2>3. Condiciones Generales de Uso</h2>
-      <p>El acceso y/o uso de este portal le atribuye la condición de USUARIO, que acepta, desde dicho acceso y/o uso, las Condiciones Generales de Uso aquí reflejadas. Las citadas Condiciones serán de aplicación independientemente de las Condiciones Generales de Contratación que en su caso resulten de obligado cumplimiento.</p>
-      <p>El usuario se compromete a hacer un uso adecuado de los contenidos y servicios que Presupuesta ofrece a través de su portal y con carácter enunciativo pero no limitativo, a no emplearlos para:</p>
-      <ul>
-        <li>Incurrir en actividades ilícitas, ilegales o contrarias a la buena fe y al orden público.</li>
-        <li>Provocar daños en los sistemas físicos y lógicos de Presupuesta, de sus proveedores o de terceras personas.</li>
-        <li>Introducir o difundir en la red virus informáticos o cualesquiera otros sistemas físicos o lógicos que sean susceptibles de provocar los daños anteriormente mencionados.</li>
-        <li>Intentar acceder y, en su caso, utilizar las cuentas de correo electrónico o de contacto de otros usuarios.</li>
-      </ul>
+<h2>6. Legislación aplicable</h2>
+<p>Se aplica la legislación española. Para cualquier conflicto, las partes se someten a los juzgados y tribunales que correspondan según la ley; si eres consumidor, los de tu domicilio.</p>
 
-      <h2>4. Propiedad Intelectual e Industrial</h2>
-      <p>Todos los elementos que forman el sitio web, así como la estructura, diseño, código fuente, logotipos, marcas, ilustraciones SVG y demás signos distintivos que aparecen en la misma, son titularidad exclusiva de Presupuesta o de sus legítimos colaboradores, estando protegidos por los correspondientes derechos de propiedad intelectual e industrial.</p>
-      <p>Queda expresamente prohibida la reproducción, distribución, comunicación pública y transformación de la totalidad o parte de los contenidos de esta página web con fines comerciales, en cualquier soporte y por cualquier medio técnico, sin la autorización expresa y por escrito de Presupuesta.</p>
-
-      <h2>5. Exclusión de Responsabilidad</h2>
-      <p>Presupuesta no se hace responsable, en ningún caso, de los daños y perjuicios de cualquier naturaleza que pudieran ocasionar, a título enunciativo: errores u omisiones en los contenidos técnicos, falta de disponibilidad del portal o la transmisión de virus o programas maliciosos en los contenidos, a pesar de haber adoptado todas las medidas tecnológicas necesarias para evitarlo.</p>
-      <p>Dado que Presupuesta utiliza inteligencia artificial para realizar estimaciones de presupuestos en su demostración, el usuario acepta que los precios de materiales y mano de obra generados por el software son **precios estimativos de referencia** y deben ser revisados y validados manualmente por el constructor antes de emitir cualquier propuesta contractual definitiva a su cliente final.</p>
-
-      <h2>6. Legislación Aplicable y Jurisdicción</h2>
-      <p>La relación entre Presupuesta y el USUARIO se regirá por la normativa española vigente y cualquier controversia se someterá a los Juzgados y tribunales de la ciudad de Madrid, España.</p>
-    </article>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>
-        <a href="index.html">Inicio</a> | 
-        <a href="aviso-legal.html">Aviso Legal</a> | 
-        <a href="politica-privacidad.html">Política de Privacidad</a>
-      </p>
-      <div class="footer-copyright">
-        &copy; 2026 Presupuesta. Todos los derechos reservados.
+  </div>
+</main>
+<footer class="pie">
+  <div class="contenedor">
+    <div class="pie-grid">
+      <div>
+        <a href="/" class="marca"><svg viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" rx="116" fill="#C2410C"/><path transform="translate(-20 -12)" fill="#FFFFFF" fill-rule="evenodd" d="M 150 232 A 126 126 0 1 1 226 347.6 L 226 392 Q 226 404 214 408 L 150 430 Z M 276 178 A 54 54 0 1 0 276.01 178 Z"/></svg><span>Presupuesta</span></a>
+        <p>Presupuestos de obra con IA para autónomos y pymes de reformas e instalaciones. Hecho en Ermua (Bizkaia) por <a href="https://estudios.presupuesta.net">Presupuesta Estudios</a>.</p>
+      </div>
+      <div>
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="/#como-funciona">Cómo funciona</a></li>
+          <li><a href="/#funciones">Funciones</a></li>
+          <li><a href="/#precios">Precios</a></li>
+          <li><a href="/#preguntas">Preguntas frecuentes</a></li>
+          <li><a href="https://panel.presupuesta.net/registro">Crear cuenta gratis</a></li>
+          <li><a href="https://panel.presupuesta.net/entrar">Entrar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Ejemplos</h4>
+        <ul><li><a href="/ejemplos/reforma-integral-bano.html">Reforma de baño</a></li><li><a href="/ejemplos/presupuesto-pintura-piso-90m2.html">Pintura de un piso</a></li><li><a href="/ejemplos/partidas-reforma-cocina.html">Reforma de cocina</a></li><li><a href="/ejemplos/presupuesto-albanileria-ejemplo.html">Albañilería</a></li><li><a href="/ejemplos/presupuesto-fontaneria-calculo.html">Fontanería</a></li><li><a href="/ejemplos/nota-de-voz-a-presupuesto.html">De nota de voz a presupuesto</a></li><li><a href="/ejemplos/">Ver todos los ejemplos</a></li></ul>
+      </div>
+      <div>
+        <h4>Contacto y legal</h4>
+        <ul>
+          <li><a href="https://wa.me/34652679391">WhatsApp 652 67 93 91</a></li>
+          <li><a href="mailto:asistente@presupuesta.net">asistente@presupuesta.net</a></li>
+          <li><a href="/#quien">Quién hay detrás</a></li>
+          <li><a href="/aviso-legal.html">Aviso legal</a></li>
+          <li><a href="/politica-privacidad.html">Privacidad y cookies</a></li>
+          <li><a href="/condiciones.html">Condiciones de uso</a></li>
+          <li><a href="#" data-abrir-cookies>Configurar cookies</a></li>
+        </ul>
       </div>
     </div>
-  </footer>
-
+    <div class="pie-legal">
+      <span>© 2026 Presupuesta · Ermua, Bizkaia (España)</span>
+      <span><a href="/llms.txt">llms.txt</a> · <a href="/sitemap.xml">Mapa del sitio</a></span>
+    </div>
+  </div>
+</footer>
+<div class="barra-movil" role="complementary" aria-label="Probar Presupuesta">
+  <div><strong>14 días gratis, sin tarjeta</strong><small>Luego 24,90 € + IVA/mes · sin permanencia</small></div>
+  <a href="https://panel.presupuesta.net/registro" class="btn btn-principal">Probar</a>
+</div>
+<div id="aviso-cookies" class="aviso-cookies" role="dialog" aria-label="Cookies" hidden>
+  <p><strong>¿Nos dejas medir cómo se usa la web?</strong> Usamos Microsoft Clarity para ver qué partes se entienden y cuáles no. Sin publicidad. <a href="/politica-privacidad.html#cookies">Más información</a>.</p>
+  <div><button class="btn btn-secundario" type="button" data-cookies="no">No, gracias</button><button class="btn btn-principal" type="button" data-cookies="si">Aceptar</button></div>
+</div>
+<script src="/assets/site.js?v=20261027" defer></script>
 </body>
 </html>

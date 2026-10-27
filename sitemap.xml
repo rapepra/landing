@@ -1,101 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-  <!-- Página principal -->
-  <url>
-    <loc>https://presupuesta.net/</loc>
-    <lastmod>2026-10-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- 10 Páginas de Ejemplos Reales / Casos de Uso (SEO / GEO) -->
-  <url>
-    <loc>https://presupuesta.net/ejemplos/reforma-integral-bano.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://presupuesta.net/ejemplos/presupuesto-pintura-piso-90m2.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://presupuesta.net/ejemplos/partidas-reforma-cocina.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://presupuesta.net/ejemplos/presupuesto-albanileria-ejemplo.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://presupuesta.net/ejemplos/presupuesto-fontaneria-calculo.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://presupuesta.net/ejemplos/nota-de-voz-a-presupuesto.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://presupuesta.net/ejemplos/presupuesto-reforma-local-comercial.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://presupuesta.net/ejemplos/errores-presupuesto-reformas.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://presupuesta.net/ejemplos/plantilla-presupuesto-obra-autonomos.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://presupuesta.net/ejemplos/enviar-presupuesto-confianza.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Páginas legales -->
-  <url>
-    <loc>https://presupuesta.net/politica-privacidad.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-
-  <url>
-    <loc>https://presupuesta.net/aviso-legal.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://presupuesta.net/</loc><lastmod>2026-10-27</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://presupuesta.net/ejemplos/</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://presupuesta.net/ejemplos/reforma-integral-bano.html</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://presupuesta.net/ejemplos/presupuesto-pintura-piso-90m2.html</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://presupuesta.net/ejemplos/partidas-reforma-cocina.html</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://presupuesta.net/ejemplos/presupuesto-albanileria-ejemplo.html</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://presupuesta.net/ejemplos/presupuesto-fontaneria-calculo.html</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://presupuesta.net/ejemplos/nota-de-voz-a-presupuesto.html</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://presupuesta.net/ejemplos/presupuesto-reforma-local-comercial.html</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://presupuesta.net/ejemplos/errores-presupuesto-reformas.html</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://presupuesta.net/ejemplos/plantilla-presupuesto-obra-autonomos.html</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://presupuesta.net/ejemplos/enviar-presupuesto-confianza.html</loc><lastmod>2026-10-27</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://presupuesta.net/aviso-legal.html</loc><lastmod>2026-10-27</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://presupuesta.net/politica-privacidad.html</loc><lastmod>2026-10-27</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://presupuesta.net/condiciones.html</loc><lastmod>2026-10-27</lastmod><changefreq>yearly</changefreq><priority>0.2</priority></url>
 </urlset>
