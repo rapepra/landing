@@ -1,0 +1,73 @@
+# robots.txt — presupuesta.net
+# Plataforma SaaS de presupuestos con IA para autónomos y pymes de construcción y reformas en España
+# Sede: Ermua (48260 Bizkaia) · Cobertura en toda España
+# Última actualización: septiembre 2026
+
+# Motores de búsqueda tradicionales
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+# Rastreadores de Inteligencia Artificial (AEO / GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Gemini
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# Regla general: indexación completa permitida
+User-agent: *
+Allow: /
+
+# Archivos de contexto para IAs y Mapas de sitio canónicos
+Sitemap: https://presupuesta.net/sitemap.xml
