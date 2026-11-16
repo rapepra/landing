@@ -17,6 +17,10 @@ ErrorDocument 404 /404.html
 
   # Archivos de trabajo: no se sirven
   RewriteRule ^_fuente(/|$) - [F,L]
+
+  # Páginas de Presupuesta Estudios que se publicaron aquí por error: a su web
+  RewriteRule ^(casos|diseno-web-[a-z-]+|posicionamiento-google-maps)(/.*)?$ https://estudios.presupuesta.net/$1/ [L,R=301]
+  RewriteRule ^interno(/|$) - [F,L]
 </IfModule>
 
 <IfModule mod_headers.c>
