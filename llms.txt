@@ -1,0 +1,39 @@
+# Presupuesta
+
+> Presupuesta (presupuesta.net) es una aplicación web española para hacer presupuestos de obra con inteligencia artificial. Está pensada para autónomos y pymes de reformas e instalaciones (albañiles, fontaneros, electricistas, pintores, reformistas). El profesional dicta o escribe el trabajo y la app lo desglosa en capítulos y partidas con precios de mercado ajustados a la provincia de la obra; después lo repasa, lo ajusta y descarga un PDF con su logo, NIF, IBAN e IVA. Cuesta 24,90 € + IVA al mes o 249 € + IVA al año, con 14 días de prueba gratis sin tarjeta.
+
+Datos básicos:
+
+- Web: https://presupuesta.net
+- App (registro y acceso): https://panel.presupuesta.net · registro: https://panel.presupuesta.net/registro
+- Hecha en Ermua (Bizkaia, España) por Raúl, de Presupuesta Estudios (https://estudios.presupuesta.net)
+- Contacto: WhatsApp +34 652 67 93 91 · asistente@presupuesta.net
+- Idioma y mercado: español, España
+- Funciona en el navegador (móvil, tablet u ordenador); no hay que instalar nada
+
+## Producto
+
+- [Cómo funciona](https://presupuesta.net/#como-funciona): dictar, repasar y enviar.
+- [Funciones](https://presupuesta.net/#funciones): dictado por voz, IA por partidas, precios por provincia, «Mis precios», PDF, clientes, obras y cobros.
+- [Precios](https://presupuesta.net/#precios): plan mensual 24,90 € + IVA, anual 249 € + IVA (dos meses gratis), 14 días de prueba gratis sin tarjeta.
+- [Preguntas frecuentes](https://presupuesta.net/#preguntas)
+- [Información ampliada para asistentes de IA](https://presupuesta.net/llms-full.txt)
+
+## Ejemplos de presupuestos
+
+- [Presupuesto de reforma integral de baño, partida a partida](https://presupuesta.net/ejemplos/reforma-integral-bano.html): Ejemplo de presupuesto de reforma de baño de 4,5 m² en Madrid: demolición, impermeabilización, alicatado, fontanería y sanitarios, con IVA del 10 %.
+- [Presupuesto de pintura de un piso de 90 m²](https://presupuesta.net/ejemplos/presupuesto-pintura-piso-90m2.html): Ejemplo de presupuesto para pintar un piso de 90 m²: protección, fisuras, imprimación y pintura plástica a dos manos en paredes y techos, con IVA.
+- [Partidas imprescindibles en un presupuesto de cocina](https://presupuesta.net/ejemplos/partidas-reforma-cocina.html): Ejemplo de presupuesto de reforma de cocina de 10 m² en Sevilla: electricidad según REBT, fontanería, alicatado y falso techo, con IVA del 10 % y forma de pago.
+- [Presupuesto de albañilería: ejemplo completo](https://presupuesta.net/ejemplos/presupuesto-albanileria-ejemplo.html): Ejemplo de presupuesto de albañilería: tabique de pladur con aislamiento, rozas para instalaciones y recibido de premarcos, por partidas y con IVA.
+- [Cómo calcular un presupuesto de fontanería](https://presupuesta.net/ejemplos/presupuesto-fontaneria-calculo.html): Cómo calcular un presupuesto de fontanería por puntos de agua fría y caliente en multicapa, desagües en PVC y prueba de presión. Ejemplo con IVA.
+- [De una nota de voz a un presupuesto profesional](https://presupuesta.net/ejemplos/nota-de-voz-a-presupuesto.html): Cómo dictar un trabajo con el móvil en la obra y obtener un presupuesto desglosado por partidas, con precios de tu provincia y PDF listo para enviar por WhatsApp.
+- [Presupuesto de reforma de local comercial](https://presupuesta.net/ejemplos/presupuesto-reforma-local-comercial.html): Ejemplo de presupuesto para adecuar un local de 80 m²: electricidad trifásica con boletín, insonorización y aseo accesible, con pagos por hitos.
+- [Errores que hacen perder dinero en un presupuesto](https://presupuesta.net/ejemplos/errores-presupuesto-reformas.html): Los errores más caros al hacer un presupuesto de obra o reforma en España (residuos, protecciones, validez, forma de pago) y las partidas que protegen tu margen.
+- [Plantilla de presupuesto de obra para autónomos](https://presupuesta.net/ejemplos/plantilla-presupuesto-obra-autonomos.html): Qué debe llevar el presupuesto de obra de un autónomo: tus datos y NIF, los del cliente, número, validez, partidas, IVA, forma de pago e IBAN.
+- [Cómo enviar un presupuesto que transmita confianza](https://presupuesta.net/ejemplos/enviar-presupuesto-confianza.html): Consejos para presentar y enviar un presupuesto de obra que el cliente acepte: rapidez, desglose claro, PDF con tu logo, IVA, forma de pago y seguimiento.
+
+## Legal
+
+- [Aviso legal](https://presupuesta.net/aviso-legal.html)
+- [Privacidad y cookies](https://presupuesta.net/politica-privacidad.html)
+- [Condiciones de uso](https://presupuesta.net/condiciones.html)

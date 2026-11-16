@@ -1,2231 +1,390 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
-  <meta name="description" content="ObraFlow es el SaaS definitivo para constructores y reformistas en España. Genera presupuestos profesionales y automatizados en segundos con Inteligencia Artificial por capítulos.">
-  <meta name="keywords" content="presupuestos automatizados construccion, presupuestos IA obras, presupuestos reformas inteligencia artificial, hacer presupuestos construccion online, alternativa excel presupuestos obras, software presupuestos construccion España, generador capitulos partidas reformas, presupuestos automaticos construccion">
-  <link rel="canonical" href="https://obraflow.es/">
-  
-  <!-- Open Graph / Facebook (SEO) -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://obraflow.es/">
-  <meta property="og:title" content="ObraFlow | Presupuestos Automatizados con IA para Constructores y Reformistas">
-  <meta property="og:description" content="Genera presupuestos profesionales desglosados en segundos. Transcribe audios de obra y crea renders automáticos con inteligencia artificial en España.">
-  <meta property="og:site_name" content="ObraFlow">
-  <meta property="og:locale" content="es_ES">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ObraFlow | Presupuestos Automatizados con IA para Constructores">
-  <meta name="twitter:description" content="ObraFlow analiza tu obra y genera presupuestos profesionales por capítulos listos para enviar en PDF y Excel en segundos.">
-
-  <title>ObraFlow | Presupuestos Automatizados con IA para Constructores y Reformistas</title>
-  
-  <!-- Google Fonts: Inter -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- ==========================================================================
-       DATOS ESTRUCTURADOS DE BUSCADORES E INTELIGENCIAS ARTIFICIALES (SEO / GEO JSON-LD)
-       ========================================================================== -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "ObraFlow",
-      "operatingSystem": "All",
-      "applicationCategory": "BusinessApplication",
-      "browserRequirements": "Requires HTML5/JavaScript",
-      "description": "SaaS para constructores y reformistas españoles que genera presupuestos de obras y reformas automatizados en segundos utilizando Inteligencia Artificial.",
-      "offers": {
-        "@type": "Offer",
-        "price": "39.00",
-        "priceCurrency": "EUR"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "142"
-      }
-    }
-  </script>
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "¿Cómo funciona el generador de presupuestos automatizados de ObraFlow?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "ObraFlow utiliza modelos avanzados de inteligencia artificial entrenados con miles de presupuestos del sector de la construcción en España. Solo tienes que describir las reformas o la obra nueva con tus propias palabras o dictarlo por voz. La IA analiza el texto, identifica los materiales, la mano de obra necesaria y genera automáticamente un presupuesto detallado dividido por capítulos técnicos (como Albañilería, Fontanería, Electricidad, etc.) en menos de 30 segundos."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Es compatible con el formato español de capítulos y partidas?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sí, absolutamente. ObraFlow ha sido entrenado específicamente con las estructuras habituales del mercado español. Organiza las partidas automáticamente por capítulos y genera un formato A4 profesional idéntico al que exigen arquitectos, jefes de obra y clientes particulares en España."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Cómo ayuda la Inteligencia Artificial a calcular los precios de materiales y mano de obra?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "La IA de ObraFlow está calibrada con bases de datos de precios reales de materiales y tarifas medias de mano de obra en el mercado español. Esto te permite obtener precios de referencia realistas y actualizados frente a la inflación para evitar pérdidas y errores de cálculo manuales."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Puedo exportar los presupuestos automáticos a PDF y Excel?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sí. Puedes exportar el presupuesto en PDF en un formato A4 elegante con tu logotipo y datos listo para enviar por WhatsApp o email al cliente. También permite la exportación a archivos Excel (.xlsx) si prefieres llevar un control interno o modificar partidas manualmente."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Por qué ObraFlow es mejor que hacer presupuestos en Word o Excel manuales?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Porque reduce el tiempo administrativo en más de un 90%. En lugar de pasar 2 o 3 horas buscando precios, redactando partidas y calculando totales para un solo cliente, ObraFlow lo resuelve en 30 segundos. Además, elimina los olvidos involuntarios de materiales y ofrece una presentación visual premium que aumenta la tasa de cierre de obras."
-          }
-        }
-      ]
-    }
-  </script>
-
-  <style>
-    /* ==========================================================================
-       1. VARIABLES Y DISEÑO DEL SISTEMA (CSS VARIABLES)
-       ========================================================================== */
-    :root {
-      --primary-dark: #1B3A6B;
-      --primary-medium: #2E6DA4;
-      --accent-light: #4A90D9;
-      --white: #FFFFFF;
-      --gray-text: #4A5568;
-      --gray-light: #718096;
-      --gray-bg: #F7FAFC;
-      --gray-border: #E2E8F0;
-      --cta-orange: #F6890A;
-      --cta-orange-hover: #E07B05;
-      --footer-bg: #0F1F3D;
-      
-      --font-family: 'Inter', sans-serif;
-      
-      --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-      
-      --border-radius-sm: 8px;
-      --border-radius-md: 12px;
-      --border-radius-lg: 20px;
-      --border-radius-full: 9999px;
-      
-      --shadow-sm: 0 2px 4px rgba(27, 58, 107, 0.04);
-      --shadow-md: 0 10px 30px -10px rgba(27, 58, 107, 0.08), 0 8px 10px -6px rgba(27, 58, 107, 0.04);
-      --shadow-lg: 0 20px 40px -15px rgba(27, 58, 107, 0.12), 0 15px 15px -10px rgba(27, 58, 107, 0.06);
-      --shadow-orange: 0 10px 20px -8px rgba(246, 137, 10, 0.4);
-    }
-
-    /* ==========================================================================
-       2. REGLAS GENERALES Y RESET
-       ========================================================================== */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 80px; /* Compensa la altura del navbar fijo */
-      font-size: 16px;
-    }
-
-    body {
-      font-family: var(--font-family);
-      background-color: var(--white);
-      color: var(--gray-text);
-      line-height: 1.6;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    h1, h2, h3, h4 {
-      font-weight: 700;
-      color: var(--primary-dark);
-      line-height: 1.25;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-      transition: var(--transition-smooth);
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    img, svg {
-      vertical-align: middle;
-      max-width: 100%;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    section {
-      padding: 100px 0;
-      position: relative;
-    }
-
-    /* ==========================================================================
-       3. UTILITIES Y BOTONES (UI ELEMENTS)
-       ========================================================================== */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 28px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      border-radius: var(--border-radius-md);
-      transition: var(--transition-smooth);
-      cursor: pointer;
-      border: none;
-      text-align: center;
-      gap: 10px;
-    }
-
-    .btn-orange {
-      background-color: var(--cta-orange);
-      color: var(--white);
-      box-shadow: var(--shadow-orange);
-    }
-
-    .btn-orange:hover {
-      background-color: var(--cta-orange-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 24px -6px rgba(246, 137, 10, 0.5);
-    }
-
-    .btn-orange:active {
-      transform: translateY(0);
-    }
-
-    .btn-outline-white {
-      background-color: transparent;
-      color: var(--white);
-      border: 2px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .btn-outline-white:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-      border-color: var(--white);
-      transform: translateY(-2px);
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      padding: 6px 16px;
-      background-color: rgba(74, 144, 217, 0.15);
-      color: var(--accent-light);
-      border-radius: var(--border-radius-full);
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 24px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      border: 1px solid rgba(74, 144, 217, 0.2);
-    }
-
-    .badge-white {
-      background-color: rgba(255, 255, 255, 0.1);
-      color: #9EC6EE;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .section-title {
-      font-size: 2.25rem;
-      text-align: center;
-      margin-bottom: 50px;
-      font-weight: 800;
-    }
-
-    .section-title span {
-      color: var(--primary-medium);
-    }
-
-    /* Animaciones Fade-In (IntersectionObserver) */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: var(--transition-slow);
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .stagger-1 { transition-delay: 0.1s; }
-    .stagger-2 { transition-delay: 0.2s; }
-    .stagger-3 { transition-delay: 0.3s; }
-    .stagger-4 { transition-delay: 0.4s; }
-    .stagger-5 { transition-delay: 0.5s; }
-    .stagger-6 { transition-delay: 0.6s; }
-
-    /* ==========================================================================
-       4. NAVBAR FIJO EN SCROLL
-       ========================================================================== */
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 80px;
-      z-index: 1000;
-      background-color: transparent;
-      transition: var(--transition-smooth);
-      display: flex;
-      align-items: center;
-    }
-
-    header.scrolled {
-      background-color: var(--primary-dark);
-      height: 70px;
-      box-shadow: 0 10px 30px rgba(15, 31, 61, 0.3);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    header.scrolled .logo-text {
-      color: var(--white);
-    }
-
-    header.scrolled .nav-links a {
-      color: rgba(255, 255, 255, 0.8);
-    }
-
-    header.scrolled .nav-links a:hover {
-      color: var(--white);
-    }
-
-    .navbar-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-    }
-
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo-icon {
-      fill: var(--accent-light);
-      width: 32px;
-      height: 32px;
-      transition: var(--transition-smooth);
-    }
-
-    header.scrolled .logo-icon {
-      fill: var(--white);
-    }
-
-    .logo-text {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--primary-dark);
-      letter-spacing: -0.5px;
-    }
-
-    .nav-menu {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .nav-links a {
-      font-weight: 500;
-      color: var(--gray-text);
-      font-size: 0.95rem;
-      position: relative;
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: var(--cta-orange);
-      transition: var(--transition-smooth);
-    }
-
-    .nav-links a:hover {
-      color: var(--primary-dark);
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .nav-cta .btn {
-      padding: 10px 20px;
-      font-size: 0.85rem;
-    }
-
-    /* Menu Movil Hamburger Toggle */
-    .mobile-menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      width: 30px;
-      height: 24px;
-      position: relative;
-      z-index: 1100;
-    }
-
-    .mobile-menu-toggle span {
-      display: block;
-      width: 100%;
-      height: 3px;
-      background-color: var(--primary-dark);
-      border-radius: 3px;
-      position: absolute;
-      transition: var(--transition-smooth);
-    }
-
-    header.scrolled .mobile-menu-toggle span {
-      background-color: var(--white);
-    }
-
-    .mobile-menu-toggle span:nth-child(1) { top: 0; }
-    .mobile-menu-toggle span:nth-child(2) { top: 10px; }
-    .mobile-menu-toggle span:nth-child(3) { top: 20px; }
-
-    .mobile-menu-toggle.active span:nth-child(1) {
-      transform: translateY(10px) rotate(45deg);
-    }
-    .mobile-menu-toggle.active span:nth-child(2) {
-      opacity: 0;
-    }
-    .mobile-menu-toggle.active span:nth-child(3) {
-      transform: translateY(-10px) rotate(-45deg);
-    }
-
-    /* ==========================================================================
-       5. HERO SECTION
-       ========================================================================== */
-    .hero {
-      background: radial-gradient(circle at 80% 20%, rgba(74, 144, 217, 0.12) 0%, transparent 60%), linear-gradient(135deg, var(--primary-dark) 0%, #0F254B 100%);
-      color: var(--white);
-      padding: 160px 0 100px 0;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 0);
-      background-size: 24px 24px;
-      pointer-events: none;
-    }
-
-    .hero-content {
-      max-width: 850px;
-      margin: 0 auto;
-      z-index: 5;
-      position: relative;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      color: var(--white);
-      margin-bottom: 24px;
-      letter-spacing: -1px;
-      line-height: 1.15;
-    }
-
-    .hero h1 span {
-      background: linear-gradient(to right, #9EC6EE, #4A90D9);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero .subtitle {
-      font-size: 1.2rem;
-      color: #D2E3F4;
-      max-width: 720px;
-      margin: 0 auto 40px auto;
-      font-weight: 400;
-      line-height: 1.6;
-    }
-
-    .hero-actions {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      margin-bottom: 60px;
-    }
-
-    .hero-link {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #9EC6EE;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      border-bottom: 2px solid transparent;
-      padding-bottom: 2px;
-    }
-
-    .hero-link:hover {
-      color: var(--white);
-      border-color: var(--white);
-    }
-
-    /* Stats bar */
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding-top: 50px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .stat-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .stat-icon {
-      font-size: 1.8rem;
-    }
-
-    .stat-text {
-      font-size: 1rem;
-      font-weight: 600;
-      color: #D2E3F4;
-    }
-
-    /* ==========================================================================
-       6. SECCIÓN PROBLEMA
-       ========================================================================== */
-    .problem {
-      background-color: var(--white);
-    }
-
-    .problem-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-    }
-
-    .problem-card {
-      background-color: var(--white);
-      border: 1px solid var(--gray-border);
-      border-radius: var(--border-radius-lg);
-      padding: 40px 32px;
-      transition: var(--transition-smooth);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .problem-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background-color: #E53E3E; /* Rojo suave para indicar problema */
-      opacity: 0;
-      transition: var(--transition-smooth);
-    }
-
-    .problem-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-lg);
-      border-color: rgba(229, 62, 62, 0.2);
-    }
-
-    .problem-card:hover::before {
-      opacity: 1;
-    }
-
-    .problem-card-icon {
-      width: 48px;
-      height: 48px;
-      background-color: #FED7D7;
-      color: #E53E3E;
-      border-radius: var(--border-radius-md);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 24px;
-      font-size: 1.4rem;
-    }
-
-    .problem-card h3 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--primary-dark);
-      margin-bottom: 16px;
-    }
-
-    .problem-card p {
-      color: var(--gray-text);
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    /* ==========================================================================
-       7. SECCIÓN CÓMO FUNCIONA / SOLUCIÓN
-       ========================================================================== */
-    .solution {
-      background-color: var(--gray-bg);
-      border-top: 1px solid var(--gray-border);
-      border-bottom: 1px solid var(--gray-border);
-    }
-
-    .solution-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-      position: relative;
-    }
-
-    .solution-card {
-      background-color: var(--white);
-      border-radius: var(--border-radius-lg);
-      padding: 40px 32px;
-      box-shadow: var(--shadow-md);
-      border: 1px solid rgba(46, 109, 164, 0.05);
-      position: relative;
-      text-align: center;
-      transition: var(--transition-smooth);
-    }
-
-    .solution-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .step-number {
-      position: absolute;
-      top: -24px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 48px;
-      height: 48px;
-      border-radius: var(--border-radius-full);
-      background-color: var(--primary-dark);
-      color: var(--white);
-      font-weight: 800;
-      font-size: 1.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 10px rgba(27, 58, 107, 0.2);
-    }
-
-    .solution-card-icon {
-      width: 64px;
-      height: 64px;
-      margin: 15px auto 24px auto;
-      background-color: rgba(74, 144, 217, 0.1);
-      color: var(--primary-medium);
-      border-radius: var(--border-radius-full);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .solution-card-icon svg {
-      width: 32px;
-      height: 32px;
-      fill: none;
-      stroke: var(--primary-medium);
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .solution-card h3 {
-      font-size: 1.25rem;
-      margin-bottom: 12px;
-    }
-
-    .solution-card p {
-      font-size: 0.95rem;
-      color: var(--gray-text);
-    }
-
-    /* ==========================================================================
-       8. SECCIÓN FUNCIONES CLAVE
-       ========================================================================== */
-    .features {
-      background-color: var(--white);
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-    }
-
-    .feature-card {
-      background-color: var(--white);
-      border: 1px solid var(--gray-border);
-      border-radius: var(--border-radius-lg);
-      padding: 32px;
-      transition: var(--transition-smooth);
-    }
-
-    .feature-card:hover {
-      border-color: var(--accent-light);
-      box-shadow: var(--shadow-md);
-      transform: translateY(-5px);
-    }
-
-    .feature-icon-container {
-      width: 50px;
-      height: 50px;
-      border-radius: var(--border-radius-md);
-      background-color: rgba(74, 144, 217, 0.08);
-      color: var(--primary-medium);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-      transition: var(--transition-smooth);
-    }
-
-    .feature-card:hover .feature-icon-container {
-      background-color: var(--primary-dark);
-      color: var(--white);
-    }
-
-    .feature-icon-container svg {
-      width: 24px;
-      height: 24px;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 2;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .feature-card h3 {
-      font-size: 1.15rem;
-      margin-bottom: 12px;
-      font-weight: 700;
-    }
-
-    .feature-card p {
-      font-size: 0.9rem;
-      color: var(--gray-text);
-      line-height: 1.5;
-    }
-
-    /* ==========================================================================
-       9. SECCIÓN PRECIOS
-       ========================================================================== */
-    .pricing {
-      background: linear-gradient(135deg, var(--primary-dark) 0%, #0F254B 100%);
-      color: var(--white);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .pricing .section-title {
-      color: var(--white);
-    }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      align-items: stretch;
-      max-width: 1100px;
-      margin: 0 auto 50px auto;
-    }
-
-    .price-card {
-      background-color: var(--white);
-      color: var(--gray-text);
-      border-radius: var(--border-radius-lg);
-      padding: 45px 35px;
-      display: flex;
-      flex-direction: column;
-      transition: var(--transition-smooth);
-      position: relative;
-      border: 1px solid var(--gray-border);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .price-card:hover {
-      transform: translateY(-8px);
-    }
-
-    /* Destacado Pro Card */
-    .price-card.featured {
-      border: 3px solid var(--cta-orange);
-      transform: scale(1.03);
-      z-index: 10;
-    }
-
-    .price-card.featured:hover {
-      transform: scale(1.03) translateY(-8px);
-      box-shadow: 0 30px 60px -15px rgba(246, 137, 10, 0.25);
-    }
-
-    .popular-badge {
-      position: absolute;
-      top: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: var(--cta-orange);
-      color: var(--white);
-      padding: 6px 16px;
-      border-radius: var(--border-radius-full);
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      box-shadow: 0 4px 8px rgba(246, 137, 10, 0.3);
-      white-space: nowrap;
-    }
-
-    .price-header {
-      margin-bottom: 30px;
-      text-align: center;
-    }
-
-    .price-name {
-      font-size: 1.25rem;
-      font-weight: 800;
-      color: var(--primary-dark);
-      margin-bottom: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .price-value {
-      font-size: 2.75rem;
-      font-weight: 800;
-      color: var(--primary-dark);
-      line-height: 1;
-    }
-
-    .price-value span {
-      font-size: 1rem;
-      color: var(--gray-light);
-      font-weight: 500;
-    }
-
-    .price-features {
-      margin-bottom: 35px;
-      flex-grow: 1;
-    }
-
-    .price-features li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: 0.9rem;
-      margin-bottom: 16px;
-      color: var(--gray-text);
-      line-height: 1.4;
-    }
-
-    .price-features li svg {
-      width: 18px;
-      height: 18px;
-      fill: none;
-      stroke: #48BB78; /* Verde para check */
-      stroke-width: 2.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .price-cta .btn {
-      width: 100%;
-    }
-
-    .price-cta .btn-muted {
-      background-color: var(--primary-dark);
-      color: var(--white);
-    }
-
-    .price-cta .btn-muted:hover {
-      background-color: var(--primary-medium);
-      transform: translateY(-2px);
-    }
-
-    .pricing-guarantees {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      text-align: center;
-      color: #9EC6EE;
-      font-size: 0.95rem;
-      font-weight: 500;
-    }
-
-    .pricing-guarantees span {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    /* ==========================================================================
-       10. SECCIÓN TESTIMONIO
-       ========================================================================== */
-    .testimonial {
-      background-color: var(--white);
-      border-bottom: 1px solid var(--gray-border);
-    }
-
-    .testimonial-container {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-      box-shadow: var(--shadow-lg);
-      padding: 60px 48px;
-      border-radius: var(--border-radius-lg);
-      border: 1px solid var(--gray-border);
-      position: relative;
-    }
-
-    .testimonial-quote-icon {
-      position: absolute;
-      top: 30px;
-      left: 40px;
-      font-size: 6rem;
-      line-height: 1;
-      color: rgba(74, 144, 217, 0.08);
-      font-family: Georgia, serif;
-      pointer-events: none;
-    }
-
-    .testimonial-stars {
-      display: flex;
-      justify-content: center;
-      gap: 4px;
-      margin-bottom: 24px;
-    }
-
-    .testimonial-stars svg {
-      width: 24px;
-      height: 24px;
-      fill: #ED8936; /* Color estrella dorada */
-    }
-
-    .testimonial-text {
-      font-size: 1.25rem;
-      font-weight: 500;
-      color: var(--primary-dark);
-      line-height: 1.7;
-      margin-bottom: 30px;
-      font-style: italic;
-    }
-
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-    }
-
-    .avatar {
-      width: 56px;
-      height: 56px;
-      border-radius: var(--border-radius-full);
-      background: linear-gradient(135deg, var(--primary-medium) 0%, var(--accent-light) 100%);
-      color: var(--white);
-      font-weight: 700;
-      font-size: 1.2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 10px rgba(46, 109, 164, 0.2);
-    }
-
-    .author-info {
-      text-align: left;
-    }
-
-    .author-name {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--primary-dark);
-    }
-
-    .author-company {
-      font-size: 0.85rem;
-      color: var(--gray-light);
-    }
-
-    /* ==========================================================================
-       11. SECCIÓN PREGUNTAS FRECUENTES (SEO & GEO ENHANCEMENT)
-       ========================================================================== */
-    .faq-section {
-      background-color: var(--white);
-      border-bottom: 1px solid var(--gray-border);
-    }
-
-    .faq-grid {
-      max-width: 800px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .faq-item {
-      border: 1px solid var(--gray-border);
-      border-radius: var(--border-radius-md);
-      background-color: var(--white);
-      overflow: hidden;
-      transition: var(--transition-smooth);
-    }
-
-    .faq-item:hover {
-      border-color: var(--accent-light);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .faq-question {
-      width: 100%;
-      padding: 22px 28px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: none;
-      border: none;
-      cursor: pointer;
-      text-align: left;
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--primary-dark);
-      transition: var(--transition-smooth);
-      gap: 15px;
-      outline: none;
-    }
-
-    .faq-question:hover {
-      color: var(--primary-medium);
-    }
-
-    .faq-chevron {
-      width: 20px;
-      height: 20px;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 2.5;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      transition: transform 0.3s ease;
-      flex-shrink: 0;
-    }
-
-    .faq-item.active .faq-chevron {
-      transform: rotate(180deg);
-      stroke: var(--cta-orange);
-    }
-
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-out;
-      background-color: var(--gray-bg);
-      border-top: 0 solid var(--gray-border);
-    }
-
-    .faq-answer p {
-      padding: 24px 28px;
-      font-size: 0.95rem;
-      color: var(--gray-text);
-      line-height: 1.6;
-    }
-
-    .faq-item.active .faq-answer {
-      border-top: 1px solid var(--gray-border);
-    }
-
-    /* ==========================================================================
-       12. FORMULARIO DE CAPTACIÓN (CONVERSIÓN DIRECTA)
-       ========================================================================== */
-    .contact-section {
-      background-color: var(--gray-bg);
-      border-bottom: 1px solid var(--gray-border);
-    }
-
-    .contact-container {
-      max-width: 650px;
-      margin: 0 auto;
-    }
-
-    .contact-header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .contact-header h2 {
-      font-size: 2.25rem;
-      margin-bottom: 12px;
-      font-weight: 800;
-    }
-
-    .contact-header p {
-      font-size: 1.05rem;
-      color: var(--gray-text);
-    }
-
-    .form-wrapper {
-      background-color: var(--white);
-      border-radius: var(--border-radius-lg);
-      padding: 48px;
-      box-shadow: var(--shadow-lg);
-      border: 1px solid var(--gray-border);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-      transition: opacity 0.3s ease;
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      position: relative;
-    }
-
-    .form-group label {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--primary-dark);
-    }
-
-    .form-group input, 
-    .form-group select {
-      width: 100%;
-      padding: 14px 16px;
-      border: 1.5px solid var(--gray-border);
-      border-radius: var(--border-radius-md);
-      font-family: var(--font-family);
-      font-size: 0.95rem;
-      color: var(--gray-text);
-      transition: var(--transition-smooth);
-      background-color: var(--white);
-      outline: none;
-    }
-
-    .form-group input::placeholder {
-      color: #A0AEC0;
-    }
-
-    .form-group input:focus, 
-    .form-group select:focus {
-      border-color: var(--primary-medium);
-      box-shadow: 0 0 0 3px rgba(46, 109, 164, 0.15);
-    }
-
-    .form-help {
-      font-size: 0.8rem;
-      color: var(--gray-light);
-    }
-
-    .contact-form .btn-orange {
-      padding: 16px;
-      font-size: 1.05rem;
-      margin-top: 10px;
-    }
-
-    .privacy-notice {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      font-size: 0.8rem;
-      color: var(--gray-light);
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .privacy-notice svg {
-      width: 14px;
-      height: 14px;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 2;
-    }
-
-    /* Panel de Éxito */
-    .success-panel {
-      display: none;
-      text-align: center;
-      flex-direction: column;
-      align-items: center;
-      animation: fadeIn 0.5s ease forwards;
-      padding: 20px 0;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(15px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .success-icon-container {
-      width: 80px;
-      height: 80px;
-      background-color: #C6F6D5;
-      color: #38A169;
-      border-radius: var(--border-radius-full);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 24px;
-      box-shadow: 0 8px 20px rgba(56, 161, 105, 0.15);
-    }
-
-    .success-icon-container svg {
-      width: 40px;
-      height: 40px;
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 3;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .success-panel h3 {
-      font-size: 1.75rem;
-      margin-bottom: 16px;
-      font-weight: 800;
-    }
-
-    .success-panel p {
-      font-size: 1rem;
-      color: var(--gray-text);
-      max-width: 480px;
-      margin: 0 auto 30px auto;
-      line-height: 1.6;
-    }
-
-    .success-actions {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      max-width: 400px;
-      gap: 12px;
-    }
-
-    .btn-whatsapp {
-      background-color: #25D366;
-      color: var(--white);
-      font-weight: 600;
-      box-shadow: 0 10px 20px -8px rgba(37, 211, 102, 0.4);
-    }
-
-    .btn-whatsapp:hover {
-      background-color: #20BA56;
-      transform: translateY(-2px);
-      box-shadow: 0 12px 24px -6px rgba(37, 211, 102, 0.5);
-    }
-
-    /* ==========================================================================
-       13. FOOTER (FONDO AZUL OSCURO MUY OSCURO)
-       ========================================================================== */
-    footer {
-      background-color: var(--footer-bg);
-      color: #9EC6EE;
-      padding: 60px 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .footer-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
-
-    .footer-left {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .footer-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .footer-logo-icon {
-      fill: var(--white);
-      width: 28px;
-      height: 28px;
-    }
-
-    .footer-logo-text {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: var(--white);
-      letter-spacing: -0.5px;
-    }
-
-    .footer-nav {
-      display: flex;
-      gap: 24px;
-    }
-
-    .footer-nav a {
-      font-size: 0.9rem;
-      color: #A0AEC0;
-    }
-
-    .footer-nav a:hover {
-      color: var(--white);
-    }
-
-    .footer-copyright {
-      font-size: 0.85rem;
-      color: #718096;
-      border-top: 1px solid rgba(255, 255, 255, 0.05);
-      padding-top: 30px;
-      margin-top: 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    .footer-span-credits {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    /* ==========================================================================
-       14. RESPONSIVE DESIGN (MOBILE FIRST)
-       ========================================================================== */
-    @media (max-width: 1024px) {
-      .hero h1 {
-        font-size: 3rem;
-      }
-      
-      .problem-grid,
-      .solution-grid,
-      .features-grid,
-      .pricing-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-      }
-      
-      .price-card.featured {
-        transform: none;
-      }
-      .price-card.featured:hover {
-        transform: translateY(-8px);
-      }
-    }
-
-    @media (max-width: 768px) {
-      section {
-        padding: 70px 0;
-      }
-
-      header {
-        height: 70px;
-      }
-
-      .mobile-menu-toggle {
-        display: block;
-      }
-
-      .nav-menu {
-        position: fixed;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background-color: var(--primary-dark);
-        flex-direction: column;
-        justify-content: center;
-        gap: 40px;
-        padding: 40px;
-        transform: translateX(100%);
-        transition: var(--transition-smooth);
-        z-index: 1050;
-      }
-
-      .nav-menu.active {
-        transform: translateX(0);
-      }
-
-      .nav-links {
-        flex-direction: column;
-        gap: 30px;
-        width: 100%;
-      }
-
-      .nav-links a {
-        color: var(--white);
-        font-size: 1.25rem;
-      }
-
-      .nav-cta {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-      }
-
-      .nav-cta .btn {
-        width: 100%;
-        max-width: 300px;
-        padding: 14px 28px;
-        font-size: 1rem;
-      }
-
-      .hero {
-        padding: 130px 0 80px 0;
-      }
-
-      .hero h1 {
-        font-size: 2.25rem;
-      }
-
-      .hero .subtitle {
-        font-size: 1.05rem;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      .hero-actions .btn {
-        width: 100%;
-        max-width: 320px;
-      }
-
-      .hero-stats {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding-top: 40px;
-      }
-
-      .problem-grid,
-      .solution-grid,
-      .features-grid,
-      .pricing-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-
-      .price-card {
-        padding: 35px 24px;
-      }
-
-      .testimonial-container {
-        padding: 40px 24px;
-      }
-
-      .testimonial-text {
-        font-size: 1.1rem;
-      }
-
-      .form-wrapper {
-        padding: 30px 20px;
-      }
-
-      .contact-header h2 {
-        font-size: 1.75rem;
-      }
-
-      .footer-container {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .footer-nav {
-        flex-direction: column;
-        gap: 15px;
-      }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presupuesta: presupuestos de obra con IA en un minuto</title>
+<meta name="description" content="Dicta el trabajo en la obra y Presupuesta lo desglosa en partidas con precios de tu provincia. PDF con tu logo y control de cobros. 14 días gratis.">
+<link rel="canonical" href="https://presupuesta.net/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="theme-color" content="#C2410C">
+<meta name="author" content="Presupuesta">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Presupuesta">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Presupuesta: presupuestos de obra con IA en un minuto">
+<meta property="og:description" content="Dicta el trabajo en la obra y Presupuesta lo desglosa en partidas con precios de tu provincia. PDF con tu logo y control de cobros. 14 días gratis.">
+<meta property="og:url" content="https://presupuesta.net/">
+<meta property="og:image" content="https://presupuesta.net/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Presupuesta: presupuestos de obra con IA">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="logo.png" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="logo.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="alternate" type="text/plain" title="Información para asistentes de IA" href="https://presupuesta.net/llms.txt">
+<link rel="preload" href="assets/fuentes/inter-tight.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fuentes/figtree.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css?v=20261116">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://presupuesta.net/#organizacion","name":"Presupuesta","url":"https://presupuesta.net","logo":{"@type":"ImageObject","url":"https://presupuesta.net/logo.png","width":512,"height":512},"email":"asistente@presupuesta.net","telephone":"+34652679391","address":{"@type":"PostalAddress","addressLocality":"Ermua","postalCode":"48260","addressRegion":"Bizkaia","addressCountry":"ES"},"areaServed":{"@type":"Country","name":"España"},"founder":{"@id":"https://presupuesta.net/#fundador"},"parentOrganization":{"@type":"Organization","name":"Presupuesta Estudios","url":"https://estudios.presupuesta.net"},"contactPoint":{"@type":"ContactPoint","contactType":"customer support","telephone":"+34652679391","email":"asistente@presupuesta.net","availableLanguage":"es","areaServed":"ES"},"sameAs":["https://estudios.presupuesta.net"]},{"@type":"Person","@id":"https://presupuesta.net/#fundador","name":"Raúl","jobTitle":"Fundador de Presupuesta","worksFor":{"@id":"https://presupuesta.net/#organizacion"},"address":{"@type":"PostalAddress","addressLocality":"Ermua","addressCountry":"ES"}},{"@type":"WebSite","@id":"https://presupuesta.net/#web","url":"https://presupuesta.net/","name":"Presupuesta","inLanguage":"es-ES","publisher":{"@id":"https://presupuesta.net/#organizacion"}},{"@type":"SoftwareApplication","@id":"https://presupuesta.net/#app","name":"Presupuesta","url":"https://presupuesta.net/","applicationCategory":"BusinessApplication","applicationSubCategory":"Software de presupuestos de obra","operatingSystem":"Web (navegador en móvil, tablet u ordenador)","inLanguage":"es-ES","description":"Presupuestos de obra con IA para autónomos y pymes de reformas e instalaciones en España: dictado por voz, partidas con precios ajustados a la provincia, aprendizaje de los precios propios, PDF con logo, NIF, IBAN e IVA, clientes, obras y control de cobros.","featureList":["Dictado por voz desde el móvil","Presupuestos por capítulos y partidas generados con IA","Precios de mercado ajustados a las 52 provincias","Aprende los precios del profesional e importa presupuestos antiguos en PDF","Edición con IA en lenguaje natural","PDF con logo, NIF, IBAN, IVA 21/10/0 % y numeración automática","Clientes y obras con acceso directo a WhatsApp","Panel de cobros: presupuestado, aceptado, cobrado y lo que te deben"],"screenshot":"https://presupuesta.net/og-image.png","publisher":{"@id":"https://presupuesta.net/#organizacion"},"offers":[{"@type":"Offer","name":"Plan mensual","price":"24.90","priceCurrency":"EUR","url":"https://panel.presupuesta.net/registro","availability":"https://schema.org/InStock","priceSpecification":{"@type":"UnitPriceSpecification","price":"24.90","priceCurrency":"EUR","unitCode":"MON","valueAddedTaxIncluded":false},"eligibleDuration":{"@type":"QuantitativeValue","value":14,"unitCode":"DAY"},"description":"14 días de prueba gratis sin tarjeta. Sin permanencia."},{"@type":"Offer","name":"Plan anual","price":"249.00","priceCurrency":"EUR","url":"https://panel.presupuesta.net/registro","availability":"https://schema.org/InStock","priceSpecification":{"@type":"UnitPriceSpecification","price":"249.00","priceCurrency":"EUR","unitCode":"ANN","valueAddedTaxIncluded":false},"description":"Dos meses gratis frente al plan mensual."}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿Tengo que poner la tarjeta para probarlo?","acceptedAnswer":{"@type":"Answer","text":"No. Te registras con tu email y tienes 14 días con todas las funciones, sin tarjeta. Si al terminar no te convence, no pagas nada; tus presupuestos y PDF siguen ahí."}},{"@type":"Question","name":"¿Cuánto cuesta Presupuesta?","acceptedAnswer":{"@type":"Answer","text":"24,90 € + IVA al mes, o 249 € + IVA al año (dos meses gratis). Incluye todas las funciones y hasta 100 presupuestos con IA al mes, sin permanencia. Antes tienes 14 días de prueba gratis sin tarjeta. Para empresas con más volumen o varias personas hay un plan a medida."}},{"@type":"Question","name":"¿Para qué oficios sirve?","acceptedAnswer":{"@type":"Answer","text":"Para autónomos y pymes de reformas e instalaciones: reformas integrales, albañilería, fontanería, electricidad, pintura, cocinas, baños y locales. Sirve para cualquier trabajo que se presupueste por partidas con medidas y precios."}},{"@type":"Question","name":"¿De dónde salen los precios? ¿Son fiables?","acceptedAnswer":{"@type":"Answer","text":"La IA parte de precios medios de mercado en España, sin IVA, y Presupuesta los ajusta a la provincia de cada obra. Cuando cambias un precio, lo aprende y lo usa en los siguientes presupuestos; también puedes subir tus presupuestos antiguos en PDF para cargar tus tarifas. Son una base orientativa: el precio final lo decides tú."}},{"@type":"Question","name":"¿Funciona en el móvil? ¿Hay que instalar algo?","acceptedAnswer":{"@type":"Answer","text":"Funciona en el navegador del móvil (iPhone y Android), de la tablet y del ordenador, sin instalar nada. El dictado por voz está pensado para usarlo en la obra."}},{"@type":"Question","name":"¿Qué IVA puedo poner?","acceptedAnswer":{"@type":"Answer","text":"21 %, 10 % (reformas de vivienda que cumplan los requisitos) o 0 %. Presupuesta recuerda el que uses y lo desglosa en el PDF."}},{"@type":"Question","name":"¿Me hacéis factura? ¿Cómo me doy de baja?","acceptedAnswer":{"@type":"Answer","text":"Sí: el pago se hace con Stripe, que emite la factura con IVA y te deja poner tu NIF o CIF. Te das de baja cuando quieras desde «Mi suscripción», sin permanencia; sigues teniendo acceso hasta el final del periodo pagado."}},{"@type":"Question","name":"¿Mis datos están seguros?","acceptedAnswer":{"@type":"Answer","text":"Cada profesional solo ve sus propios clientes y presupuestos, los pagos los gestiona Stripe (nunca vemos tu tarjeta) y no vendemos tus datos a nadie. Lo tienes explicado en la política de privacidad."}}]}]}</script>
 </head>
 <body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="cabecera">
+  <div class="contenedor cabecera-dentro">
+    <a href="/" class="marca" aria-label="Presupuesta, ir al inicio"><svg viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" rx="116" fill="#C2410C"/><path transform="translate(-20 -12)" fill="#FFFFFF" fill-rule="evenodd" d="M 150 232 A 126 126 0 1 1 226 347.6 L 226 392 Q 226 404 214 408 L 150 430 Z M 276 178 A 54 54 0 1 0 276.01 178 Z"/></svg><span>Presupuesta</span></a>
+    <ul id="menu" class="menu">
+      <li><a href="#como-funciona">Cómo funciona</a></li>
+      <li><a href="#funciones">Funciones</a></li>
+      <li><a href="ejemplos/">Ejemplos</a></li>
+      <li><a href="#precios">Precios</a></li>
+      <li><a href="#preguntas">Preguntas</a></li>
+    </ul>
+    <div class="acciones-cabecera">
+      <a href="https://panel.presupuesta.net/entrar" class="enlace-entrar">Entrar</a>
+      <a href="https://panel.presupuesta.net/registro" class="btn btn-principal">Probar gratis</a>
+      <button class="boton-menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
+    </div>
+  </div>
+</header>
+<main id="contenido">
 
-  <!-- ==========================================================================
-       1. NAVBAR FIXED
-       ========================================================================== -->
-  <header>
-    <div class="container navbar-container">
-      <a href="#" class="logo-container" aria-label="Volver al inicio">
-        <svg class="logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2L2 22h20L12 2zm0 4.5l6.5 13H5.5L12 6.5z"/>
-          <path d="M11 12h2v4h-2zm0-3h2v2h-2z" fill="currentColor"/>
-        </svg>
-        <span class="logo-text">ObraFlow</span>
-      </a>
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="contenedor hero-grid">
+      <div>
+        <p class="etiqueta-hero">Presupuestos de obra con IA · para reformas e instalaciones</p>
+        <h1>Dilo en voz alta. <span>Tu presupuesto, listo en un minuto.</span></h1>
+        <p class="entradilla">Cuenta el trabajo con el móvil y Presupuesta lo desglosa en partidas con precios de tu provincia. Lo repasas y le mandas al cliente un PDF con tu logo.</p>
+        <div class="hero-ctas">
+          <a href="https://panel.presupuesta.net/registro" class="btn btn-principal btn-grande">Probar 14 días gratis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          <a href="#como-funciona" class="btn btn-secundario btn-grande">Cómo funciona</a>
+        </div>
+        <p class="microcopy">Sin tarjeta · Sin permanencia · Sin instalar nada</p>
+      </div>
 
-      <button class="mobile-menu-toggle" aria-label="Abrir menú de navegación">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div>
+        <div class="movil" id="demo" aria-label="Demostración: de un dictado a un presupuesto en PDF" role="img">
+          <div class="movil-isla"></div>
+          <div class="movil-pantalla">
+            <div class="movil-barra"><span>9:41</span><span>5G ▮▮▮</span></div>
+            <div class="movil-cabecera"><div><strong>Nuevo presupuesto</strong><small>Reforma de baño · Bilbao</small></div><span class="chip chip-pend" id="demo-estado">Borrador</span></div>
+            <div class="movil-cuerpo">
 
-      <nav class="nav-menu">
-        <ul class="nav-links">
+              <div class="demo-paso activo">
+                <div class="dictado-caja"><span id="demo-texto" data-frase="Reforma de baño de 5 metros en Bilbao. Quitar la bañera y poner plato de ducha de 120 por 70, alicatar paredes con porcelánico y cambiar inodoro y lavabo."></span><span class="cursor"></span></div>
+                <div class="micro-zona">
+                  <div class="ondas" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                  <div class="micro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></svg></div>
+                  <p>Escuchando… pulsa para parar</p>
+                </div>
+              </div>
+
+              <div class="demo-paso">
+                <div class="barra-progreso"><i></i></div>
+                <div class="pensando">
+                  <div class="pensando-fila"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Desglosando el trabajo por capítulos…</div>
+                  <div class="pensando-fila"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Calculando materiales y mano de obra…</div>
+                  <div class="pensando-fila"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Ajustando los precios a la zona de la obra…</div>
+                  <div class="pensando-fila"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Repasando que no falte nada…</div>
+                </div>
+              </div>
+
+              <div class="demo-paso">
+                <div class="capitulo-mini">
+                  <h5>1. Demoliciones</h5>
+                  <div class="partida-mini" data-partida="420"><span>Desmontaje de bañera y alicatado, retirada a vertedero</span><b>420,00 €</b><small>1 ud <span class="chip chip-zona">ZONA</span></small></div>
+                  <h5>2. Albañilería</h5>
+                  <div class="partida-mini" data-partida="465"><span>Plato de ducha de resina 120×70 con impermeabilización</span><b>465,00 €</b><small>1 ud <span class="chip chip-zona">ZONA</span></small></div>
+                  <div class="partida-mini" data-partida="612"><span>Alicatado porcelánico 30×60 en paredes</span><b>612,00 €</b><small>18 m² × 34,00 € <span class="chip chip-tu">TU</span></small></div>
+                  <h5>3. Fontanería</h5>
+                  <div class="partida-mini" data-partida="540"><span>Cambio de inodoro y lavabo con mueble</span><b>540,00 €</b><small>1 ud <span class="chip chip-zona">ZONA</span></small></div>
+                </div>
+                <div class="total-mini"><div><small>Total con IVA 10 %</small><b id="demo-total" data-total="2240.70">2.240,70 €</b></div><span class="chip chip-ok">Guardado</span></div>
+              </div>
+
+              <div class="demo-paso">
+                <div class="pdf-listo">
+                  <div class="pdf-hoja">
+                    <div class="pdf-hoja-cab">
+                      <div class="pdf-emisor"><span class="pdf-logo">RE</span><div><strong>Reformas Ejemplo</strong><small>NIF B00000000 · Bilbao</small></div></div>
+                      <div class="pdf-num"><strong>2026-0042</strong><small>Válido 30 días</small></div>
+                    </div>
+                    <div class="pdf-cliente"><small>Cliente</small><b>Ane Etxeberria · Reforma de baño</b></div>
+                    <div class="lin cab"><span>Concepto</span><span>Importe</span></div>
+                    <div class="lin"><span>1. Demoliciones</span><span>420,00 €</span></div>
+                    <div class="lin"><span>2. Albañilería</span><span>1.077,00 €</span></div>
+                    <div class="lin"><span>3. Fontanería</span><span>540,00 €</span></div>
+                    <div class="pdf-totales">
+                      <div><span>Base imponible</span><span>2.037,00 €</span></div>
+                      <div><span>IVA 10 %</span><span>203,70 €</span></div>
+                      <div class="tot"><span>Total</span><span>2.240,70 €</span></div>
+                    </div>
+                    <div class="pdf-pago"><small>Forma de pago</small>50 % al aceptar (1.120,35 €) y 50 % al terminar, por transferencia.</div>
+                    <div class="pdf-firma"><span>Conforme del cliente</span><span>Fecha</span></div>
+                  </div>
+                  <div class="pdf-enviado"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Enviado a Ane por WhatsApp</div>
+                  <div class="acciones-pdf"><span class="dl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg> PDF</span><span class="wa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> WhatsApp</span></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="demo-puntos" role="group" aria-label="Pasos de la demostración">
+          <button type="button" aria-label="Paso 1: dictar"></button><button type="button" aria-label="Paso 2: la IA desglosa"></button><button type="button" aria-label="Paso 3: partidas"></button><button type="button" aria-label="Paso 4: PDF"></button>
+        </div>
+        <p class="demo-leyenda" id="demo-leyenda" aria-live="polite">1. Dictas el trabajo desde la obra</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CÓMO FUNCIONA ============ -->
+  <section class="seccion" id="como-funciona" aria-labelledby="t-como">
+    <div class="contenedor">
+      <div class="cabecera-seccion">
+        <div>
+          <span class="antetitulo">01 — Cómo funciona</span>
+          <h2 class="titulo-seccion" id="t-como">Tres pasos. <em>Antes de subir a la furgoneta.</em></h2>
+        </div>
+        <p class="entradilla">El presupuesto sale en la obra, y el cliente lo tiene antes de llamar a otro.</p>
+      </div>
+      <ol class="pasos">
+        <li class="paso">
+          <h3>Dicta el trabajo</h3>
+          <p>Pulsa el micro y cuéntalo como se lo contarías a un compañero: qué hay que hacer, medidas y dónde es la obra.</p>
+          <p class="ejemplo-frase">«Pintar un piso de 90 m² con tres dormitorios, quitando gotelé en el salón.»</p>
+        </li>
+        <li class="paso">
+          <h3>Repasa las partidas</h3>
+          <p>La IA lo ordena por capítulos con unidades, cantidades y precios de tu zona. Cambias lo que quieras o se lo pides con palabras.</p>
+          <p class="ejemplo-frase">«Añade un extractor y baja un 5 % los precios.»</p>
+        </li>
+        <li class="paso">
+          <h3>Envía y cobra</h3>
+          <p>Descarga el PDF con tu logo, NIF, IBAN e IVA y mándalo por WhatsApp. Cuando lo acepten, apuntas los cobros.</p>
+          <p class="ejemplo-frase">«Señal del 50 % recibida. Quedan 1.120,35 €.»</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ FUNCIONES ============ -->
+  <section class="seccion" id="funciones" aria-labelledby="t-funciones">
+    <div class="contenedor">
+      <div class="cabecera-seccion">
+        <div>
+          <span class="antetitulo">02 — Funciones</span>
+          <h2 class="titulo-seccion" id="t-funciones">Lo justo. <em>Sin cursos de formación.</em></h2>
+        </div>
+        <p class="entradilla">Lo que necesitas para presupuestar rápido, bien y con tus precios. Nada más.</p>
+      </div>
+      <div class="funciones">
+        <div class="funcion"><h3>Dictado por voz</h3><p>En iPhone y Android, desde el navegador. Hasta 3 minutos por dictado, y puedes corregir el texto antes de generar.</p></div>
+        <div class="funcion"><h3>Precios de tu provincia <span class="chip chip-zona">ZONA</span></h3><p>No cuesta lo mismo en Madrid que en Soria. Los precios de mercado se ajustan a la provincia de cada obra.</p></div>
+        <div class="funcion"><h3>Aprende tus precios <span class="chip chip-tu">TU</span></h3><p>Cada precio que corriges se guarda en «Mis precios» y se usa en el siguiente presupuesto.</p></div>
+        <div class="funcion"><h3>Pídeselo a la IA</h3><p>«Añade un extractor», «baja un 5 % los precios». Editas el presupuesto con palabras, sin buscar la fila.</p></div>
+        <div class="funcion"><h3>Importa tus PDF antiguos</h3><p>Sube presupuestos que ya hiciste y Presupuesta carga sus partidas y precios. Empiezas con tus tarifas.</p></div>
+        <div class="funcion"><h3>PDF profesional</h3><p>Tu logo y tu color, NIF, numeración, validez, IVA desglosado, forma de pago, IBAN y espacio para el conforme.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PANEL Y COBROS ============ -->
+  <section class="seccion" aria-labelledby="t-panel">
+    <div class="contenedor dos-columnas">
+      <div>
+        <span class="antetitulo">03 — Panel</span>
+        <h2 class="titulo-seccion" id="t-panel">Sabes siempre <em>lo que te deben.</em></h2>
+        <p class="entradilla">Al abrir la app ves lo cobrado, lo pendiente y a quién tienes que llamar hoy.</p>
+      </div>
+      <div class="panel-maqueta" aria-hidden="true">
+        <div class="panel-numeros">
+          <div class="panel-numero"><span>Presupuestado</span><b>18.420 €</b><small>9 enviados</small></div>
+          <div class="panel-numero"><span>Aceptado</span><b>11.380 €</b><small>aceptas el 56 %</small></div>
+          <div class="panel-numero"><span>Cobrado</span><b>7.940 €</b><small>este mes</small></div>
+          <div class="panel-numero destacado"><span>Te deben</span><b>3.440 €</b><small>de 3 obras</small></div>
+        </div>
+        <div class="para-hoy">
+          <h4>Para hoy</h4>
+          <div class="aviso-fila"><span class="aviso-icono" style="background:var(--pend-bg);color:var(--pend-ink)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.17a2 2 0 0 0-.59-1.42L12 12l-4.41 4.41A2 2 0 0 0 7 17.83V22"/><path d="M7 2v4.17a2 2 0 0 0 .59 1.42L12 12l4.41-4.41A2 2 0 0 0 17 6.17V2"/></svg></span><div><strong>Ana Ruiz · Cocina</strong><small>Sin respuesta desde hace 6 días · 4.120,00 €</small></div><span class="mini-btn">Llamar</span></div>
+          <div class="aviso-fila"><span class="aviso-icono" style="background:var(--pend-bg);color:var(--pend-ink)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><div><strong>Jon Etxeberria · Baño</strong><small>Caduca mañana · 3.860,00 €</small></div><span class="mini-btn">Llamar</span></div>
+          <div class="aviso-fila"><span class="aviso-icono" style="background:var(--brand-soft);color:var(--brand)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/></svg></span><div><strong>Marta Gil · Pintura</strong><small>Pendiente de cobro: 1.520,00 €</small></div><span class="mini-btn">Apuntar cobro</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EJEMPLOS ============ -->
+  <section class="seccion" id="ejemplos" aria-labelledby="t-ejemplos">
+    <div class="contenedor">
+      <div class="cabecera-seccion">
+        <div>
+          <span class="antetitulo">04 — Ejemplos</span>
+          <h2 class="titulo-seccion" id="t-ejemplos">Mira cómo queda <em>en tu oficio.</em></h2>
+        </div>
+        <p class="entradilla">Del dictado al PDF, con las partidas y lo que conviene revisar. <a href="ejemplos/">Ver los 10 ejemplos</a>.</p>
+      </div>
+      <div class="ejemplos-rejilla"><a class="ejemplo-tarjeta" href="ejemplos/reforma-integral-bano.html"><span class="chip chip-marca">Reformas</span><h3>Presupuesto de reforma integral de baño, partida a partida</h3><p>Un baño de 4,5 m² en Madrid: desde lo que el profesional dicta en la obra hasta el PDF que recibe el cliente, con IVA reducido y la señal del 50 %.</p><div class="ejemplo-pie"><b>4.249,85 €</b><span>Ver ejemplo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16" height="16"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></div></a><a class="ejemplo-tarjeta" href="ejemplos/presupuesto-pintura-piso-90m2.html"><span class="chip chip-marca">Pintura</span><h3>Presupuesto de pintura de un piso de 90 m²</h3><p>Por qué 90 m² de piso son unos 330 m² de pintura, y cómo dejarlo claro en el presupuesto para no regalar horas de tapado.</p><div class="ejemplo-pie"><b>3.639,68 €</b><span>Ver ejemplo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16" height="16"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></div></a><a class="ejemplo-tarjeta" href="ejemplos/partidas-reforma-cocina.html"><span class="chip chip-marca">Cocinas</span><h3>Partidas imprescindibles en un presupuesto de cocina</h3><p>Las líneas eléctricas que exige el reglamento, la fontanería de los electrodomésticos y los revestimientos: todo en un presupuesto claro para una cocina de 10 m².</p><div class="ejemplo-pie"><b>3.660,80 €</b><span>Ver ejemplo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16" height="16"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></div></a></div>
+    </div>
+  </section>
+
+  <!-- ============ PRECIOS ============ -->
+  <section class="seccion" id="precios" aria-labelledby="t-precios">
+    <div class="contenedor">
+      <div class="cabecera-seccion">
+        <div>
+          <span class="antetitulo">05 — Precios</span>
+          <h2 class="titulo-seccion" id="t-precios">Menos de lo que cobras <em>por una hora.</em></h2>
+        </div>
+        <div>
+          <p class="entradilla">Un solo plan con todo incluido. Pruébalo 14 días gratis y decide después.</p>
+          <div class="selector-plan" role="group" aria-label="Forma de pago">
+            <button type="button" data-plan="mensual" aria-pressed="true">Mensual</button>
+            <button type="button" data-plan="anual" aria-pressed="false">Anual <small>2 meses gratis</small></button>
+          </div>
+        </div>
+      </div>
+      <div class="precios">
+        <div class="plan plan-principal">
+          <h3>Presupuesta <span class="plan-sello">14 días gratis</span></h3>
+          <p class="plan-desc">Para autónomos y pymes de reformas e instalaciones</p>
+          <div class="plan-precio"><b data-precio-mensual="24,90 €" data-precio-anual="249 €">24,90 €</b><span data-precio-mensual="+ IVA al mes" data-precio-anual="+ IVA al año">+ IVA al mes</span></div>
+          <p class="plan-nota" data-precio-mensual="Sin permanencia. Te das de baja cuando quieras." data-precio-anual="Equivale a 20,75 € al mes. Puedes cancelar la renovación cuando quieras.">Sin permanencia. Te das de baja cuando quieras.</p>
+          <ul>
+            <li>Presupuestos con IA por voz o texto (100 al mes)</li>
+            <li>Precios ajustados a tu provincia y «Mis precios»</li>
+            <li>Importa tus presupuestos antiguos en PDF</li>
+            <li>PDF con tu logo, NIF, IBAN e IVA, sin límite</li>
+            <li>Clientes, obras y panel de cobros</li>
+            <li>Soporte por WhatsApp con una persona</li>
+          </ul>
+          <a href="https://panel.presupuesta.net/registro" class="btn btn-principal btn-grande">Empezar mis 14 días gratis</a>
+          <p class="plan-garantia">No pedimos tarjeta. Si no te convence, no pagas nada.</p>
+        </div>
+        <div class="plan">
+          <h3>Empresa</h3>
+          <p class="plan-desc">Para empresas con más volumen o varias personas</p>
+          <div class="plan-precio"><b>A medida</b></div>
+          <p class="plan-nota">Te preparamos una propuesta según tu caso.</p>
+          <ul>
+            <li>Todo lo de Presupuesta</li>
+            <li>Más presupuestos con IA al mes</li>
+            <li>Te ayudamos a cargar tus precios y presupuestos antiguos</li>
+            <li>Sesión de puesta en marcha</li>
+          </ul>
+          <a href="https://wa.me/34652679391?text=Hola%2C%20me%20interesa%20Presupuesta%20para%20una%20empresa%20con%20varias%20personas" class="btn btn-secundario btn-grande">Hablar por WhatsApp</a>
+        </div>
+      </div>
+      <p class="pie-precios">Precios sin IVA. Pago con tarjeta a través de Stripe, con factura y tu NIF/CIF.</p>
+    </div>
+  </section>
+
+  <!-- ============ QUIÉN HAY DETRÁS ============ -->
+  <section class="seccion" id="quien" aria-labelledby="t-quien">
+    <div class="contenedor">
+      <span class="antetitulo">06 — Quién hay detrás</span>
+      <div class="fundador-bloque">
+        <div class="foto-fundador" aria-hidden="true">R</div>
+        <div>
+          <h2 id="t-quien" class="cita">«Lo hice para que el presupuesto salga en la obra, no a las once de la noche.»</h2>
+          <p class="firma">Soy <strong>Raúl</strong>. Desde Ermua (Bizkaia) hago webs para empresas de reformas con <a href="https://estudios.presupuesta.net">Presupuesta Estudios</a>, y veía siempre lo mismo: presupuestos que salían tarde o no salían. Presupuesta es la herramienta que me habría gustado darles.</p>
+          <p class="firma" style="margin-top:12px">Si tienes una duda, escríbeme. Te respondo yo.</p>
+          <div class="respaldo">
+            <a href="https://wa.me/34652679391?text=Hola%2C%20tengo%20una%20duda%20sobre%20Presupuesta" class="btn btn-secundario">WhatsApp 652 67 93 91</a>
+            <a href="mailto:asistente@presupuesta.net" class="btn btn-secundario">asistente@presupuesta.net</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PREGUNTAS ============ -->
+  <section class="seccion" id="preguntas" aria-labelledby="t-preguntas">
+    <div class="contenedor">
+      <div class="cabecera-seccion">
+        <div>
+          <span class="antetitulo">07 — Preguntas</span>
+          <h2 class="titulo-seccion" id="t-preguntas">Lo que nos suelen <em>preguntar.</em></h2>
+        </div>
+      </div>
+      <div class="preguntas"><details class="pregunta" open><summary>¿Tengo que poner la tarjeta para probarlo?</summary><div><p>No. Te registras con tu email y tienes 14 días con todas las funciones, sin tarjeta. Si al terminar no te convence, no pagas nada; tus presupuestos y PDF siguen ahí.</p></div></details><details class="pregunta"><summary>¿Cuánto cuesta Presupuesta?</summary><div><p>24,90 € + IVA al mes, o 249 € + IVA al año (dos meses gratis). Incluye todas las funciones y hasta 100 presupuestos con IA al mes, sin permanencia. Antes tienes 14 días de prueba gratis sin tarjeta. Para empresas con más volumen o varias personas hay un plan a medida.</p></div></details><details class="pregunta"><summary>¿Para qué oficios sirve?</summary><div><p>Para autónomos y pymes de reformas e instalaciones: reformas integrales, albañilería, fontanería, electricidad, pintura, cocinas, baños y locales. Sirve para cualquier trabajo que se presupueste por partidas con medidas y precios.</p></div></details><details class="pregunta"><summary>¿De dónde salen los precios? ¿Son fiables?</summary><div><p>La IA parte de precios medios de mercado en España, sin IVA, y Presupuesta los ajusta a la provincia de cada obra. Cuando cambias un precio, lo aprende y lo usa en los siguientes presupuestos; también puedes subir tus presupuestos antiguos en PDF para cargar tus tarifas. Son una base orientativa: el precio final lo decides tú.</p></div></details><details class="pregunta"><summary>¿Funciona en el móvil? ¿Hay que instalar algo?</summary><div><p>Funciona en el navegador del móvil (iPhone y Android), de la tablet y del ordenador, sin instalar nada. El dictado por voz está pensado para usarlo en la obra.</p></div></details><details class="pregunta"><summary>¿Qué IVA puedo poner?</summary><div><p>21 %, 10 % (reformas de vivienda que cumplan los requisitos) o 0 %. Presupuesta recuerda el que uses y lo desglosa en el PDF.</p></div></details><details class="pregunta"><summary>¿Me hacéis factura? ¿Cómo me doy de baja?</summary><div><p>Sí: el pago se hace con Stripe, que emite la factura con IVA y te deja poner tu NIF o CIF. Te das de baja cuando quieras desde «Mi suscripción», sin permanencia; sigues teniendo acceso hasta el final del periodo pagado.</p></div></details><details class="pregunta"><summary>¿Mis datos están seguros?</summary><div><p>Cada profesional solo ve sus propios clientes y presupuestos, los pagos los gestiona Stripe (nunca vemos tu tarjeta) y no vendemos tus datos a nadie. Lo tienes explicado en la política de privacidad.</p></div></details></div>
+    </div>
+  </section>
+
+  <!-- ============ LLAMADA FINAL ============ -->
+  <section class="seccion final" aria-labelledby="t-final">
+    <div class="contenedor">
+      <h2 id="t-final">Tu próximo presupuesto, <span>hoy y en un minuto.</span></h2>
+      <p class="entradilla">Crea tu cuenta, rellena tus datos una vez y dicta el primer trabajo. 14 días gratis.</p>
+      <div class="hero-ctas">
+        <a href="https://panel.presupuesta.net/registro" class="btn btn-principal btn-grande">Probar Presupuesta gratis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        <a href="https://wa.me/34652679391?text=Hola%2C%20tengo%20una%20duda%20sobre%20Presupuesta" class="btn btn-secundario btn-grande">Tengo una duda</a>
+      </div>
+      <p class="microcopy">Sin tarjeta · Sin permanencia · Factura con tu NIF</p>
+    </div>
+  </section>
+</main>
+
+<aside class="banner-estudios" aria-label="Presupuesta Estudios">
+  <div class="contenedor">
+    <a href="https://estudios.presupuesta.net?utm_source=presupuesta.net&amp;utm_medium=banner&amp;utm_campaign=pie">
+      <span class="be-texto"><small>Presupuesta Estudios</small><strong>¿Quieres que te encuentren en Google?</strong><span>Hacemos la web de tu negocio y ponemos a punto tu ficha de Google Maps para que te llamen a ti.</span></span>
+      <span class="be-cta">Ver cómo trabajamos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+    </a>
+  </div>
+</aside>
+<footer class="pie">
+  <div class="contenedor">
+    <div class="pie-grid">
+      <div>
+        <a href="/" class="marca"><svg viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height="512" rx="116" fill="#C2410C"/><path transform="translate(-20 -12)" fill="#FFFFFF" fill-rule="evenodd" d="M 150 232 A 126 126 0 1 1 226 347.6 L 226 392 Q 226 404 214 408 L 150 430 Z M 276 178 A 54 54 0 1 0 276.01 178 Z"/></svg><span>Presupuesta</span></a>
+        <p>Presupuestos de obra con IA para autónomos y pymes de reformas e instalaciones. Hecho en Ermua (Bizkaia) por <a href="https://estudios.presupuesta.net">Presupuesta Estudios</a>.</p>
+      </div>
+      <div>
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="#como-funciona">Cómo funciona</a></li>
           <li><a href="#funciones">Funciones</a></li>
           <li><a href="#precios">Precios</a></li>
-          <li><a href="#testimonios">Testimonios</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#preguntas">Preguntas frecuentes</a></li>
+          <li><a href="https://panel.presupuesta.net/registro">Crear cuenta gratis</a></li>
+          <li><a href="https://panel.presupuesta.net/entrar">Entrar</a></li>
         </ul>
-        <div class="nav-cta">
-          <a href="#contacto" class="btn btn-orange">Solicitar demo gratis</a>
-        </div>
-      </nav>
-    </div>
-  </header>
-
-  <!-- ==========================================================================
-       2. HERO SECTION
-       ========================================================================== -->
-  <section class="hero">
-    <div class="container hero-content">
-      <div class="badge badge-white fade-in stagger-1">
-        ✦ Inteligencia Artificial para constructores
       </div>
-      <h1 class="fade-in stagger-2">Genera presupuestos profesionales <span>en segundos con IA</span></h1>
-      <p class="subtitle fade-in stagger-3">
-        ObraFlow analiza tu obra y crea presupuestos detallados por capítulos (Albañilería, Fontanería, Electricidad...) listos para enviar al cliente en PDF.
-      </p>
-      <div class="hero-actions fade-in stagger-4">
-        <a href="#contacto" class="btn btn-orange">Solicitar demo gratis</a>
-        <a href="#cómo-funciona" class="hero-link">Ver cómo funciona ↓</a>
+      <div>
+        <h4>Ejemplos</h4>
+        <ul><li><a href="ejemplos/reforma-integral-bano.html">Reforma de baño</a></li><li><a href="ejemplos/presupuesto-pintura-piso-90m2.html">Pintura de un piso</a></li><li><a href="ejemplos/partidas-reforma-cocina.html">Reforma de cocina</a></li><li><a href="ejemplos/presupuesto-albanileria-ejemplo.html">Albañilería</a></li><li><a href="ejemplos/presupuesto-fontaneria-calculo.html">Fontanería</a></li><li><a href="ejemplos/nota-de-voz-a-presupuesto.html">De nota de voz a presupuesto</a></li><li><a href="ejemplos/">Ver todos los ejemplos</a></li></ul>
       </div>
-      
-      <div class="hero-stats fade-in stagger-5">
-        <div class="stat-item">
-          <span class="stat-icon">⏱</span>
-          <span class="stat-text">30 segundos por presupuesto</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-icon">📄</span>
-          <span class="stat-text">Formato profesional español</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-icon">🤖</span>
-          <span class="stat-text">IA entrenada en construcción</span>
-        </div>
+      <div>
+        <h4>Contacto y legal</h4>
+        <ul>
+          <li><a href="https://wa.me/34652679391">WhatsApp 652 67 93 91</a></li>
+          <li><a href="mailto:asistente@presupuesta.net">asistente@presupuesta.net</a></li>
+          <li><a href="#quien">Quién hay detrás</a></li>
+          <li><a href="aviso-legal.html">Aviso legal</a></li>
+          <li><a href="politica-privacidad.html">Privacidad y cookies</a></li>
+          <li><a href="condiciones.html">Condiciones de uso</a></li>
+          <li><a href="#" data-abrir-cookies>Configurar cookies</a></li>
+        </ul>
       </div>
     </div>
-  </section>
-
-  <!-- ==========================================================================
-       3. SECCIÓN PROBLEMA
-       ========================================================================== */ -->
-  <section class="problem">
-    <div class="container">
-      <h2 class="section-title fade-in">¿Sigues haciendo presupuestos<br><span>en Word o a mano?</span></h2>
-      
-      <div class="problem-grid">
-        <!-- Card 1 -->
-        <div class="problem-card fade-in stagger-1">
-          <div class="problem-card-icon">⏱</div>
-          <h3>Horas perdidas</h3>
-          <p>Un presupuesto detallado te lleva 2-3 horas. Con 10 clientes al mes, son 30 horas de puro trabajo administrativo por las noches y fines de semana.</p>
-        </div>
-        <!-- Card 2 -->
-        <div class="problem-card fade-in stagger-2">
-          <div class="problem-card-icon">📉</div>
-          <h3>Aspecto poco profesional</h3>
-          <p>Un presupuesto en Word no transmite confianza. Tus competidores con mejor presentación y desglose claro ganan más obras cobrando lo mismo o más.</p>
-        </div>
-        <!-- Card 3 -->
-        <div class="problem-card fade-in stagger-3">
-          <div class="problem-card-icon">⚠️</div>
-          <h3>Errores y olvidos</h3>
-          <p>Partidas esenciales que se te olvidan incluir, precios desactualizados por la inflación y cálculos matemáticos manuales que a veces fallan y te cuestan dinero.</p>
-        </div>
-      </div>
+    <div class="pie-legal">
+      <span>© 2026 Presupuesta · Ermua, Bizkaia (España)</span>
+      <span><a href="llms.txt">llms.txt</a> · <a href="sitemap.xml">Mapa del sitio</a></span>
     </div>
-  </section>
-
-  <!-- ==========================================================================
-       4. SECCIÓN CÓMO FUNCIONA / SOLUCIÓN
-       ========================================================================== -->
-  <section id="cómo-funciona" class="solution">
-    <div class="container">
-      <h2 class="section-title fade-in">Así de fácil es con <span>ObraFlow</span></h2>
-      
-      <div class="solution-grid">
-        <!-- Paso 1 -->
-        <div class="solution-card fade-in stagger-1">
-          <div class="step-number">1</div>
-          <div class="solution-card-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
-            </svg>
-          </div>
-          <h3>Describe la obra</h3>
-          <p>Escribe en un párrafo o dicta por audio en qué consiste el trabajo. Nuestra IA entiende a la perfección la terminología y jerga del sector de la construcción.</p>
-        </div>
-        
-        <!-- Paso 2 -->
-        <div class="solution-card fade-in stagger-2">
-          <div class="step-number">2</div>
-          <div class="solution-card-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-            </svg>
-          </div>
-          <h3>La IA genera las partidas</h3>
-          <p>En segundos obtienes un presupuesto perfectamente desglosado por capítulos profesionales con precios actualizados y acordes al mercado español.</p>
-        </div>
-        
-        <!-- Paso 3 -->
-        <div class="solution-card fade-in stagger-3">
-          <div class="step-number">3</div>
-          <div class="solution-card-icon">
-            <svg viewBox="0 0 24 24">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
-            </svg>
-          </div>
-          <h3>Exporta y envía</h3>
-          <p>Obtén un PDF profesional A4 con tu logotipo y datos listo para imprimir o enviar. Si lo prefieres, también puedes exportarlo a Excel para tus controles internos.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       5. SECCIÓN FUNCIONES CLAVE
-       ========================================================================== -->
-  <section id="funciones" class="features">
-    <div class="container">
-      <h2 class="section-title fade-in">Todo lo que necesita un <span>constructor profesional</span></h2>
-      
-      <div class="features-grid">
-        <!-- Feature 1 -->
-        <div class="feature-card fade-in stagger-1">
-          <div class="feature-icon-container">
-            <svg viewBox="0 0 24 24">
-              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-              <line x1="9" y1="3" x2="9" y2="21"/>
-              <line x1="15" y1="3" x2="15" y2="21"/>
-              <line x1="3" y1="9" x2="21" y2="9"/>
-              <line x1="3" y1="15" x2="21" y2="15"/>
-            </svg>
-          </div>
-          <h3>Presupuestos con IA por capítulos</h3>
-          <p>Generación automática de presupuestos ordenados por capítulos: Albañilería, Fontanería, Electricidad, Pinturas y más.</p>
-        </div>
-
-        <!-- Feature 2 -->
-        <div class="feature-card fade-in stagger-2">
-          <div class="feature-icon-container">
-            <svg viewBox="0 0 24 24">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/>
-              <line x1="16" y1="13" x2="8" y2="13"/>
-              <line x1="16" y1="17" x2="8" y2="17"/>
-              <polyline points="10 9 9 9 8 9"/>
-            </svg>
-          </div>
-          <h3>PDF profesional formato español A4</h3>
-          <p>Documentos impecables y elegantes configurados según el estándar del sector en España. Inserta tus datos, logos y condiciones.</p>
-        </div>
-
-        <!-- Feature 3 -->
-        <div class="feature-card fade-in stagger-3">
-          <div class="feature-icon-container">
-            <svg viewBox="0 0 24 24">
-              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
-              <circle cx="12" cy="13" r="4"/>
-            </svg>
-          </div>
-          <h3>Renders de diseño con IA</h3>
-          <p>Sube la foto del estado actual de la estancia y la inteligencia artificial creará un render fotorrealista de cómo se verá reformada.</p>
-        </div>
-
-        <!-- Feature 4 -->
-        <div class="feature-card fade-in stagger-4">
-          <div class="feature-icon-container">
-            <svg viewBox="0 0 24 24">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-          </div>
-          <h3>Gestión integral de clientes</h3>
-          <p>Organiza todos tus contactos y mantén un historial ordenado de presupuestos enviados, pendientes, aceptados o rechazados.</p>
-        </div>
-
-        <!-- Feature 5 -->
-        <div class="feature-card fade-in stagger-5">
-          <div class="feature-icon-container">
-            <svg viewBox="0 0 24 24">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
-            </svg>
-          </div>
-          <h3>Portal exclusivo del cliente</h3>
-          <p>Comparte un enlace privado del presupuesto interactivo. Tu cliente podrá revisarlo, dejar comentarios y aceptarlo directamente online.</p>
-        </div>
-
-        <!-- Feature 6 -->
-        <div class="feature-card fade-in stagger-6">
-          <div class="feature-icon-container">
-            <svg viewBox="0 0 24 24">
-              <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
-              <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-              <line x1="12" y1="19" x2="12" y2="23"/>
-              <line x1="8" y1="23" x2="16" y2="23"/>
-            </svg>
-          </div>
-          <h3>Transcripción inteligente de audio</h3>
-          <p>Dicta los detalles de la reforma a pie de obra con notas de voz en tu móvil. ObraFlow las procesa y redacta las partidas automáticamente.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       6. SECCIÓN PRECIOS
-       ========================================================================== -->
-  <section id="precios" class="pricing">
-    <div class="container">
-      <h2 class="section-title fade-in">Sin sorpresas. <span>Sin letra pequeña.</span></h2>
-      
-      <div class="pricing-grid">
-        <!-- Básico -->
-        <div class="price-card fade-in stagger-1">
-          <div class="price-header">
-            <div class="price-name">Básico</div>
-            <div class="price-value">39€<span>/mes</span></div>
-          </div>
-          <ul class="price-features">
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Presupuestos ilimitados
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Gestión de clientes y fichas
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Exportación a PDF profesional
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Soporte estándar por email
-            </li>
-          </ul>
-          <div class="price-cta">
-            <a href="#contacto" class="btn btn-muted">Empezar gratis</a>
-          </div>
-        </div>
-
-        <!-- Pro -->
-        <div class="price-card featured fade-in stagger-2">
-          <div class="popular-badge">Más popular</div>
-          <div class="price-header">
-            <div class="price-name">Pro</div>
-            <div class="price-value">59€<span>/mes</span></div>
-          </div>
-          <ul class="price-features">
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              <strong>Todo lo del plan Básico</strong>
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              IA para generación de presupuestos
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Renders de diseño con IA ilimitados
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Transcripción de notas de audio
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Soporte prioritario 24/7
-            </li>
-          </ul>
-          <div class="price-cta">
-            <a href="#contacto" class="btn btn-orange">Probar gratis 14 días</a>
-          </div>
-        </div>
-
-        <!-- Empresa -->
-        <div class="price-card fade-in stagger-3">
-          <div class="price-header">
-            <div class="price-name">Empresa</div>
-            <div class="price-value">99€<span>/mes</span></div>
-          </div>
-          <ul class="price-features">
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              <strong>Todo lo del plan Pro</strong>
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Usuarios e instaladores ilimitados
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              Sesión de onboarding personalizada
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-              SLA de soporte garantizado por contrato
-            </li>
-          </ul>
-          <div class="price-cta">
-            <a href="#contacto" class="btn btn-muted">Contactar ventas</a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="pricing-guarantees fade-in">
-        <span>✓ 14 días de prueba gratis</span>
-        <span>✓ Sin tarjeta de crédito</span>
-        <span>✓ Cancela cuando quieras</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       7. SECCIÓN TESTIMONIO
-       ========================================================================== -->
-  <section id="testimonios" class="testimonial">
-    <div class="container">
-      <div class="testimonial-container fade-in">
-        <div class="testimonial-quote-icon">“</div>
-        <div class="testimonial-stars">
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-        </div>
-        <p class="testimonial-text">
-          "Antes tardaba 3 horas en hacer un presupuesto decente. Con ObraFlow lo tengo en 5 minutos y mis clientes me dicen que el PDF es muy profesional. Ya he cerrado 3 obras más este mes."
-        </p>
-        <div class="testimonial-author">
-          <div class="avatar">JM</div>
-          <div class="author-info">
-            <div class="author-name">José M.</div>
-            <div class="author-company">Reformas JM · Bilbao</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       8. SECCIÓN PREGUNTAS FRECUENTES (SEO & GEO ENHANCEMENT)
-       ========================================================================== -->
-  <section id="faq" class="faq-section">
-    <div class="container">
-      <h2 class="section-title fade-in">Preguntas frecuentes sobre <span>presupuestos con IA</span></h2>
-      
-      <div class="faq-grid fade-in">
-        <!-- FAQ 1 -->
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>¿Cómo funciona el generador de presupuestos automatizados de ObraFlow?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>ObraFlow utiliza modelos avanzados de inteligencia artificial entrenados con miles de presupuestos del sector de la construcción en España. Solo tienes que describir las reformas o la obra nueva con tus propias palabras o dictarlo por voz. La IA analiza el texto, identifica los materiales, la mano de obra necesaria y genera automáticamente un presupuesto detallado dividido por capítulos técnicos (como Demoliciones, Albañilería, Electricidad, Fontanería, etc.) en menos de 30 segundos.</p>
-          </div>
-        </div>
-
-        <!-- FAQ 2 -->
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>¿Es compatible con el formato español de capítulos y partidas?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Sí, absolutamente. ObraFlow ha sido entrenado específicamente con las estructuras habituales del mercado español. Organiza las partidas automáticamente por capítulos y genera un formato A4 profesional idéntico al que exigen arquitectos, jefes de obra y clientes particulares en España.</p>
-          </div>
-        </div>
-
-        <!-- FAQ 3 -->
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>¿Cómo ayuda la Inteligencia Artificial a calcular los precios de materiales y mano de obra?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>La IA de ObraFlow está calibrada con bases de datos de precios reales de materiales y tarifas medias de mano de obra en el mercado español. Esto te permite obtener precios de referencia realistas y actualizados frente a la inflación para evitar pérdidas y errores de cálculo manuales.</p>
-          </div>
-        </div>
-
-        <!-- FAQ 4 -->
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>¿Puedo exportar los presupuestos automáticos a PDF y Excel?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Sí. Puedes exportar el presupuesto en PDF en un formato A4 elegante con tu logotipo y datos listo para enviar por WhatsApp o email al cliente. También permite la exportación a archivos Excel (.xlsx) si prefieres llevar un control interno o modificar partidas manualmente.</p>
-          </div>
-        </div>
-
-        <!-- FAQ 5 -->
-        <div class="faq-item">
-          <button class="faq-question">
-            <span>¿Por qué ObraFlow es mejor que hacer presupuestos en Word o Excel manuales?</span>
-            <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Porque reduce el tiempo administrativo en más de un 90%. En lugar de pasar 2 o 3 horas buscando precios, redactando partidas y calculando totales para un solo cliente, ObraFlow lo resuelve en 30 segundos. Además, elimina los olvidos involuntarios de materiales y ofrece una presentación visual premium que aumenta la tasa de cierre de obras.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       9. FORMULARIO DE CAPTACIÓN
-       ========================================================================== -->
-  <section id="contacto" class="contact-section">
-    <div class="container contact-container">
-      <div class="contact-header fade-in">
-        <h2>Solicita tu demo gratuita</h2>
-        <p>Rellena el formulario y te llamamos en menos de 24 horas para mostrarte ObraFlow con tu tipo de obra.</p>
-      </div>
-
-      <div class="form-wrapper fade-in">
-        <!-- Formulario Principal -->
-        <form id="lead-form" class="contact-form">
-          <div class="form-group">
-            <label for="name">Nombre completo</label>
-            <input type="text" id="name" name="name" placeholder="Ej. Juan Pérez García" required>
-          </div>
-
-          <div class="form-group">
-            <label for="phone">Teléfono</label>
-            <input type="tel" id="phone" name="phone" placeholder="Ej. 600 123 456" required>
-            <span class="form-help">Te llamamos nosotros, sin esperas</span>
-          </div>
-
-          <div class="form-group">
-            <label for="work-type">Tipo de obra que haces</label>
-            <select id="work-type" name="work-type" required>
-              <option value="" disabled selected>Selecciona una opción</option>
-              <option value="obra-nueva">Obra nueva</option>
-              <option value="reforma-integral">Reforma integral</option>
-              <option value="fontaneria-electricidad">Fontanería / Electricidad</option>
-              <option value="pintura-acabados">Pintura y acabados</option>
-              <option value="varios">Varios</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="volume">¿Cuántos presupuestos haces al mes?</label>
-            <select id="volume" name="volume" required>
-              <option value="" disabled selected>Selecciona una opción</option>
-              <option value="1-5">1-5 presupuestos</option>
-              <option value="6-15">6-15 presupuestos</option>
-              <option value="16-30">16-30 presupuestos</option>
-              <option value="mas-de-30">Más de 30 presupuestos</option>
-            </select>
-          </div>
-
-          <button type="submit" class="btn btn-orange">Quiero mi demo gratis →</button>
-          
-          <div class="privacy-notice">
-            <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            <span>Tus datos están seguros. No hacemos spam. Solo te llamamos para la demo.</span>
-          </div>
-        </form>
-
-        <!-- Contenedor Éxito -->
-        <div id="success-panel" class="success-panel">
-          <div class="success-icon-container">
-            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
-          <h3>✅ ¡Recibido!</h3>
-          <p>Te llamamos en menos de 24 horas para agendar tu demostración guiada. Mientras tanto, si tienes dudas inmediatas, escríbenos directamente por WhatsApp.</p>
-          
-          <div class="success-actions">
-            <a href="#" id="whatsapp-btn" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
-              <svg style="width: 20px; height: 20px; fill: currentColor;" viewBox="0 0 24 24">
-                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.458L0 24zm6.59-4.846c1.6.95 3.192 1.449 4.81 1.45 5.515 0 10.002-4.484 10.005-9.998.002-2.67-1.037-5.18-2.92-7.065C16.66 1.656 14.15 1.016 11.48 1.016 5.97 1.016 1.484 5.503 1.48 11.018c-.001 1.702.46 3.36 1.332 4.815L1.83 20.915l5.222-1.378-.405-.223z"/>
-                <path d="M15.97 12.922c-.22-.11-1.3-.642-1.501-.715-.203-.073-.35-.11-.5.11-.148.22-.572.715-.7.86-.128.148-.257.167-.478.056-.222-.11-.937-.345-1.785-1.107-.66-.587-1.104-1.314-1.233-1.536-.13-.22-.014-.34.096-.45.1-.1.22-.256.33-.385.11-.128.147-.22.22-.366.075-.147.037-.275-.02-.385-.055-.11-.5-.1.685-1.278-.18-.433-.377-.373-.55-.373H9.28c-.183 0-.482.07-.734.343-.253.275-.965.943-.965 2.3 0 1.357.987 2.668 1.125 2.852.138.184 1.943 2.968 4.707 4.16.658.284 1.172.453 1.57.58.66.21 1.26.18 1.734.11.53-.08 1.62-.662 1.85-1.3.23-.637.23-1.182.16-1.3-.07-.11-.25-.22-.47-.33z"/>
-              </svg>
-              Escríbenos por WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       10. FOOTER
-       ========================================================================== -->
-  <footer>
-    <div class="container footer-container">
-      <div class="footer-left">
-        <a href="#" class="footer-logo">
-          <svg class="footer-logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2L2 22h20L12 2zm0 4.5l6.5 13H5.5L12 6.5z"/>
-            <path d="M11 12h2v4h-2zm0-3h2v2h-2z" fill="currentColor"/>
-          </svg>
-          <span class="footer-logo-text">ObraFlow</span>
-        </a>
-      </div>
-      
-      <div class="footer-nav">
-        <a href="#">Política de privacidad</a>
-        <a href="#">Aviso legal</a>
-        <a href="#contacto">Contacto</a>
-      </div>
-    </div>
-    
-    <div class="container">
-      <div class="footer-copyright">
-        <span>&copy; 2026 ObraFlow. Todos los derechos reservados.</span>
-        <span class="footer-span-credits">Desarrollado con orgullo en España 🇪🇸</span>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ==========================================================================
-       14. BEHAVIOR AND INTERACTION (JAVASCRIPT)
-       ========================================================================== -->
-  <script>
-    /* ==========================================
-       VARIABLES GLOBALES DE CONFIGURACIÓN
-       ========================================== */
-    const WEBHOOK_URL = ""; // Introduce tu webhook URL si deseas enviar los datos a un CRM/Email
-    const WHATSAPP = "34600000000"; // Número de WhatsApp placeholder en España (sin símbolos ni espacios)
-
-    /* ==========================================
-       ELEMENTOS DOM RELEVANTES
-       ========================================= */
-    const header = document.querySelector('header');
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    const leadForm = document.getElementById('lead-form');
-    const successPanel = document.getElementById('success-panel');
-    const whatsappBtn = document.getElementById('whatsapp-btn');
-    const phoneInput = document.getElementById('phone');
-
-    /* ==========================================
-       A. COMPORTAMIENTO HEADER SCROLL
-       ========================================== */
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-
-    /* ==========================================
-       B. MENÚ RESPONSIVE MÓVIL
-       ========================================== */
-    mobileMenuToggle.addEventListener('click', () => {
-      mobileMenuToggle.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-
-    // Cerrar menú al hacer click en cualquier link
-    document.querySelectorAll('.nav-links a, .nav-cta a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenuToggle.classList.remove('active');
-        navMenu.classList.remove('active');
-      });
-    });
-
-    /* ==========================================
-       C. SECCIÓN FADE-IN ANIMATION (Intersection Observer)
-       ========================================== */
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1
-    };
-
-    const sectionObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Solo anima una vez
-        }
-      });
-    }, observerOptions);
-
-    // Añadimos el observador a todas las clases fade-in
-    document.querySelectorAll('.fade-in').forEach(element => {
-      sectionObserver.observe(element);
-    });
-
-    /* ==========================================
-       D. ACORDEÓN DE PREGUNTAS FRECUENTES (FAQs)
-       ========================================== */
-    const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach(item => {
-      const question = item.querySelector('.faq-question');
-      const answer = item.querySelector('.faq-answer');
-      
-      question.addEventListener('click', () => {
-        const isActive = item.classList.contains('active');
-        
-        // Cerramos cualquier otra FAQ abierta
-        faqItems.forEach(otherItem => {
-          otherItem.classList.remove('active');
-          otherItem.querySelector('.faq-answer').style.maxHeight = null;
-        });
-        
-        if (!isActive) {
-          item.classList.add('active');
-          answer.style.maxHeight = answer.scrollHeight + "px";
-        }
-      });
-    });
-
-    /* ==========================================
-       E. VALIDACIÓN DINÁMICA DE TELÉFONO ESPAÑOL
-       ========================================== */
-    phoneInput.addEventListener('input', () => {
-      const value = phoneInput.value.replace(/\s+/g, '');
-      // Validamos móviles o fijos en España (9 dígitos, comenzando por 6, 7 o 9)
-      const isSpanishPhone = /^[679]\d{8}$/.test(value);
-      
-      if (value === "") {
-        phoneInput.style.borderColor = 'var(--gray-border)';
-        phoneInput.style.boxShadow = 'none';
-        phoneInput.setCustomValidity('');
-      } else if (isSpanishPhone) {
-        phoneInput.style.borderColor = '#38A169'; // Borde verde
-        phoneInput.style.boxShadow = '0 0 0 3px rgba(56, 161, 105, 0.15)';
-        phoneInput.setCustomValidity('');
-      } else {
-        phoneInput.style.borderColor = '#E53E3E'; // Borde rojo
-        phoneInput.style.boxShadow = '0 0 0 3px rgba(229, 62, 62, 0.15)';
-        phoneInput.setCustomValidity('Introduce un número de teléfono móvil o fijo español válido (9 dígitos, ej: 600123456).');
-      }
-    });
-
-    /* ==========================================
-       F. ENVÍO Y CAPTACIÓN DEL FORMULARIO
-       ========================================== */
-    leadForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      // Recopilamos datos del formulario
-      const formData = new FormData(leadForm);
-      const leadData = {
-        name: formData.get('name').trim(),
-        phone: formData.get('phone').trim(),
-        workType: formData.get('work-type'),
-        volume: formData.get('volume'),
-        date: new Date().toISOString()
-      };
-
-      // Guardamos en LocalStorage
-      let leads = JSON.parse(localStorage.getItem('obraflow_leads')) || [];
-      leads.push(leadData);
-      localStorage.setItem('obraflow_leads', JSON.stringify(leads));
-
-      // Envío opcional a Webhook URL si está configurada
-      if (WEBHOOK_URL !== "") {
-        try {
-          await fetch(WEBHOOK_URL, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(leadData)
-          });
-        } catch (error) {
-          console.error("Error al enviar el Webhook:", error);
-        }
-      }
-
-      // Configuración dinámica del enlace de WhatsApp con el tipo de obra y volumen
-      const selectWorkType = leadForm.querySelector('option[value="' + leadData.workType + '"]').text;
-      const selectVolume = leadForm.querySelector('option[value="' + leadData.volume + '"]').text;
-      
-      const whatsappMsg = `¡Hola ObraFlow! Acabo de registrarme para solicitar la demo guiada. Mi nombre es ${leadData.name}. Nos dedicamos a: "${selectWorkType}" y solemos hacer unas "${selectVolume}" al mes. Me gustaría coordinar la llamada pronto. ¡Gracias!`;
-      const encodedMsg = encodeURIComponent(whatsappMsg);
-      const targetPhone = WHATSAPP !== "" ? WHATSAPP : "34600000000";
-      
-      whatsappBtn.href = `https://wa.me/${targetPhone}?text=${encodedMsg}`;
-
-      // Ocultar formulario y mostrar panel de éxito
-      leadForm.style.opacity = '0';
-      setTimeout(() => {
-        leadForm.style.display = 'none';
-        successPanel.style.display = 'flex';
-      }, 300);
-    });
-  </script>
+  </div>
+</footer>
+<div class="barra-movil" role="complementary" aria-label="Probar Presupuesta">
+  <div><strong>14 días gratis, sin tarjeta</strong><small>Luego 24,90 € + IVA/mes · sin permanencia</small></div>
+  <a href="https://panel.presupuesta.net/registro" class="btn btn-principal">Probar</a>
+</div>
+<div id="aviso-cookies" class="aviso-cookies" role="dialog" aria-label="Cookies" hidden>
+  <p>Usamos cookies de análisis para mejorar la web. <a href="politica-privacidad.html#cookies">Más información</a></p>
+  <div><button class="btn btn-secundario" type="button" data-cookies="no">Rechazar</button><button class="btn btn-principal" type="button" data-cookies="si">Aceptar</button></div>
+</div>
+<script src="assets/site.js?v=20261116" defer></script>
 </body>
 </html>

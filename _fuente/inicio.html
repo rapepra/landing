@@ -1,0 +1,278 @@
+<main id="contenido">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="contenedor hero-grid">
+      <div>
+        <p class="etiqueta-hero">Presupuestos de obra con IA · para reformas e instalaciones</p>
+        <h1>Dilo en voz alta. <span>Tu presupuesto, listo en un minuto.</span></h1>
+        <p class="entradilla">Cuenta el trabajo con el móvil y Presupuesta lo desglosa en partidas con precios de tu provincia. Lo repasas y le mandas al cliente un PDF con tu logo.</p>
+        <div class="hero-ctas">
+          <a href="{{REGISTRO}}" class="btn btn-principal btn-grande">Probar 14 días gratis {{I_FLECHA}}</a>
+          <a href="#como-funciona" class="btn btn-secundario btn-grande">Cómo funciona</a>
+        </div>
+        <p class="microcopy">Sin tarjeta · Sin permanencia · Sin instalar nada</p>
+      </div>
+
+      <div>
+        <div class="movil" id="demo" aria-label="Demostración: de un dictado a un presupuesto en PDF" role="img">
+          <div class="movil-isla"></div>
+          <div class="movil-pantalla">
+            <div class="movil-barra"><span>9:41</span><span>5G ▮▮▮</span></div>
+            <div class="movil-cabecera"><div><strong>Nuevo presupuesto</strong><small>Reforma de baño · Bilbao</small></div><span class="chip chip-pend" id="demo-estado">Borrador</span></div>
+            <div class="movil-cuerpo">
+
+              <div class="demo-paso activo">
+                <div class="dictado-caja"><span id="demo-texto" data-frase="Reforma de baño de 5 metros en Bilbao. Quitar la bañera y poner plato de ducha de 120 por 70, alicatar paredes con porcelánico y cambiar inodoro y lavabo."></span><span class="cursor"></span></div>
+                <div class="micro-zona">
+                  <div class="ondas" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                  <div class="micro">{{I_MIC}}</div>
+                  <p>Escuchando… pulsa para parar</p>
+                </div>
+              </div>
+
+              <div class="demo-paso">
+                <div class="barra-progreso"><i></i></div>
+                <div class="pensando">
+                  <div class="pensando-fila">{{I_CHECK}} Desglosando el trabajo por capítulos…</div>
+                  <div class="pensando-fila">{{I_CHECK}} Calculando materiales y mano de obra…</div>
+                  <div class="pensando-fila">{{I_CHECK}} Ajustando los precios a la zona de la obra…</div>
+                  <div class="pensando-fila">{{I_CHECK}} Repasando que no falte nada…</div>
+                </div>
+              </div>
+
+              <div class="demo-paso">
+                <div class="capitulo-mini">
+                  <h5>1. Demoliciones</h5>
+                  <div class="partida-mini" data-partida="420"><span>Desmontaje de bañera y alicatado, retirada a vertedero</span><b>420,00 €</b><small>1 ud <span class="chip chip-zona">ZONA</span></small></div>
+                  <h5>2. Albañilería</h5>
+                  <div class="partida-mini" data-partida="465"><span>Plato de ducha de resina 120×70 con impermeabilización</span><b>465,00 €</b><small>1 ud <span class="chip chip-zona">ZONA</span></small></div>
+                  <div class="partida-mini" data-partida="612"><span>Alicatado porcelánico 30×60 en paredes</span><b>612,00 €</b><small>18 m² × 34,00 € <span class="chip chip-tu">TU</span></small></div>
+                  <h5>3. Fontanería</h5>
+                  <div class="partida-mini" data-partida="540"><span>Cambio de inodoro y lavabo con mueble</span><b>540,00 €</b><small>1 ud <span class="chip chip-zona">ZONA</span></small></div>
+                </div>
+                <div class="total-mini"><div><small>Total con IVA 10 %</small><b id="demo-total" data-total="2240.70">2.240,70 €</b></div><span class="chip chip-ok">Guardado</span></div>
+              </div>
+
+              <div class="demo-paso">
+                <div class="pdf-listo">
+                  <div class="pdf-hoja">
+                    <div class="pdf-hoja-cab">
+                      <div class="pdf-emisor"><span class="pdf-logo">RE</span><div><strong>Reformas Ejemplo</strong><small>NIF B00000000 · Bilbao</small></div></div>
+                      <div class="pdf-num"><strong>2026-0042</strong><small>Válido 30 días</small></div>
+                    </div>
+                    <div class="pdf-cliente"><small>Cliente</small><b>Ane Etxeberria · Reforma de baño</b></div>
+                    <div class="lin cab"><span>Concepto</span><span>Importe</span></div>
+                    <div class="lin"><span>1. Demoliciones</span><span>420,00 €</span></div>
+                    <div class="lin"><span>2. Albañilería</span><span>1.077,00 €</span></div>
+                    <div class="lin"><span>3. Fontanería</span><span>540,00 €</span></div>
+                    <div class="pdf-totales">
+                      <div><span>Base imponible</span><span>2.037,00 €</span></div>
+                      <div><span>IVA 10 %</span><span>203,70 €</span></div>
+                      <div class="tot"><span>Total</span><span>2.240,70 €</span></div>
+                    </div>
+                    <div class="pdf-pago"><small>Forma de pago</small>50 % al aceptar (1.120,35 €) y 50 % al terminar, por transferencia.</div>
+                    <div class="pdf-firma"><span>Conforme del cliente</span><span>Fecha</span></div>
+                  </div>
+                  <div class="pdf-enviado">{{I_CHECK}} Enviado a Ane por WhatsApp</div>
+                  <div class="acciones-pdf"><span class="dl">{{I_BAJAR}} PDF</span><span class="wa">{{I_MENSAJE}} WhatsApp</span></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="demo-puntos" role="group" aria-label="Pasos de la demostración">
+          <button type="button" aria-label="Paso 1: dictar"></button><button type="button" aria-label="Paso 2: la IA desglosa"></button><button type="button" aria-label="Paso 3: partidas"></button><button type="button" aria-label="Paso 4: PDF"></button>
+        </div>
+        <p class="demo-leyenda" id="demo-leyenda" aria-live="polite">1. Dictas el trabajo desde la obra</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CÓMO FUNCIONA ============ -->
+  <section class="seccion" id="como-funciona" aria-labelledby="t-como">
+    <div class="contenedor">
+      <div class="cabecera-seccion">
+        <div>
+          <span class="antetitulo">01 — Cómo funciona</span>
+          <h2 class="titulo-seccion" id="t-como">Tres pasos. <em>Antes de subir a la furgoneta.</em></h2>
+        </div>
+        <p class="entradilla">El presupuesto sale en la obra, y el cliente lo tiene antes de llamar a otro.</p>
+      </div>
+      <ol class="pasos">
+        <li class="paso">
+          <h3>Dicta el trabajo</h3>
+          <p>Pulsa el micro y cuéntalo como se lo contarías a un compañero: qué hay que hacer, medidas y dónde es la obra.</p>
+          <p class="ejemplo-frase">«Pintar un piso de 90 m² con tres dormitorios, quitando gotelé en el salón.»</p>
+        </li>
+        <li class="paso">
+          <h3>Repasa las partidas</h3>
+          <p>La IA lo ordena por capítulos con unidades, cantidades y precios de tu zona. Cambias lo que quieras o se lo pides con palabras.</p>
+          <p class="ejemplo-frase">«Añade un extractor y baja un 5 % los precios.»</p>
+        </li>
+        <li class="paso">
+          <h3>Envía y cobra</h3>
+          <p>Descarga el PDF con tu logo, NIF, IBAN e IVA y mándalo por WhatsApp. Cuando lo acepten, apuntas los cobros.</p>
+          <p class="ejemplo-frase">«Señal del 50 % recibida. Quedan 1.120,35 €.»</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ FUNCIONES ============ -->
+  <section class="seccion" id="funciones" aria-labelledby="t-funciones">
+    <div class="contenedor">
+      <div class="cabecera-seccion">
+        <div>
+          <span class="antetitulo">02 — Funciones</span>
+          <h2 class="titulo-seccion" id="t-funciones">Lo justo. <em>Sin cursos de formación.</em></h2>
+        </div>
+        <p class="entradilla">Lo que necesitas para presupuestar rápido, bien y con tus precios. Nada más.</p>
+      </div>
+      <div class="funciones">
+        <div class="funcion"><h3>Dictado por voz</h3><p>En iPhone y Android, desde el navegador. Hasta 3 minutos por dictado, y puedes corregir el texto antes de generar.</p></div>
+        <div class="funcion"><h3>Precios de tu provincia <span class="chip chip-zona">ZONA</span></h3><p>No cuesta lo mismo en Madrid que en Soria. Los precios de mercado se ajustan a la provincia de cada obra.</p></div>
+        <div class="funcion"><h3>Aprende tus precios <span class="chip chip-tu">TU</span></h3><p>Cada precio que corriges se guarda en «Mis precios» y se usa en el siguiente presupuesto.</p></div>
+        <div class="funcion"><h3>Pídeselo a la IA</h3><p>«Añade un extractor», «baja un 5 % los precios». Editas el presupuesto con palabras, sin buscar la fila.</p></div>
+        <div class="funcion"><h3>Importa tus PDF antiguos</h3><p>Sube presupuestos que ya hiciste y Presupuesta carga sus partidas y precios. Empiezas con tus tarifas.</p></div>
+        <div class="funcion"><h3>PDF profesional</h3><p>Tu logo y tu color, NIF, numeración, validez, IVA desglosado, forma de pago, IBAN y espacio para el conforme.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PANEL Y COBROS ============ -->
+  <section class="seccion" aria-labelledby="t-panel">
+    <div class="contenedor dos-columnas">
+      <div>
+        <span class="antetitulo">03 — Panel</span>
+        <h2 class="titulo-seccion" id="t-panel">Sabes siempre <em>lo que te deben.</em></h2>
+        <p class="entradilla">Al abrir la app ves lo cobrado, lo pendiente y a quién tienes que llamar hoy.</p>
+      </div>
+      <div class="panel-maqueta" aria-hidden="true">
+        <div class="panel-numeros">
+          <div class="panel-numero"><span>Presupuestado</span><b>18.420 €</b><small>9 enviados</small></div>
+          <div class="panel-numero"><span>Aceptado</span><b>11.380 €</b><small>aceptas el 56 %</small></div>
+          <div class="panel-numero"><span>Cobrado</span><b>7.940 €</b><small>este mes</small></div>
+          <div class="panel-numero destacado"><span>Te deben</span><b>3.440 €</b><small>de 3 obras</small></div>
+        </div>
+        <div class="para-hoy">
+          <h4>Para hoy</h4>
+          <div class="aviso-fila"><span class="aviso-icono" style="background:var(--pend-bg);color:var(--pend-ink)">{{I_ARENA}}</span><div><strong>Ana Ruiz · Cocina</strong><small>Sin respuesta desde hace 6 días · 4.120,00 €</small></div><span class="mini-btn">Llamar</span></div>
+          <div class="aviso-fila"><span class="aviso-icono" style="background:var(--pend-bg);color:var(--pend-ink)">{{I_RELOJ}}</span><div><strong>Jon Etxeberria · Baño</strong><small>Caduca mañana · 3.860,00 €</small></div><span class="mini-btn">Llamar</span></div>
+          <div class="aviso-fila"><span class="aviso-icono" style="background:var(--brand-soft);color:var(--brand)">{{I_CARTERA}}</span><div><strong>Marta Gil · Pintura</strong><small>Pendiente de cobro: 1.520,00 €</small></div><span class="mini-btn">Apuntar cobro</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EJEMPLOS ============ -->
+  <section class="seccion" id="ejemplos" aria-labelledby="t-ejemplos">
+    <div class="contenedor">
+      <div class="cabecera-seccion">
+        <div>
+          <span class="antetitulo">04 — Ejemplos</span>
+          <h2 class="titulo-seccion" id="t-ejemplos">Mira cómo queda <em>en tu oficio.</em></h2>
+        </div>
+        <p class="entradilla">Del dictado al PDF, con las partidas y lo que conviene revisar. <a href="ejemplos/">Ver los 10 ejemplos</a>.</p>
+      </div>
+      <div class="ejemplos-rejilla">{{EJEMPLOS}}</div>
+    </div>
+  </section>
+
+  <!-- ============ PRECIOS ============ -->
+  <section class="seccion" id="precios" aria-labelledby="t-precios">
+    <div class="contenedor">
+      <div class="cabecera-seccion">
+        <div>
+          <span class="antetitulo">05 — Precios</span>
+          <h2 class="titulo-seccion" id="t-precios">Menos de lo que cobras <em>por una hora.</em></h2>
+        </div>
+        <div>
+          <p class="entradilla">Un solo plan con todo incluido. Pruébalo 14 días gratis y decide después.</p>
+          <div class="selector-plan" role="group" aria-label="Forma de pago">
+            <button type="button" data-plan="mensual" aria-pressed="true">Mensual</button>
+            <button type="button" data-plan="anual" aria-pressed="false">Anual <small>2 meses gratis</small></button>
+          </div>
+        </div>
+      </div>
+      <div class="precios">
+        <div class="plan plan-principal">
+          <h3>Presupuesta <span class="plan-sello">14 días gratis</span></h3>
+          <p class="plan-desc">Para autónomos y pymes de reformas e instalaciones</p>
+          <div class="plan-precio"><b data-precio-mensual="24,90 €" data-precio-anual="249 €">24,90 €</b><span data-precio-mensual="+ IVA al mes" data-precio-anual="+ IVA al año">+ IVA al mes</span></div>
+          <p class="plan-nota" data-precio-mensual="Sin permanencia. Te das de baja cuando quieras." data-precio-anual="Equivale a 20,75 € al mes. Puedes cancelar la renovación cuando quieras.">Sin permanencia. Te das de baja cuando quieras.</p>
+          <ul>
+            <li>Presupuestos con IA por voz o texto (100 al mes)</li>
+            <li>Precios ajustados a tu provincia y «Mis precios»</li>
+            <li>Importa tus presupuestos antiguos en PDF</li>
+            <li>PDF con tu logo, NIF, IBAN e IVA, sin límite</li>
+            <li>Clientes, obras y panel de cobros</li>
+            <li>Soporte por WhatsApp con una persona</li>
+          </ul>
+          <a href="{{REGISTRO}}" class="btn btn-principal btn-grande">Empezar mis 14 días gratis</a>
+          <p class="plan-garantia">No pedimos tarjeta. Si no te convence, no pagas nada.</p>
+        </div>
+        <div class="plan">
+          <h3>Empresa</h3>
+          <p class="plan-desc">Para empresas con más volumen o varias personas</p>
+          <div class="plan-precio"><b>A medida</b></div>
+          <p class="plan-nota">Te preparamos una propuesta según tu caso.</p>
+          <ul>
+            <li>Todo lo de Presupuesta</li>
+            <li>Más presupuestos con IA al mes</li>
+            <li>Te ayudamos a cargar tus precios y presupuestos antiguos</li>
+            <li>Sesión de puesta en marcha</li>
+          </ul>
+          <a href="{{WHATSAPP_EMPRESA}}" class="btn btn-secundario btn-grande">Hablar por WhatsApp</a>
+        </div>
+      </div>
+      <p class="pie-precios">Precios sin IVA. Pago con tarjeta a través de Stripe, con factura y tu NIF/CIF.</p>
+    </div>
+  </section>
+
+  <!-- ============ QUIÉN HAY DETRÁS ============ -->
+  <section class="seccion" id="quien" aria-labelledby="t-quien">
+    <div class="contenedor">
+      <span class="antetitulo">06 — Quién hay detrás</span>
+      <div class="fundador-bloque">
+        {{FOTO_FUNDADOR}}
+        <div>
+          <h2 id="t-quien" class="cita">«Lo hice para que el presupuesto salga en la obra, no a las once de la noche.»</h2>
+          <p class="firma">Soy <strong>{{NOMBRE_FUNDADOR}}</strong>. Desde Ermua (Bizkaia) hago webs para empresas de reformas con <a href="{{ESTUDIOS}}">Presupuesta Estudios</a>, y veía siempre lo mismo: presupuestos que salían tarde o no salían. Presupuesta es la herramienta que me habría gustado darles.</p>
+          <p class="firma" style="margin-top:12px">Si tienes una duda, escríbeme. Te respondo yo.</p>
+          <div class="respaldo">
+            <a href="{{WHATSAPP_URL}}" class="btn btn-secundario">WhatsApp {{WHATSAPP_VISIBLE}}</a>
+            <a href="mailto:{{EMAIL}}" class="btn btn-secundario">{{EMAIL}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PREGUNTAS ============ -->
+  <section class="seccion" id="preguntas" aria-labelledby="t-preguntas">
+    <div class="contenedor">
+      <div class="cabecera-seccion">
+        <div>
+          <span class="antetitulo">07 — Preguntas</span>
+          <h2 class="titulo-seccion" id="t-preguntas">Lo que nos suelen <em>preguntar.</em></h2>
+        </div>
+      </div>
+      <div class="preguntas">{{PREGUNTAS}}</div>
+    </div>
+  </section>
+
+  <!-- ============ LLAMADA FINAL ============ -->
+  <section class="seccion final" aria-labelledby="t-final">
+    <div class="contenedor">
+      <h2 id="t-final">Tu próximo presupuesto, <span>hoy y en un minuto.</span></h2>
+      <p class="entradilla">Crea tu cuenta, rellena tus datos una vez y dicta el primer trabajo. 14 días gratis.</p>
+      <div class="hero-ctas">
+        <a href="{{REGISTRO}}" class="btn btn-principal btn-grande">Probar Presupuesta gratis {{I_FLECHA}}</a>
+        <a href="{{WHATSAPP_URL}}" class="btn btn-secundario btn-grande">Tengo una duda</a>
+      </div>
+      <p class="microcopy">Sin tarjeta · Sin permanencia · Factura con tu NIF</p>
+    </div>
+  </section>
+</main>

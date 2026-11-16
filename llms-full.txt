@@ -1,0 +1,165 @@
+# Presupuesta — información completa
+
+Última actualización: 2026-11-16. Este documento describe Presupuesta con datos verificables para asistentes de IA, buscadores y personas.
+
+## Qué es
+
+Presupuesta es una aplicación web para hacer presupuestos de obra y reformas con inteligencia artificial, pensada para autónomos y pequeñas empresas de reformas e instalaciones en España.
+
+Flujo de trabajo:
+1. El profesional dicta el trabajo con el micrófono del móvil (o lo escribe): qué hay que hacer, medidas y dónde está la obra.
+2. La IA lo desglosa en capítulos y partidas con unidad, cantidad y precio. Los precios parten de una media de mercado sin IVA y se ajustan a la provincia de la obra (52 provincias). Los importes, el IVA y los totales los calcula la aplicación al céntimo, no la IA.
+3. El profesional repasa y edita las partidas (como una hoja de cálculo o pidiéndoselo a la IA en lenguaje natural, por ejemplo «añade un extractor» o «baja un 5 % los precios»).
+4. Descarga un PDF profesional con su logo, NIF, dirección, numeración automática (2026-0001…), validez, IVA (21 %, 10 % o 0 %), forma de pago, IBAN y espacio para el conforme del cliente, y se lo envía por WhatsApp o email.
+5. Cuando el cliente acepta, apunta los cobros. El panel muestra lo presupuestado, aceptado y cobrado del mes, lo que le deben y avisos «Para hoy» (presupuestos sin respuesta, que caducan o pendientes de cobro).
+
+## Funciones
+
+- Dictado por voz desde el navegador del móvil (iPhone y Android), hasta 3 minutos por dictado.
+- Presupuestos por capítulos y partidas generados con IA (modelos de Anthropic; transcripción de voz con OpenAI).
+- Precios de mercado ajustados a la provincia de cada obra, marcados como ZONA.
+- «Mis precios»: cuando el profesional cambia un precio, Presupuesta lo aprende y lo usa en los siguientes presupuestos (marcado como TU). Se pueden importar presupuestos antiguos en PDF para cargar sus precios.
+- Editor en móvil y ordenador, con guardado automático y deshacer.
+- Clientes y obras, con acceso directo a llamar, WhatsApp, email y mapa.
+- Estados del presupuesto: borrador, pendiente, aceptado y rechazado; control de cobros.
+- Beneficio repartido en los precios u opcionalmente visible.
+
+Lo que Presupuesta no hace (para evitar confusiones): no emite facturas a los clientes del profesional, no exporta a Excel, no tiene firma digital online ni portal del cliente, y no es una app de las tiendas de aplicaciones (se usa desde el navegador).
+
+## Precios
+
+- Plan mensual: 24,90 € + IVA al mes, sin permanencia.
+- Plan anual: 249 € + IVA al año (dos meses gratis frente al mensual).
+- Prueba gratis de 14 días con todas las funciones, sin tarjeta.
+- Incluye 100 presupuestos con IA al mes. Para empresas con más volumen o varias personas: plan a medida (contacto por WhatsApp).
+- Pago con tarjeta a través de Stripe, con factura con IVA y opción de poner NIF/CIF. La baja se hace desde «Mi suscripción» y tiene efecto al final del periodo pagado.
+- Sin suscripción activa se bloquea solo la IA; los datos y los PDF siguen accesibles.
+
+## Quién hay detrás
+
+Presupuesta la ha creado Raúl, desde Ermua (Bizkaia, España), dentro de Presupuesta Estudios (https://estudios.presupuesta.net), un estudio que hace páginas web y posicionamiento local en Google para empresas de reformas y oficios. Soporte directo por WhatsApp (+34 652 67 93 91) y en asistente@presupuesta.net.
+
+## Preguntas frecuentes
+
+### ¿Tengo que poner la tarjeta para probarlo?
+No. Te registras con tu email y tienes 14 días con todas las funciones, sin tarjeta. Si al terminar no te convence, no pagas nada; tus presupuestos y PDF siguen ahí.
+
+### ¿Cuánto cuesta Presupuesta?
+24,90 € + IVA al mes, o 249 € + IVA al año (dos meses gratis). Incluye todas las funciones y hasta 100 presupuestos con IA al mes, sin permanencia. Antes tienes 14 días de prueba gratis sin tarjeta. Para empresas con más volumen o varias personas hay un plan a medida.
+
+### ¿Para qué oficios sirve?
+Para autónomos y pymes de reformas e instalaciones: reformas integrales, albañilería, fontanería, electricidad, pintura, cocinas, baños y locales. Sirve para cualquier trabajo que se presupueste por partidas con medidas y precios.
+
+### ¿De dónde salen los precios? ¿Son fiables?
+La IA parte de precios medios de mercado en España, sin IVA, y Presupuesta los ajusta a la provincia de cada obra. Cuando cambias un precio, lo aprende y lo usa en los siguientes presupuestos; también puedes subir tus presupuestos antiguos en PDF para cargar tus tarifas. Son una base orientativa: el precio final lo decides tú.
+
+### ¿Funciona en el móvil? ¿Hay que instalar algo?
+Funciona en el navegador del móvil (iPhone y Android), de la tablet y del ordenador, sin instalar nada. El dictado por voz está pensado para usarlo en la obra.
+
+### ¿Qué IVA puedo poner?
+21 %, 10 % (reformas de vivienda que cumplan los requisitos) o 0 %. Presupuesta recuerda el que uses y lo desglosa en el PDF.
+
+### ¿Me hacéis factura? ¿Cómo me doy de baja?
+Sí: el pago se hace con Stripe, que emite la factura con IVA y te deja poner tu NIF o CIF. Te das de baja cuando quieras desde «Mi suscripción», sin permanencia; sigues teniendo acceso hasta el final del periodo pagado.
+
+### ¿Mis datos están seguros?
+Cada profesional solo ve sus propios clientes y presupuestos, los pagos los gestiona Stripe (nunca vemos tu tarjeta) y no vendemos tus datos a nadie. Lo tienes explicado en la política de privacidad.
+
+## Ejemplos de presupuestos (datos de ejemplo, empresas y clientes ficticios)
+
+### Presupuesto de reforma integral de baño, partida a partida
+https://presupuesta.net/ejemplos/reforma-integral-bano.html
+Ejemplo de presupuesto de reforma de baño de 4,5 m² en Madrid: demolición, impermeabilización, alicatado, fontanería y sanitarios, con IVA del 10 %.
+- Base imponible: 3.863,50 € · IVA 10 %: 386,35 € · Total: 4.249,85 €
+- Partidas:
+  - Demolición de alicatado y solado, desmontaje de bañera e inodoro. Carga y transporte a vertedero autorizado, tasas incluidas. — 1 ud × 480,00 € = 480,00 €
+  - Regularización de paredes con mortero hidrófugo, listo para alicatar. — 22 m² × 14,00 € = 308,00 €
+  - Impermeabilización con membrana líquida y malla de refuerzo en zona de ducha. — 6 m² × 18,00 € = 108,00 €
+  - Alicatado con porcelánico 30×60 con cemento cola C2TE y junta fina. — 22 m² × 28,00 € = 616,00 €
+  - Solado de gres porcelánico antideslizante C3 nivelado con cuñas. — 4,5 m² × 42,00 € = 189,00 €
+  - Instalación de fontanería en multicapa desde colector, con llaves de corte para lavabo, inodoro y ducha. Desagües en PVC. — 1 ud × 750,00 € = 750,00 €
+  - Plato de ducha de resina 120×80, válvula de gran caudal y mampara de vidrio templado de 6 mm. — 1 ud × 620,00 € = 620,00 €
+  - Inodoro compacto con cisterna de doble descarga y mueble de lavabo de 80 cm con espejo LED. — 1 ud × 500,00 € = 500,00 €
+  - Falso techo de pladur hidrófugo de 13 mm con estructura y dos focos LED IP44. — 4,5 m² × 65,00 € = 292,50 €
+
+### Presupuesto de pintura de un piso de 90 m²
+https://presupuesta.net/ejemplos/presupuesto-pintura-piso-90m2.html
+Ejemplo de presupuesto para pintar un piso de 90 m²: protección, fisuras, imprimación y pintura plástica a dos manos en paredes y techos, con IVA.
+- Base imponible: 3.008,00 € · IVA 21 %: 631,68 € · Total: 3.639,68 €
+- Partidas:
+  - Protección de suelos con papel encintado y de muebles, ventanas y puertas con plástico. Retirada al terminar. — 90 m² × 2,20 € = 198,00 €
+  - Saneado de desperfectos: rascado, masillado de grietas y lijado con aspiración. — 1 PA × 260,00 € = 260,00 €
+  - Imprimación selladora acrílica en paredes para igualar la absorción. — 240 m² × 1,80 € = 432,00 €
+  - Pintura plástica mate lavable en techos, dos manos, color blanco. — 90 m² × 6,20 € = 558,00 €
+  - Pintura plástica lisa lavable en paredes, dos manos, color a elegir. — 240 m² × 6,50 € = 1.560,00 €
+
+### Partidas imprescindibles en un presupuesto de cocina
+https://presupuesta.net/ejemplos/partidas-reforma-cocina.html
+Ejemplo de presupuesto de reforma de cocina de 10 m² en Sevilla: electricidad según REBT, fontanería, alicatado y falso techo, con IVA del 10 % y forma de pago.
+- Base imponible: 3.328,00 € · IVA 10 %: 332,80 € · Total: 3.660,80 €
+- Partidas:
+  - Adecuación eléctrica de cocina según REBT: línea para placa y horno, circuito para lavadora y lavavajillas y cuatro tomas dobles sobre encimera. — 1 ud × 880,00 € = 880,00 €
+  - Fontanería en multicapa para fregadero, lavavajillas y lavadora, con llaves de corte y desagües en PVC. — 1 ud × 820,00 € = 820,00 €
+  - Alicatado de paredes con azulejo 30×90 rectificado y cemento cola C2TE. — 28 m² × 36,00 € = 1.008,00 €
+  - Falso techo de pladur hidrófugo con hueco para extracción y cuatro focos LED empotrados. — 10 m² × 62,00 € = 620,00 €
+
+### Presupuesto de albañilería: ejemplo completo
+https://presupuesta.net/ejemplos/presupuesto-albanileria-ejemplo.html
+Ejemplo de presupuesto de albañilería: tabique de pladur con aislamiento, rozas para instalaciones y recibido de premarcos, por partidas y con IVA.
+- Base imponible: 2.790,00 € · IVA 21 %: 585,90 € · Total: 3.375,90 €
+- Partidas:
+  - Tabique de pladur de 15 mm a dos caras sobre estructura de 46 mm, con lana de roca de 50 mm. — 45 m² × 38,00 € = 1.710,00 €
+  - Apertura y tapado de rozas para instalaciones de electricidad y agua. Ayudas a otros oficios. — 60 ml × 8,50 € = 510,00 €
+  - Recibido de premarcos de puertas de paso con mortero, garras y aplomado. — 6 ud × 95,00 € = 570,00 €
+
+### Cómo calcular un presupuesto de fontanería
+https://presupuesta.net/ejemplos/presupuesto-fontaneria-calculo.html
+Cómo calcular un presupuesto de fontanería por puntos de agua fría y caliente en multicapa, desagües en PVC y prueba de presión. Ejemplo con IVA.
+- Base imponible: 1.620,00 € · IVA 21 %: 340,20 € · Total: 1.960,20 €
+- Partidas:
+  - Punto de agua fría y caliente en multicapa 16/20 con aislamiento y desagüe en PVC (lavabo, bidé, ducha o fregadero). — 4 ud × 180,00 € = 720,00 €
+  - Punto de agua fría en multicapa y desagüe en PVC (inodoro, lavadora o lavavajillas) con llave de escuadra. — 3 ud × 140,00 € = 420,00 €
+  - Prueba de estanqueidad y presión de la instalación con manómetro. — 1 PA × 480,00 € = 480,00 €
+
+### De una nota de voz a un presupuesto profesional
+https://presupuesta.net/ejemplos/nota-de-voz-a-presupuesto.html
+Cómo dictar un trabajo con el móvil en la obra y obtener un presupuesto desglosado por partidas, con precios de tu provincia y PDF listo para enviar por WhatsApp.
+- Base imponible: 1.008,00 € · IVA 21 %: 211,68 € · Total: 1.219,68 €
+- Partidas:
+  - Demolición de tabique entre salón y cocina, con carga y retirada de escombros a contenedor. — 12 m² × 24,00 € = 288,00 €
+  - Falso techo continuo de pladur hidrófugo en cocina, con remate perimetral. — 9 m² × 60,00 € = 540,00 €
+  - Pintura plástica lavable mate en paredes del salón, dos manos, color blanco. — 30 m² × 6,00 € = 180,00 €
+
+### Presupuesto de reforma de local comercial
+https://presupuesta.net/ejemplos/presupuesto-reforma-local-comercial.html
+Ejemplo de presupuesto para adecuar un local de 80 m²: electricidad trifásica con boletín, insonorización y aseo accesible, con pagos por hitos.
+- Base imponible: 6.900,00 € · IVA 21 %: 1.449,00 € · Total: 8.349,00 €
+- Partidas:
+  - Instalación eléctrica trifásica con cuadro de protección, alumbrado de emergencia y tramitación del certificado (boletín). — 1 ud × 3.200,00 € = 3.200,00 €
+  - Insonorización de techo con lana de roca de alta densidad, amortiguadores y doble placa de pladur acústica. — 80 m² × 32,00 € = 2.560,00 €
+  - Aseo accesible con barras abatibles, lavabo sin pedestal y puerta de paso ancha. — 1 ud × 1.140,00 € = 1.140,00 €
+
+### Errores que hacen perder dinero en un presupuesto
+https://presupuesta.net/ejemplos/errores-presupuesto-reformas.html
+Los errores más caros al hacer un presupuesto de obra o reforma en España (residuos, protecciones, validez, forma de pago) y las partidas que protegen tu margen.
+- Base imponible: 780,00 € · IVA 10 %: 78,00 € · Total: 858,00 €
+- Partidas:
+  - Gestión de residuos y alquiler de contenedor de 5 m³ con permiso de ocupación de vía pública. — 1 ud × 350,00 € = 350,00 €
+  - Protección de zonas comunes (ascensor, portal y rellanos) con cartón y plástico reforzado. — 1 PA × 180,00 € = 180,00 €
+  - Limpieza de fin de obra antes de entregar la vivienda. — 1 PA × 250,00 € = 250,00 €
+
+### Plantilla de presupuesto de obra para autónomos
+https://presupuesta.net/ejemplos/plantilla-presupuesto-obra-autonomos.html
+Qué debe llevar el presupuesto de obra de un autónomo: tus datos y NIF, los del cliente, número, validez, partidas, IVA, forma de pago e IBAN.
+- Base imponible: 1.200,00 € · IVA 10 %: 120,00 € · Total: 1.320,00 €
+- Partidas:
+  - Nivelado de solera de terraza con mortero autonivelante y pendiente hacia el sumidero. — 20 m² × 22,00 € = 440,00 €
+  - Solado con gres antideslizante de exterior con cemento cola flexible C2TE. — 20 m² × 38,00 € = 760,00 €
+
+### Cómo enviar un presupuesto que transmita confianza
+https://presupuesta.net/ejemplos/enviar-presupuesto-confianza.html
+Consejos para presentar y enviar un presupuesto de obra que el cliente acepte: rapidez, desglose claro, PDF con tu logo, IVA, forma de pago y seguimiento.
+- Base imponible: 3.302,00 € · IVA 10 %: 330,20 € · Total: 3.632,20 €
+- Partidas:
+  - Albañilería y nivelado con materiales de primera calidad con marcado CE. Garantía de dos años. — 1 PA × 2.150,00 € = 2.150,00 €
+  - Pintura plástica lavable de paredes y techos, dos manos. — 180 m² × 6,40 € = 1.152,00 €
