@@ -151,15 +151,6 @@ p { text-wrap: pretty; }
 .chip-marca { background: var(--brand-soft); color: var(--brand); }
 @media (prefers-color-scheme: dark) { .chip-marca { color: #fdba74; } }
 
-/* ---------- Franja superior ---------- */
-.franja {
-  background: var(--surface); color: var(--muted); font-size: 14px; text-align: center; border-bottom: 1px solid var(--line);
-  padding: 9px 16px; line-height: 1.4;
-}
-.franja strong { color: var(--ink); font-weight: 600; }
-.franja a { color: var(--brand); font-weight: 700; text-decoration: none; white-space: nowrap; }
-.franja a:hover { text-decoration: underline; }
-
 /* ---------- Cabecera ---------- */
 .cabecera {
   position: sticky; top: 0; z-index: 50;
@@ -375,12 +366,6 @@ p { text-wrap: pretty; }
 .plan-precio b { font-family: var(--font-display); font-weight: 600; font-size: 56px; letter-spacing: -.03em; line-height: 1; }
 .plan-precio span { color: var(--muted); font-weight: 600; }
 .plan-nota { color: var(--muted); font-size: 15px; min-height: 24px; }
-.fundador {
-  margin: 20px 0 4px; border-left: 2px solid var(--brand); padding: 2px 0 2px 14px; font-size: 15.5px; color: var(--muted);
-}
-.fundador[hidden] { display: none; }
-.fundador strong { color: var(--ink); font-weight: 600; }
-.fundador code { font-family: var(--font-display); font-weight: 700; color: var(--brand); letter-spacing: .04em; }
 .plan ul { list-style: none; margin: 24px 0 30px; flex: 1; }
 .plan li { padding: 10px 0; border-top: 1px solid var(--line); font-size: 16px; }
 .pie-precios { margin-top: 24px; color: var(--muted); font-size: 15px; }

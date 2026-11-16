@@ -23,6 +23,10 @@ T = {k: _dato(v) for k, v in TITULAR.items()}
 PREGUNTAS_INICIO = [
     ("¿Tengo que poner la tarjeta para probarlo?",
      "No. Te registras con tu email y tienes 14 días con todas las funciones, sin tarjeta. Si al terminar no te convence, no pagas nada; tus presupuestos y PDF siguen ahí."),
+    ("¿Cuánto cuesta Presupuesta?",
+     "24,90 € + IVA al mes, o 249 € + IVA al año (dos meses gratis). Incluye todas las funciones y hasta 100 presupuestos con IA al mes, sin permanencia. Antes tienes 14 días de prueba gratis sin tarjeta. Para empresas con más volumen o varias personas hay un plan a medida."),
+    ("¿Para qué oficios sirve?",
+     "Para autónomos y pymes de reformas e instalaciones: reformas integrales, albañilería, fontanería, electricidad, pintura, cocinas, baños y locales. Sirve para cualquier trabajo que se presupueste por partidas con medidas y precios."),
     ("¿De dónde salen los precios? ¿Son fiables?",
      "La IA parte de precios medios de mercado en España, sin IVA, y Presupuesta los ajusta a la provincia de cada obra. Cuando cambias un precio, lo aprende y lo usa en los siguientes presupuestos; también puedes subir tus presupuestos antiguos en PDF para cargar tus tarifas. Son una base orientativa: el precio final lo decides tú."),
     ("¿Funciona en el móvil? ¿Hay que instalar algo?",
@@ -139,7 +143,6 @@ LEGAL = {
 <ul>
   <li>Plan mensual: 24,90 € + IVA al mes. Plan anual: 249 € + IVA al año.</li>
   <li>El cobro es por adelantado al inicio de cada periodo, con tarjeta, a través de Stripe, que emite la factura.</li>
-  <li>El código FUNDADOR (20 plazas) aplica 10 € de descuento al mes, de forma indefinida mientras la suscripción mensual siga activa.</li>
   <li>Incluye hasta 100 presupuestos generados con IA al mes por cuenta.</li>
   <li>Si cambiamos el precio, te avisaremos con al menos 30 días de antelación y podrás darte de baja antes.</li>
 </ul>

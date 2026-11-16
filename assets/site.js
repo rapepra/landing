@@ -33,6 +33,23 @@
     a.addEventListener("click", function (e) { e.preventDefault(); if (aviso) aviso.hidden = false; });
   });
 
+  /* ---------- Campañas: pasa utm_*, gclid y fbclid a los enlaces de la app ---------- */
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var CLAVES = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid", "gbraid", "wbraid", "fbclid"];
+    var campania = {};
+    CLAVES.forEach(function (k) { if (params.get(k)) campania[k] = params.get(k); });
+    if (Object.keys(campania).length) { try { sessionStorage.setItem("presupuesta-campania", JSON.stringify(campania)); } catch (e) { /* modo privado */ } }
+    else { try { campania = JSON.parse(sessionStorage.getItem("presupuesta-campania") || "{}"); } catch (e) { campania = {}; } }
+    if (Object.keys(campania).length) {
+      document.querySelectorAll('a[href^="https://panel.presupuesta.net"]').forEach(function (a) {
+        var u = new URL(a.href);
+        Object.keys(campania).forEach(function (k) { if (!u.searchParams.has(k)) u.searchParams.set(k, campania[k]); });
+        a.href = u.toString();
+      });
+    }
+  } catch (e) { /* navegador antiguo: los enlaces quedan como están */ }
+
   /* ---------- Menú móvil ---------- */
   var botonMenu = document.querySelector(".boton-menu");
   var menu = document.getElementById("menu");
@@ -77,8 +94,6 @@
       document.querySelectorAll("[data-precio-" + plan + "]").forEach(function (el) {
         el.textContent = el.getAttribute("data-precio-" + plan);
       });
-      var fundador = document.getElementById("fundador");
-      if (fundador) fundador.hidden = plan !== "mensual";
     });
   });
 

@@ -32,7 +32,6 @@ HOY = dt.date.today().isoformat()
 PUBLICADO = "2026-08-31"
 VERSION = HOY.replace("-", "")
 PRECIO_MES, PRECIO_ANO = 24.90, 249
-PRECIO_FUNDADOR = 14.90
 
 e = html.escape
 
@@ -93,7 +92,6 @@ LOGO = ('<svg viewBox="0 0 512 512" aria-hidden="true"><rect width="512" height=
 def cabecera(base: str) -> str:
     inicio = base or "/"
     return f"""<a class="saltar" href="#contenido">Saltar al contenido</a>
-<div class="franja">Los 20 primeros pagan <strong>14,90 € al mes para siempre</strong> con el código FUNDADOR · <a href="{REGISTRO}">Empezar gratis →</a></div>
 <header class="cabecera">
   <div class="contenedor cabecera-dentro">
     <a href="{inicio}" class="marca" aria-label="Presupuesta, ir al inicio">{LOGO}<span>Presupuesta</span></a>
@@ -589,7 +587,7 @@ Datos básicos:
 
 - [Cómo funciona]({WEB}/#como-funciona): dictar, repasar y enviar.
 - [Funciones]({WEB}/#funciones): dictado por voz, IA por partidas, precios por provincia, «Mis precios», PDF, clientes, obras y cobros.
-- [Precios]({WEB}/#precios): plan mensual 24,90 € + IVA, anual 249 € + IVA, código FUNDADOR para los 20 primeros.
+- [Precios]({WEB}/#precios): plan mensual 24,90 € + IVA, anual 249 € + IVA (dos meses gratis), 14 días de prueba gratis sin tarjeta.
 - [Preguntas frecuentes]({WEB}/#preguntas)
 - [Información ampliada para asistentes de IA]({WEB}/llms-full.txt)
 
@@ -646,7 +644,6 @@ Lo que Presupuesta no hace (para evitar confusiones): no emite facturas a los cl
 - Plan mensual: 24,90 € + IVA al mes, sin permanencia.
 - Plan anual: 249 € + IVA al año (dos meses gratis frente al mensual).
 - Prueba gratis de 14 días con todas las funciones, sin tarjeta.
-- Código FUNDADOR: los 20 primeros suscriptores del plan mensual pagan 10 € menos al mes para siempre (14,90 € + IVA).
 - Incluye 100 presupuestos con IA al mes. Para empresas con más volumen o varias personas: plan a medida (contacto por WhatsApp).
 - Pago con tarjeta a través de Stripe, con factura con IVA y opción de poner NIF/CIF. La baja se hace desde «Mi suscripción» y tiene efecto al final del periodo pagado.
 - Sin suscripción activa se bloquea solo la IA; los datos y los PDF siguen accesibles.

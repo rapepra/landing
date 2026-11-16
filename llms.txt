@@ -15,7 +15,7 @@ Datos básicos:
 
 - [Cómo funciona](https://presupuesta.net/#como-funciona): dictar, repasar y enviar.
 - [Funciones](https://presupuesta.net/#funciones): dictado por voz, IA por partidas, precios por provincia, «Mis precios», PDF, clientes, obras y cobros.
-- [Precios](https://presupuesta.net/#precios): plan mensual 24,90 € + IVA, anual 249 € + IVA, código FUNDADOR para los 20 primeros.
+- [Precios](https://presupuesta.net/#precios): plan mensual 24,90 € + IVA, anual 249 € + IVA (dos meses gratis), 14 días de prueba gratis sin tarjeta.
 - [Preguntas frecuentes](https://presupuesta.net/#preguntas)
 - [Información ampliada para asistentes de IA](https://presupuesta.net/llms-full.txt)
 
